@@ -1,0 +1,82 @@
+<div class="b-content_servicess">
+    <div class="title_content clearfix">
+        <h1><?php echo $this->page['title']; ?></h1>
+    </div>
+    <div class="step_wrapper">
+        <div class="coll_step">
+            <div class="step_label">
+                <span><?php echo $this->localize('step1'); ?></span>
+            </div>
+            <h3><?php echo $this->columns[0]['title']?></h3>
+            <p><?php echo nl2br($this->columns[0]['text']); ?></p>
+        </div>
+        <div class="coll_step">
+            <div class="step_label">
+                <span><?php echo $this->localize('step2'); ?></span>
+            </div>
+            <h3><?php echo $this->columns[1]['title']?></h3>
+            <p><?php echo nl2br($this->columns[1]['text']); ?></p>
+        </div>
+        <div class="coll_step">
+            <div class="step_label">
+                <span><?php echo $this->localize('step3'); ?></span>
+            </div>
+            <h3><?php echo $this->columns[2]['title']?></h3>
+            <p><?php echo nl2br($this->columns[2]['text']); ?></p>
+        </div>
+    </div>
+    <div class="calculate">
+        <a id="inline" class="btn btn_blue" href="#service-contact-form"><?php echo $this->localize('calculateCost'); ?></a>
+    </div>
+    
+    <!-- HIDDEN CONTACT FORM DIV -->
+    <div style="display:none">
+        
+    <div id="service-contact-form" class="form_wrapper form_contact">
+	<h2>Закажите расчет стоимости:</h2>
+        <form action="<?php echo $this->baseUrl; ?><?php echo $this->langUrl('/services.html'); ?>" method="post" class="clearfix">
+            <input name="email" style="display: none" />
+            <input name="hash1" value="<?php echo $this->hash1; ?>" type="hidden" />
+            <label class="f-item f-item_text">
+                <input name="name" class="f-text f-text_name" type="text" placeholder="<?php echo $this->localize('yourName'); ?>"/>
+            </label>
+            <label class="f-item f-item_text">
+                <input name="contact" class="f-text" type="text" placeholder="<?php echo $this->localize('yourMail'); ?>"/>
+            </label>
+            <label class="f-item f-item_text">
+                <input name="phone" class="f-text" type="text" placeholder="<?php echo $this->localize('yourPhone'); ?>"/>
+            </label>
+            
+            <label class="f-item f-item_text">
+            <select name="type" class="f-text">
+                <option selected disabled><?php echo $this->localize('selectType'); ?></option>
+                <option>квартира, дом/дача</option>
+                <option>коттедж</option>
+                <option>отель/гостиница</option>
+                <option>ресторан/кафе</option>
+                <option>офис</option>
+                <option>общественное помещение</option>
+            </select>
+            </label>
+            
+            <label class="f-item f-item_text">
+                <input name="meters" class="f-text" type="text" placeholder="<?php echo $this->localize('yourMeters'); ?>"/>
+            </label>            
+<!--            <label class="f-item f-item_textarea">
+                <textarea name="text" class="f-textarea" placeholder="message" cols="30" rows="10"></textarea>
+            </label>
+-->
+            <button type="submit" class="btn btn_blue"><?php echo $this->localize('calculateCost'); ?></button>
+        </form>
+    </div>
+
+        </div>
+    </div>
+    
+    <script>
+    	$("a#inline").fancybox({
+		'hideOnContentClick': false
+	});
+    </script>
+    
+</div>

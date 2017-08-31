@@ -1,0 +1,5 @@
+<div class="breadcrumb_wrapper clearfix">
+    <?php foreach ($this->breadcrumbs as $url => $title) : ?>
+        <a href="<?php echo $this->langUrl($url); ?>"><?php echo $title; ?></a>
+    <?php endforeach; ?>
+</div>

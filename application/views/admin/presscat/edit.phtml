@@ -1,0 +1,110 @@
+<script type="text/javascript" src="/js/rusLat.js"></script>
+<script type="text/javascript" src="/js/autoRusLat.js"></script>
+<h1>Press Categories</h1>
+<a href="/admin/presscat" class="btn btn-primary">Back to list</a>
+<div class="row">
+    <form method="post" action="/admin/presscat/edit?id=<?php echo $this->interior['id']; ?>" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<?php echo $this->interior['id']; ?>"/>
+        <div class="col-md-6">
+            <div class="checkbox">
+                <label>
+                    <input value="1"
+                           name="status" <?php echo ($this->interior['status'] == 1) ? 'checked="checked"' : '' ?>
+                           type="checkbox">
+                    Status visible
+                </label>
+            </div>
+            <div class="form-group form-horizontal">
+                <label>Url</label>
+                <input name="url" type="text" value="<?php echo $this->interior['url']; ?>" class="form-control">
+            </div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#tab_ru" role="tab" data-toggle="tab">ru</a></li>
+                <li><a href="#tab_en" role="tab" data-toggle="tab">en</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_ru">
+                    <div class="form-group form-horizontal">
+                        <label>Category title</label>
+                        <input data-action="translate" data-target="url" type="text" name="title" value="<?php echo $this->interior['title']; ?>"
+                               class="form-control">
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Page Title</label>
+                        <input type="text" name="page_title" value="<?php echo $this->interior['page_title']; ?>"
+                               class="form-control">
+                    </div>        
+                    <div class="form-group form-horizontal">
+                        <label>H1 Title</label>
+                        <input type="text" name="h1" value="<?php echo $this->interior['h1']; ?>"
+                               class="form-control">
+                    </div>                     
+<!--
+                    <div class="form-group form-horizontal">
+                        <label>Description</label>
+                        <textarea name="description" class="form-control" rows="6"><?php echo $this->interior['description']; ?></textarea>
+                    </div>
+-->
+                    <div class="form-group form-horizontal">
+                        <label>Meta keywords</label>
+                        <input type="text" name="meta_keywords" value="<?php echo $this->interior['meta_keywords']; ?>"
+                               class="form-control">
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Meta description</label>
+                        <textarea name="meta_description" class="form-control" rows="6"><?php echo $this->interior['meta_description']; ?></textarea>
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Text</label>
+                        <textarea name="text" class="form-control" rows="6"><?php echo $this->interior['text']; ?></textarea>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab_en">
+                    <div class="form-group form-horizontal">
+                        <label>Category title</label>
+                        <input type="text" name="title_en" value="<?php echo $this->interior['title_en']; ?>"
+                               class="form-control">
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Page Title</label>
+                        <input type="text" name="page_title_en" value="<?php echo $this->interior['page_title_en']; ?>"
+                               class="form-control">
+                    </div>        
+                    <div class="form-group form-horizontal">
+                        <label>H1 Title</label>
+                        <input type="text" name="h1_en" value="<?php echo $this->interior['h1_en']; ?>"
+                               class="form-control">
+                    </div>                     
+<!--
+                    <div class="form-group form-horizontal">
+                        <label>Description</label>
+                        <textarea name="description" class="form-control" rows="6"><?php echo $this->interior['description_en']; ?></textarea>
+                    </div>
+-->
+
+                    <div class="form-group form-horizontal">
+                        <label>Meta keywords</label>
+                        <input type="text" name="meta_keywords_en" value="<?php echo $this->interior['meta_keywords_en']; ?>"
+                               class="form-control">
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Meta description</label>
+                        <textarea name="meta_description_en" class="form-control" rows="6"><?php echo $this->interior['meta_description_en']; ?></textarea>
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Text</label>
+                        <textarea name="text_en" class="form-control" rows="6"><?php echo $this->interior['text_en']; ?></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-md-6">
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+
+    </form>
+</div>

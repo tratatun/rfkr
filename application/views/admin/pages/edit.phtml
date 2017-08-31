@@ -1,0 +1,79 @@
+<h1 xmlns="http://www.w3.org/1999/html">Page edit</h1>
+<a href="/admin/pages" class="btn btn-primary btn-margin">Back to list</a>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#tab_ru" role="tab" data-toggle="tab">ru</a></li>
+            <li><a href="#tab_en" role="tab" data-toggle="tab">en</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <form action="/admin/pages/edit?id=<?php echo $this->page['id']; ?>" method="post">
+            <input type="hidden" name="id" value="<?php echo $this->page['id']; ?>" />
+            <div class="tab-content">
+            <div class="tab-pane active" id="tab_ru">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group form-horizontal">
+                            <label>Page title</label>
+                            <input name="page_title" type="text" value="<?php echo $this->page['page_title']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Meta keywords</label>
+                            <input name="meta_keywords" type="text" value="<?php echo $this->page['meta_keywords']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Meta description</label>
+                            <input name="meta_description" type="text" value="<?php echo $this->page['meta_description']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Preview</label>
+                            <input name="preview" type="text" value="<?php echo $this->page['preview']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Title</label>
+                            <input name="title" type="text" value="<?php echo $this->page['title']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Text</label>
+                            <textarea name="text" class="form-control" rows="6"><?php echo $this->page['text']; ?></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane" id="tab_en">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group form-horizontal">
+                            <label>Page title</label>
+                            <input name="page_title_en" type="text" value="<?php echo $this->page['page_title_en']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Meta keywords</label>
+                            <input name="meta_keywords_en" type="text" value="<?php echo $this->page['meta_keywords_en']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Meta description</label>
+                            <input name="meta_description_en" type="text" value="<?php echo $this->page['meta_description_en']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Preview</label>
+                            <input name="preview_en" type="text" value="<?php echo $this->page['preview_en']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Title</label>
+                            <input name="title_en" type="text" value="<?php echo $this->page['title_en']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Text</label>
+                            <textarea name="text_en" class="form-control" rows="6"><?php echo $this->page['text_en']; ?></textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>

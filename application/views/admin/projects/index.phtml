@@ -1,0 +1,29 @@
+<h1>Projects</h1>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Options</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach($this->projects as $project) : ?>
+            <tr>
+                <td><?php echo $project['title']; ?> | <?php echo $project['title_en']; ?></td>
+                <td><?php echo $project['status'] == true ? 'enabled' : 'disabled' ?></td>
+                <td>
+                    <a href="/admin/projects/edit?id=<?php echo $project['id']; ?>" class="btn btn-primary">edit</a>
+                    <a href="/admin/projects/delete?id=<?php echo $project['id']; ?>" class="jsDelete btn btn-danger">delete</a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+        <form action="/admin/projects/create" method="post">
+            <button type="submit" class="btn btn-primary">Add project</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<h1 xmlns="http://www.w3.org/1999/html">Contacts</h1>
+<form action="/admin/contacts" method="post" enctype="multipart/form-data">
+    <div class="row">
+    <div class="col-md-6">
+            <div class="form-group form-horizontal">
+                <label>Avatar</label>
+
+                <input name="avatar" type="file" class="form-control">
+            </div>
+            <div class="form-group form-horizontal">
+                <label>Phone</label>
+                <input name="phone_1" type="text" value="<?php echo $this->data['phone_1']; ?>" class="form-control">
+            </div>
+            <div class="form-group form-horizontal">
+                <label>Phone additional 1</label>
+                <input name="phone_2" type="text" value="<?php echo $this->data['phone_2']; ?>" class="form-control">
+            </div>
+            <div class="form-group form-horizontal">
+                <label>Phone additional 2</label>
+                <input name="phone_3" type="text" value="<?php echo $this->data['phone_3']; ?>" class="form-control">
+            </div>
+            <div class="form-group form-horizontal">
+                <label>Email</label>
+
+                <input name="email_1" type="email" value="<?php echo $this->data['email_1']; ?>" class="form-control">
+            </div>
+    </div>
+    <div class="col-md-6">
+        <div class="image pull-left">
+            <img src="<?php echo $this->baseUrl; ?>/<?php echo $this->data['avatar'] . '?u=' . time(); ?>" alt="user" class="img-thumbnail">
+        </div>
+    </div>
+</div>
+    <div class="tab_page">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#tab_ru" role="tab" data-toggle="tab">ru</a></li>
+        <li><a href="#tab_en" role="tab" data-toggle="tab">en</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab_ru">
+            <div class="row">
+                <div class="col-md-6">
+                        <div class="form-group form-horizontal">
+                            <label>Name</label>
+
+                            <input name="name" type="text" value="<?php echo $this->data['name']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Post</label>
+                            <textarea name="who" rows="2" class="form-control"><?php echo $this->data['who']; ?></textarea>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane" id="tab_en">
+            <div class="row">
+                <div class="col-md-6">
+                        <div class="form-group form-horizontal">
+                            <label>Name</label>
+
+                            <input name="name_en" type="text" value="<?php echo $this->data['name_en']; ?>" class="form-control">
+                        </div>
+                        <div class="form-group form-horizontal">
+                            <label>Post</label>
+                            <textarea name="who_en" rows="2" class="form-control"><?php echo $this->data['who_en']; ?></textarea>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

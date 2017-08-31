@@ -1,0 +1,107 @@
+<script type="text/javascript" src="/js/rusLat.js"></script>
+<script type="text/javascript" src="/js/autoRusLat.js"></script>
+<h1>Interior design</h1>
+<a href="/admin/design" class="btn btn-primary">Back to list</a>
+<div class="row">
+    <form method="post" action="/admin/design/edit?id=<?php echo $this->interior['id']; ?>" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<?php echo $this->interior['id']; ?>"/>
+        <div class="col-md-6">
+            <div class="checkbox">
+                <label>
+                    <input value="1"
+                           name="status" <?php echo ($this->interior['status'] == 1) ? 'checked="checked"' : '' ?>
+                           type="checkbox">
+                    Status visible
+                </label>
+            </div>
+            <div class="form-group form-horizontal">
+                <label>Sort Order</label>
+                <input type="text" name="sortorder" value="<?php echo $this->interior['sortorder']; ?>"
+                               class="form-control">
+            </div>            
+            <div class="form-group form-horizontal">
+                <label>Url</label>
+                <input name="url" type="text" value="<?php echo $this->interior['url']; ?>" class="form-control">
+            </div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#tab_ru" role="tab" data-toggle="tab">ru</a></li>
+                <li><a href="#tab_en" role="tab" data-toggle="tab">en</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_ru">
+                    <div class="form-group form-horizontal">
+                        <label>Title</label>
+
+                        <input data-action="translate" data-target="url" type="text" name="title" value="<?php echo $this->interior['title']; ?>"
+                               class="form-control">
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Description</label>
+                        <textarea name="description" class="form-control" rows="6"><?php echo $this->interior['description']; ?></textarea>
+                        <!--                                <input type="text" name="description" value="-->
+                        <?php //echo $this->interior['description']; ?><!--" class="form-control">-->
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Meta keywords</label>
+                        <input type="text" name="meta_keywords" value="<?php echo $this->interior['meta_keywords']; ?>"
+                               class="form-control">
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Meta description</label>
+                        <input type="text" name="meta_description" value="<?php echo $this->interior['meta_description']; ?>"
+                               class="form-control">
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Text</label>
+                        <textarea name="text" class="form-control" rows="6"><?php echo $this->interior['text']; ?></textarea>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab_en">
+                    <div class="form-group form-horizontal">
+                        <label>Title</label>
+
+                        <input type="text" name="title_en"
+                               value="<?php echo $this->interior['title_en']; ?>" class="form-control">
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Description</label>
+                        <textarea name="description_en" class="form-control" rows="6"><?php echo $this->interior['description_en']; ?></textarea>
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Meta keywords</label>
+                        <input type="text" name="meta_keywords_en" value="<?php echo $this->interior['meta_keywords_en']; ?>"
+                               class="form-control">
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Meta description</label>
+                        <input type="text" name="meta_description_en" value="<?php echo $this->interior['meta_description_en']; ?>"
+                               class="form-control">
+                    </div>
+                    <div class="form-group form-horizontal">
+                        <label>Text</label>
+                        <textarea name="text_en" class="form-control" rows="6"><?php echo $this->interior['text_en']; ?></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-md-6">
+            <div class="form-group form-horizontal">
+                <label>Upload images (max count of images is <?php echo $this->maxCount; ?>) Min width of image is <?php echo $this->minWidth ?> px</label>
+                <input type="file" <?php if ($this->limitedMaxCount) :?>disabled="disabled"<?php endif; ?> name="image" class="form-control">
+            </div>
+        <div class="images_wrapper_thumbnail clearfix">
+            <?php foreach ($this->interior['images'] as $image) :?>
+            <div class="image pull-left">
+                <img src="<?php echo $this->baseUrl; ?>/<?php echo $image['file_name_des']?>" alt="img" class="img-thumbnail">
+                <a href="/admin/design/deleteImage?interior_id=<?php echo $this->interior['id']; ?>&image_id=<?php echo $image['id']; ?>" class="jsDelete btn btn-danger btn-block btn-sm">delete</a>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+
+    </form>
+</div>

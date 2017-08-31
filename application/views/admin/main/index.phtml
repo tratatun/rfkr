@@ -1,0 +1,53 @@
+<div class="tab_page">
+    <form action="/admin/main" method="post">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#tab_ru" role="tab" data-toggle="tab">ru</a></li>
+        <li><a href="#tab_en" role="tab" data-toggle="tab">en</a></li>
+    </ul>
+    <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab_ru">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group form-horizontal">
+                            <label for="disabledTextInput">Title</label>
+                            <input type="text" name="site[common_title]" value="<?php echo $this->site['common_title']; ?>" class="form-control">
+                        </div>
+                        <h3>Menu</h3>
+
+                        <?php foreach ($this->menu['ru'] as $menuItem) :?>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><?php echo $menuItem['url']; ?></div>
+                                    <input name="menu[<?php echo $menuItem['id']; ?>]" value="<?php echo $menuItem['title']; ?>" class="form-control" type="text">
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane" id="tab_en">
+            <div class="row">
+                <div class="col-md-6">
+                        <div class="form-group form-horizontal">
+                            <label>Title</label>
+                            <input type="text" name="site[common_title_en]" value="<?php echo $this->site['common_title_en']; ?>" class="form-control">
+                        </div>
+                    <h3>Menu</h3>
+                    <?php foreach ($this->menu['en'] as $menuItem) :?>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><?php echo $menuItem['url']; ?></div>
+                                <input name="menu[<?php echo $menuItem['id']; ?>]" value="<?php echo $menuItem['title']; ?>" class="form-control" type="text">
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+        <button class="btn btn-primary clearfix" type="submit">Save</button>
+        </form>
+</div>

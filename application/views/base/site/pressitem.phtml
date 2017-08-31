@@ -1,0 +1,38 @@
+<div class="b-content_press full">
+    <?php echo $this->partial('breadcrumbs')?>
+    
+    <div class="title_content clearfix">
+        <h1><?php echo $this->pressitem['title']; ?></h1>
+        <?= $this->pressitem['category']; ?>
+        <span class="date"><?php echo $this->pressitem['date']; ?></span>
+    </div>
+    
+    <div class="press_list">
+        <div class="item_press clearfix">
+            <figure class="images">
+                <?php if (!empty($this->pressitem['img_des'])) :?>
+                <a class="fancybox"  href="<?php echo $this->baseUrl; ?>/<?php echo $this->pressitem['img_des']; ?>">
+                    <img src="<?php echo $this->baseUrl; ?>/<?php echo $this->pressitem['img_des']; ?>" alt="img" />
+                </a>
+                <?php endif; ?>
+                <?php if (!empty($this->pressitem['img_2_des'])) :?>
+                <a class="fancybox"  href="<?php echo $this->baseUrl; ?>/<?php echo $this->pressitem['img_2_des']; ?>">
+                    <img src="<?php echo $this->baseUrl; ?>/<?php echo $this->pressitem['img_2_des']; ?>" alt="img" />
+                </a>
+                <?php endif; ?>
+            </figure>
+            <div class="item_text">
+                <?php echo $this->pressitem['text']; ?>
+            </div>
+        </div>        
+    </div>
+
+    <div class="project_socials">
+        <div class="project_share_txt">
+            Понравилась публикация? Поделись с друзьями:
+        </div>
+        <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+        <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter,linkedin,lj" data-counter=""></div>
+    </div>    
+</div>

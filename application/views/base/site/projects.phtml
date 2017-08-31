@@ -1,0 +1,70 @@
+<?php $counter = 0; ?>
+<div class="b-content_finish">
+<!--<div class="title_content clearfix">-->
+<!--    <h1>--><?php //echo $this->page['title']; ?><!--</h1>-->
+<!--</div>-->
+<div class="finish_list">
+<?php foreach ($this->projects as $project) : ?>
+<div class="item_finish">
+    <div class="item_title">
+        <h2>
+            <a href="<?php echo $this->baseUrl; ?><?php echo $this->langUrl('/' . $project['id'] . '-' . $project['url'] . '.html') ?>">
+                <?php echo $project['title']; ?>
+            </a>
+        </h2>
+    </div>
+    <div class="gallery_finish_wrapper clearfix">
+        <div class="gallery_finish__content cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides="> div"
+             data-cycle-timeout="0" data-cycle-pager="#gallery_finish__pager_<?php echo ++$counter; ?>" data-cycle-pager-template="">
+            <?php foreach ($project['items'] as $key => $item) :?>
+                <?php if ($key == 4) {
+                    break;
+                }; ?>
+            <div class="item_cycle">
+                <figure class="image">
+                    <img src="<?php echo $this->baseUrl; ?>/<?php echo $item['img_des']; ?>" alt="img"/>
+                </figure>
+<!--                <div class="content_image">-->
+<!--                    <div class="title_content">-->
+<!--                        <h3>--><?php //echo $item['title']; ?><!--</h3>-->
+<!--                        <strong>#--><?php //echo ++$key; ?><!--</strong>-->
+<!--                        <small>--><?php //echo $item['city']; ?><!--</small>-->
+<!--                    </div>-->
+<!--                    <div class="text_content">-->
+<!--                        <p>--><?php //echo nl2br($item['text']); ?><!--</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <div id="gallery_finish__pager_<?php echo $counter; ?>" class="gallery_finish__pager cycle-pager external">
+            <?php foreach ($project['items'] as $item) :?>
+              <?php if (!empty($item['img_min_des'])) : ?>
+              <span class="img_thumb">
+                <img src="<?php echo $this->baseUrl; ?>/<?php echo $item['img_min_des']; ?>" alt="thumb"/>
+              </span>
+              <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>
+<?php endforeach; ?>
+    <?php if (count($this->pages) > 1) :?>
+        <div class="page_pager clearfix">
+            <ul class="pager_list">
+                <?php foreach ($this->pages as $page => $link) :?>
+                    <?php if ($page == $this->page) : ?>
+                        <li class="pager_item"><span><?php echo $page ?></span></li>
+                    <?php else : ?>
+                        <li class="pager_item"><a href="<?php echo $link ?>"><?php echo $page ?></a></li>
+                        <?php endif;?>
+                <?php endforeach; ?>
+
+            </ul>
+        </div>
+    <?php endif; ?>
+    <div class="content-text">
+        <?php echo $this->text; ?>
+    </div>
+</div>
+</div>

@@ -1,0 +1,17 @@
+<?php /** @var \Base\View\View $this */ ?>
+<header class="header">
+    <div class="header_top_wrapper">
+        <div class="header_top clearfix">
+            <div class="btn_language">
+                <a class="btn btn_en <?php echo ($this->currentLang == 'en') ? '' : 'active'?>" href="/site/lang?lang=en&page=<?php echo $this->currentUrl; ?>">en</a>
+                <a class="btn btn_ru <?php echo ($this->currentLang == 'ru') ? '' : 'active'?>" href="/site/lang?lang=ru&page=<?php echo $this->currentUrl; ?>">ru</a>
+            </div>
+            <?php echo $this->partial('nav', ['menu' => $this->menu]); ?>
+        </div>
+    </div>
+    <div class="header_bottom header_not_block">
+        <div class="logo">
+            <a href="/"><img src="<?php echo $this->baseUrl; ?>/images/logo@2x.png" alt="logo"/></a>
+        </div>
+    </div>
+</header>

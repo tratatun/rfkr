@@ -1,0 +1,28 @@
+<div class="b-interior_content">
+    <div class="title_content">
+        <h1><?php echo $this->page['title']; ?></h1>
+    </div>
+    <?php foreach ($this->items as $item) :?>
+        <div class="gallery_wrapper clearfix">
+            <div class="gallery_interior" >
+                <div class="fotorama" data-width="100%" data-height="auto" data-maxwidth="100%" data-maxheight="100%">
+                    <?php foreach ($item['images'] as $image) :?>
+                        <img src="<?php echo $this->baseUrl; ?>/<?php echo $image['path'] ?>">
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="gallery_info">
+                <h2>
+                    <a href="<?php echo $this->langUrl('/design/' . $item['url']); ?>"><?php echo $item['title'] ?></a>
+                </h2>
+                <p>
+                <?php echo $item['description']; ?>
+                </p>
+                <a class="btn btn_more" href="<?php echo $this->langUrl('/design/' . $item['url']); ?>"><?php echo $this->localize('seeProjects'); ?></a>
+            </div>
+        </div>
+    <?php endforeach; ?>
+    <div class="content-text">
+        <?php echo $this->page['text']; ?>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<h1>Gallery</h1>
+<div class="row">
+    <div class="col-md-12 wrapper-home">
+        <form action="/admin/gallery" method="post" enctype="multipart/form-data">
+        <?php foreach ($this->data as $item): ?>
+        <div class="item-project clearfix">
+            <div class="col-md-50">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="active"><a href="#tab_ru_<?php echo $item['id']; ?>" role="tab" data-toggle="tab">ru</a></li>
+                    <li><a href="#tab_en_<?php echo $item['id']; ?>" role="tab" data-toggle="tab">en</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_ru_<?php echo $item['id']; ?>">
+                            <div class="form-group form-horizontal">
+                                <label>Title</label>
+
+                                <input name="item[<?php echo $item['id']; ?>][title]" value="<?php echo $item['title']; ?>" type="text" class="form-control">
+                            </div>
+                            <div class="form-group form-horizontal">
+                                <label>Description</label>
+                                <textarea name="item[<?php echo $item['id']; ?>][text]" class="form-control" rows="6"><?php echo $item['text']; ?></textarea>
+                            </div>
+                    </div>
+                    <div class="tab-pane" id="tab_en_<?php echo $item['id']; ?>">
+
+                            <div class="form-group form-horizontal">
+                                <label>Title</label>
+
+                                <input name="item[<?php echo $item['id']; ?>][title_en]" value="<?php echo $item['title_en']; ?>" type="text" class="form-control">
+                            </div>
+                            <div class="form-group form-horizontal">
+                                <label>Description</label>
+                                <textarea name="item[<?php echo $item['id']; ?>][text_en]" class="form-control" rows="6"><?php echo $item['text_en']; ?></textarea>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-50 image-wrapper">
+                    <div class="form-group form-horizontal">
+                        <label>Upload images</label>
+
+                        <input name="image_<?php echo $item['id']; ?>" type="file" class="form-control">
+
+                        <div class="image_thumbnail">
+                            <img src="<?php echo $this->baseUrl; ?>/<?php echo $item['img_des']; ?>" alt="img">
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+            <button class="btn btn-primary clearfix" type="submit">Save</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<h1>Pages</h1>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Options</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach($this->pages as $page) : ?>
+            <tr>
+                <td><?php echo $page['title']; ?> | <?php echo $page['title_en']; ?></td>
+                <td>
+                    <a href="/admin/pages/edit?id=<?php echo $page['id']; ?>" class="btn btn-primary">edit</a>
+<!--                    <a href="/admin/pages/delete?id=--><?php //echo $page['id']; ?><!--" class="btn btn-danger">delete</a>-->
+                </td>
+            </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+<!--        <button type="button" class="btn btn-primary">Add category</button>-->
+    </div>
+</div>
