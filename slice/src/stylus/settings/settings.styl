@@ -1,0 +1,145 @@
+//color variables
+$white = #fff
+$whiteOpacity = rgba(255, 255, 255, 0.2)
+$whiteSemi = rgba(255, 255, 255, 0.5)
+$fullBlack = #000
+$defaultBlack = #1c212f
+$shadow = rgba(28, 33, 47, 0.2)
+$blue = #0072cc
+$blueDark = #2196f3
+$blueLight = #8ecdff
+
+
+
+//numeric variables
+$subHeaderHeight = 64px
+$headerHeight = 134px
+$searchBlock = 210px
+
+
+//mixins
+absoluteElement(position, top, left)
+	position position
+	top top
+	left left
+
+sizeElement(width, height)
+	width width
+	height height
+
+linear-interpolation($map)
+	if (length(keys($map)) != 2)
+		error('Map must have exactly 2 values.')
+	$keys   = keys($map)
+	$values = values($map)
+	$max-width = unit(pop($keys), '')
+	$max-size  = unit(pop($values), '')
+	$min-width = unit(pop($keys), '')
+	$min-size  = unit(pop($values), '')
+	$slope       = unit(($max-size - $min-size) / ($max-width - $min-width), '')
+	$y-intercept = $min-size - $slope * $min-width
+	$sign = \+
+	if $y-intercept < 0
+		$sign = \-
+		$y-intercept = abs($y-intercept)
+	unquote('calc(' + unit($slope * 100, vw) + ' ' + $sign + ' ' + unit($y-intercept, px) + ')')
+
+//extends
+$mainContainer
+	width 71.6vw
+	max-width 1030px
+	padding 0 15px
+	margin 0 auto
+	@media screen and (max-width: 1024px)
+		width: 76vw
+	@media screen and (max-width: 767px)
+		width 100%
+
+$blueBtn
+	display inline-block
+	background-color $blue
+	line-height 56px
+	padding 0 50px
+	text-transform uppercase
+	font-family "Roboto-Medium"
+	min-width 226px
+	text-align center
+	color $white
+	&:hover
+		color $white
+
+$clearBoth
+	content ''
+	display block
+	clear both
+
+$pseudoElement
+	content ''
+	display block
+	position absolute
+
+$backgroundPosition
+	background-size cover
+	background-position center
+
+$absoluteElementPosition
+	position absolute
+	top 50%
+	left 50%
+
+$centerElement
+	transform translate(-50%, -50%)
+
+$centerElementY
+	transform translateY(-50%)
+
+$centerElementX
+	transform translateX(-50%)
+
+$centerElementMargin
+	margin 0 auto
+
+$centerText
+	text-align center
+
+$robotoMedium
+	font-family "Roboto-Medium"
+
+$fontWeight
+	font-wheight bold
+
+$textUppercase
+	text-transform uppercase
+
+$semiOpacity
+	opacity .5
+
+$smallerFontSize
+	font-size linear-interpolation((320px 8px) (1600px 10px))
+
+$smallFontSize
+	font-size linear-interpolation((320px 10px) (1600px 14px))
+
+$defaultFontSize
+	font-size linear-interpolation((320px 12px) (1600px 16px))
+
+$middleFontSize
+	font-size linear-interpolation((320px 16px) (1600px 20px))
+
+$bigFontSize
+	font-size linear-interpolation((320px 18px) (1600px 24px))
+
+$transitionDefault
+	transition all .3s
+
+$transitionSlow
+	transition all .5s
+
+$semiOpacity
+	opacity .5
+
+$noneOpacity
+	opacity 1
+
+$cursorPointer
+	cursor pointer

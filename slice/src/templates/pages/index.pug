@@ -1,0 +1,34 @@
+extends ../blocks/default.pug
+block content
+	include ../blocks/data.pug
+	include ../blocks/header.pug
+
+	section.main-block
+		.main-block__carousel
+			each slide in carouselMainSlides
+				.carousel__slide
+					.slide__image(style="background-image: url(" + slide.imageHref + ")")
+					.slide__info-wrapper
+						.slide__info
+							h1.info__caption #{slide.caption}
+							.info__description !{slide.description}
+							a.info__link(href=slide.linkHref) #{slide.link}
+		.main-block__carousel-arrows
+			.carousel-arrow.carousel-arrow_prev
+				svg.carousel-arrow_default(role="img")
+					use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel")
+				svg.carousel-arrow_hover(role="img")
+					use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel-blue")
+			.carousel-arrow.carousel-arrow_next
+				svg.carousel-arrow_default(role="img")
+					use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel")
+				svg.carousel-arrow_hover(role="img")
+					use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel-blue")
+
+
+
+
+
+
+
+

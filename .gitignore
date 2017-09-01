@@ -1,2 +1,6 @@
 .idea
 application/configs/application.php
+slice/node_modules
+slice/.idea
+slice/tmp
+slice/*.html

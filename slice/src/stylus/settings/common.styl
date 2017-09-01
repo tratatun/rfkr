@@ -1,0 +1,33 @@
+*
+	box-sizing border-box
+	margin 0
+	padding 0
+	outline none
+	border none
+	list-style-type none
+
+body
+	font-family "Roboto-Regular"
+	@extend $defaultFontSize
+	background-color $white
+	line-height 1.5
+	color $defaultBlack
+	overflow-x hidden
+	&.open-search
+		.search-container
+			height $searchBlock
+
+		@media screen and (max-height: 850px)
+			.slide__info-wrapper
+				top calc(100vh * 380/600)
+
+a
+	text-decoration none
+	color $white
+	@extend $transitionDefault
+	&:hover
+		color $blueLight
+
+h1
+	@extend $bigFontSize
+	@extend $robotoMedium

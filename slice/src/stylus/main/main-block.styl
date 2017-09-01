@@ -1,0 +1,89 @@
+.main-block
+	sizeElement(100%, 100vh)
+	color $white
+
+	.main-block__carousel,
+	.slick-list,
+	.slick-track,
+	.slide__image,
+	.slide__image:after
+		sizeElement(100%, 100%)
+
+
+	.carousel__slide
+		position relative
+
+	.slide__image
+		@extend $backgroundPosition
+		absoluteElement(absolute, 0, 0)
+		z-index 1
+		&:after
+			@extend $pseudoElement
+			background-color $shadow
+			z-index 2
+			
+
+	.slide__info-wrapper
+		width 100%
+		position absolute
+		top calc(100vh * 289/600)
+		z-index 3
+		@extend $transitionDefault
+
+	.slide__info
+		@extend $mainContainer
+
+	.info__caption
+		margin-bottom 22px
+
+	.info__description
+		margin-bottom 34px
+
+	.info__link
+		@extend $blueBtn
+
+	.slick-arrow
+		position absolute
+
+	.main-block__carousel-arrows
+		@extend $mainContainer
+		position absolute
+		left 0
+		right 0
+		bottom calc(100vh * 56/600)
+		z-index 3
+
+	.carousel-arrow
+		sizeElement(24px, 24px)
+		position absolute
+		cursor pointer
+		&.inactive
+			@extend $semiOpacity
+			cursor default
+		svg
+			sizeElement(24px, 24px)
+			@extend $transitionDefault
+			absoluteElement(absolute, 0, 0)
+		&:hover
+			.carousel-arrow_default
+				opacity 0
+			.carousel-arrow_hover
+				opacity 1
+
+
+	.carousel-arrow_prev
+		right 63px
+		svg
+			transform rotate(180deg)
+
+	.carousel-arrow_next
+		right 14px
+
+	.carousel-arrow.inactive:hover .carousel-arrow_default,
+	.carousel-arrow_default
+		opacity 1
+
+	.carousel-arrow.inactive:hover .carousel-arrow_hover,
+	.carousel-arrow_hover
+		opacity 0
+
