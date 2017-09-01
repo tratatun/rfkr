@@ -54,6 +54,27 @@ $(function(){
 		}
 	});
 
+	GLOBALS.$newsImageCarousel.slick({
+		arrows: true,
+		infinite: false,
+		asNavFor: '.carousel-news',
+	});
+
+	$('.carousel-news').slick({
+		arrows: false,
+		infinite: false,
+		dots: true,
+		asNavFor: '.carousel-news-image'
+	});
+
+
+
+	var currentNewsCarouselSlide = GLOBALS.$newsImageCarousel.slick('slickCurrentSlide');
+	if(currentNewsCarouselSlide === 0){
+		doInactivePrevBtn();
+	}
+
+
 
 
 	function doActiveNextBtn(){

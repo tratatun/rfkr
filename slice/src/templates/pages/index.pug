@@ -2,6 +2,7 @@ extends ../blocks/default.pug
 block content
 	include ../blocks/data.pug
 	include ../blocks/header.pug
+	include ../blocks/news-carousel-block.pug
 
 	section.main-block
 		.main-block__carousel
@@ -24,6 +25,20 @@ block content
 					use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel")
 				svg.carousel-arrow_hover(role="img")
 					use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel-blue")
+
+	section.news-block
+		.news-block__carousel
+			.carousel-news-image
+				each image in newsImageCarouselBlock
+					.carousel-slide
+						.carousel-slide__img(style="background-image: url(" + image.imageHref + ")")
+
+			.carousel-news
+				for item in newsCarouselBlock
+					+newsCarouselBlock(item)
+
+		.news-block__scroll
+
 
 
 

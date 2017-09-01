@@ -1,0 +1,97 @@
+.news-block
+	@extend $mainContainer
+	padding 40px 0 43px 0
+	display flex
+
+	.news-block__carousel
+		width 70%
+
+	.news-block__scroll
+		width 30%
+
+	.carousel-slide__img
+		sizeElement(100%, 422px)
+		@extend $backgroundPosition
+
+	.slick-arrow
+		position absolute
+		top 0
+		font-size 0
+		sizeElement(56px, 100%)
+		background-color rgba(0, 0, 0, .4)
+		@extend $transitionDefault
+		@extend $cursorPointer
+		z-index 2
+		&:after
+			@extend $pseudoElement
+			position absolute
+			top 50%
+			left 50%
+			@extend $centerElement
+			sizeElement(24px, 24px)
+			background-image url(../images/icons-sprite/arrow-carousel.svg)
+			background-size 100%
+			background-repeat no-repeat
+			background-position center
+			@extend $transitionDefault
+		&:hover
+			background-color rgba(0, 0, 0, .6)
+			&.slick-next:after,
+			&.slick-prev:after
+				left 55%
+
+
+
+
+	.slick-next
+		right 0
+
+	.slick-prev
+		left 0
+		transform: rotate(180deg);
+
+	.description__link
+		color $blueJeans
+		@extend $transitionDefault
+		@extend $cursorPointer
+		&:hover
+			color $blue
+
+	.slick-dots
+		li
+			display inline-block
+			&:not(:last-child)
+				margin-right 5px
+			&.slick-active
+				button
+					sizeElement(16px, 16px)
+					background-color transparent
+					border 1px solid rgba(28, 33, 47, 0.2)
+			&:not(.slick-active):hover
+				button
+					background-color $blue
+					&:before
+						@extend $noneOpacity
+
+			button
+				font-size 0
+				sizeElement(10px, 10px)
+				border-radius 50%
+				background-color rgba(28, 33, 47, 0.2)
+				@extend $transitionDefault
+				@extend $cursorPointer
+				position relative
+				&:before
+					@extend $pseudoElement
+					sizeElement(24px, 24px)
+					background-color rgba(28, 33, 47, 0.05)
+					top 50%
+					left 50%
+					@extend $centerElement
+					border-radius 50%
+					@extend $fullOpacity
+					@extend $transitionDefault
+
+
+
+
