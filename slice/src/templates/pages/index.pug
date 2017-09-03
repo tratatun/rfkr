@@ -3,6 +3,7 @@ block content
 	include ../blocks/data.pug
 	include ../blocks/header.pug
 	include ../blocks/news-carousel-block.pug
+	include ../blocks/news-short-block.pug
 
 	section.main-block
 		.main-block__carousel
@@ -30,15 +31,17 @@ block content
 		.news-block__carousel
 			.carousel-news-image
 				each image in newsImageCarouselBlock
-					.carousel-slide
-						.carousel-slide__img(style="background-image: url(" + image.imageHref + ")")
+					.carousel__slide
+						.slide__img(style="background-image: url(" + image.imageHref + ")")
 
 			.carousel-news
 				for item in newsCarouselBlock
 					+newsCarouselBlock(item)
 
 		.news-block__scroll
-
+			.news-container
+				for item in newsShortBlock
+					+newsShortBlock(item)
 
 
 

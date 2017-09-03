@@ -6,5 +6,6 @@ var GLOBALS = {
 	$mainCarouselNextBtn: $('.carousel-arrow_next'),
 	$searchContainer: $('.search-container'),
 	$newsImageCarousel: $('.carousel-news-image'),
-	$newsImageCarouselPrevBtn: $('.carousel-news-image .slick-prev')
+	$newsImageCarouselPrevBtn: $('.carousel-news-image .slick-prev'),
+	$newsImageCarouselNextBtn: $('.carousel-news-image .slick-next')
 }
