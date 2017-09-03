@@ -18,12 +18,14 @@
 			background-image linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #ffffff)
 			bottom 0
 			left 0
+			pointer-events none
 
 	.news-container
 		sizeElement(100%, 100%)
 		overflow-y auto
 		overflow-x hidden
 		padding-bottom $newsBlockShadowHeight
+		padding-right 5px
 
 	.news
 		margin-bottom 26px
@@ -35,7 +37,7 @@
 
 	.news__caption,
 	.news__description
-		font-size linear-interpolation((320px 10px) (1600px 12px))
+		@extend $smallerFontSize
 
 	.news__description
 		a
@@ -95,6 +97,7 @@
 
 	.slick-dots
 		margin 17px 0 0 5px
+		height 24px
 		li
 			display inline-block
 			&:not(:last-child)

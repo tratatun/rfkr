@@ -2,7 +2,9 @@
 $white = #fff
 $whiteOpacity = rgba(255, 255, 255, 0.2)
 $whiteSemi = rgba(255, 255, 255, 0.5)
+$whiteGray = #fafafa
 $fullBlack = #000
+$fullBlackSemi = rgba(0, 0, 0, .6)
 $defaultBlack = #1c212f
 $shadow = rgba(28, 33, 47, 0.2)
 $blue = #0072cc
@@ -17,6 +19,7 @@ $subHeaderHeight = 64px
 $headerHeight = 134px
 $searchBlock = 210px
 $newsBlockShadowHeight = 134px
+$lastNewsHeight = 96px
 
 
 //mixins
@@ -70,6 +73,23 @@ $blueBtn
 	&:hover
 		color $white
 
+$grayBtn
+	display inline-block
+	background-color transparent
+	text-transform uppercase
+	font-family "Roboto-Medium"
+	text-align center
+	font-size linear-interpolation((320px 10px) (1600px 12px))
+	opacity .6
+	color $fullBlack
+	border 1px solid $fullBlackSemi
+	padding 8px 24px
+	cursor pointer
+	transition all .3s
+	&:hover
+		color $white
+		background-color $fullBlackSemi
+
 $clearBoth
 	content ''
 	display block
@@ -116,8 +136,11 @@ $textUppercase
 $semiOpacity
 	opacity .5
 
-$smallerFontSize
+$tinyFontSize
 	font-size linear-interpolation((320px 8px) (1600px 10px))
+
+$smallerFontSize
+	font-size linear-interpolation((320px 10px) (1600px 12px))
 
 $smallFontSize
 	font-size linear-interpolation((320px 10px) (1600px 14px))

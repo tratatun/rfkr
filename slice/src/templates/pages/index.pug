@@ -4,6 +4,7 @@ block content
 	include ../blocks/header.pug
 	include ../blocks/news-carousel-block.pug
 	include ../blocks/news-short-block.pug
+	include ../blocks/last-news-block.pug
 
 	section.main-block
 		.main-block__carousel
@@ -42,6 +43,19 @@ block content
 			.news-container
 				for item in newsShortBlock
 					+newsShortBlock(item)
+
+	.last-news-wrapper
+		section.last-news
+			header.last-news__header
+				h2.header__caption Последние новости
+				button.header__btn Все Новости
+			.last-news__content
+				.content-block
+					for item in lastNews
+						+lastNew(item)
+
+	section.adjacent-links(style="height: 300px")
+
 
 
 
