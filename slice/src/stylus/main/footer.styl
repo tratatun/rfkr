@@ -1,0 +1,113 @@
+.footer-wrapper
+	background-color $defaultBlack
+
+	.footer
+		@extend $mainContainer
+
+	.footer__caption
+		@extend $smallerFontSize
+		@extend $textUppercase
+		color $white
+		opacity .4
+		padding 32px 0 20px 0
+
+
+	.footer__content
+		position relative
+		border-bottom 1px solid $whiteSemi
+		margin-bottom 34px
+		padding-bottom 15px
+		&:after
+			@extend $clearBoth
+
+	.content__col
+		float left
+		&:nth-child(1)
+			width 26%
+		&:nth-child(2)
+			width 25.5%
+		&:nth-child(3)
+			width 26%
+		&:nth-child(4)
+			width 22.5%
+
+	.content-col__sublist
+		padding-left 15px
+
+	.footer-link
+		@extend $smallFontSize
+		@extend $transitionDefault
+		display inline-block
+
+	.item__link
+		opacity .6
+		margin-bottom 9px
+		&:hover
+			opacity 1
+
+	.sublist-item__link
+		margin-bottom 11px
+
+	.footer__bottom
+		display flex
+		position relative
+		padding-bottom 34px
+
+	.social-block
+		width 27.8%
+
+	.copyright
+		width 72.2%
+
+	.btn-up
+		position absolute
+		right 0
+		top -4px
+		sizeElement(26px, 26px)
+		cursor pointer
+		&:hover
+			.btn-up__icon_default
+				@extend $fullOpacity
+			.btn-up__icon_hover
+				@extend $noneOpacity
+
+	.btn-up__icon
+		@extend $transitionDefault
+		position absolute
+		sizeElement(100%, 100%)
+		top 0
+		left 0
+
+	.btn-up__icon_default
+		@extend $noneOpacity
+
+	.btn-up__icon_hover
+		@extend $fullOpacity
+
+	.social-block__link
+		@extend $transitionDefault
+		@extend $cursorPointer
+		display inline-block
+		opacity .6
+		&:not(:last-child)
+			margin-right 20px
+		&:hover
+			@extend $noneOpacity
+
+	.link__icon_youtube
+		sizeElement(26px, 20px)
+
+	.link__icon_odnoklassniki
+		sizeElement(13px, 22px)
+
+	.link__icon_facebook,
+	.link__icon_vk,
+	.link__icon_instagram
+		sizeElement(22px, 22px)
+
+	.copyright
+		color $white
+		opacity .2
+		line-height 1.9
+		@extend $smallerFontSize
+

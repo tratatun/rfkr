@@ -1,0 +1,43 @@
+.adjacent-links-wrapper
+	background-color rgba(28, 33, 47, 0.05)
+	padding 43px 0 40px 0
+
+	.adjacent-links
+		@extend $mainContainer
+
+	.adjacent-links__caption
+		@extend $semiCaption
+		margin-bottom 32px
+
+	.adjacent-link
+		@extend $transitionDefault
+		display inline-block
+		width 48.3%
+		background-color $whiteGray
+		padding 24px
+		margin-bottom 42px
+		&:nth-child(odd)
+			margin-right 3.4%
+		&:hover
+			background-color rgba(28, 33, 47, 0.05)
+			.row__link-text
+				color $blue
+
+	.adjacent-link__caption
+		@extend $defaultFontSize
+		color $defaultBlack
+		margin-bottom 48px
+
+	.adjacent-link__row
+		position relative
+		&:after
+			@extend $clearBoth
+
+	.row__link-text
+		@extend $transitionDefault
+		color $blueJeans
+		float left
+
+	.row__icon
+		float right
+		sizeElement(24px, 24px)

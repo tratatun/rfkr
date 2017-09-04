@@ -5,8 +5,10 @@ block content
 	include ../blocks/news-carousel-block.pug
 	include ../blocks/news-short-block.pug
 	include ../blocks/last-news-block.pug
+	include ../blocks/adjacent-links-block.pug
+	include ../blocks/footer.pug
 
-	section.main-block
+	section.main-block#main-block
 		.main-block__carousel
 			each slide in carouselMainSlides
 				.carousel__slide
@@ -54,7 +56,14 @@ block content
 					for item in lastNews
 						+lastNew(item)
 
-	section.adjacent-links(style="height: 300px")
+	.adjacent-links-wrapper
+		section.adjacent-links
+			h2.adjacent-links__caption Смежные правительственные ресурсы
+			.adjacent-links__content
+				for item in adjacentLinks
+					+adjacentLink(item)
+
+	+footer(item)
 
 
 

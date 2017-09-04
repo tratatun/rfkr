@@ -1,0 +1,25 @@
+mixin footer(item)
+	.footer-wrapper
+		footer.footer
+			.footer__caption Структура сайта
+			.footer__content
+				for item in footerLinks
+					ul.content__col
+						li.content__col__item
+							a.footer-link.item__link(href=item.href) #{item.title}
+						ul.content-col__sublist
+							for subitem in item.items
+								li.sublist-item
+									a.footer-link.sublist-item__link(href=subitem.href) #{subitem.title}
+			.footer__bottom
+				.social-block
+					for item in social
+						a.social-block__link(href=item.href target="_blank")
+							svg(class="link__icon link__icon_" + item.title role="img")
+								use(xlink:href="./assets/images/svg-sprite.svg#shape-" + item.title)
+				.copyright НО РФ КРМД РК • 2017 • Материалы доступны по лицензии: CCA 4.0 International
+				.btn-up.animate-anchor(data-id="#main-block")
+					svg.btn-up__icon.btn-up__icon_default(role="img")
+						use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-up")
+					svg.btn-up__icon.btn-up__icon_hover(role="img")
+						use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-up-blue")
