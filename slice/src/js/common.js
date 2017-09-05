@@ -10,8 +10,15 @@ $(function(){
 	$('.toogle').click(function(e){
 		e.preventDefault();
 		var $this = $(this),
-			thisHref = $this.attr('href');
-		console.log(thisHref);
-		GLOBALS.$body.find(thisHref).addClass('open').animate({ height: 'auto', overflow: 'visible' }, 300)
+			thisHref = $this.attr('href'),
+			$currentToogle = $(thisHref);
+
+		if($currentToogle.hasClass('open')){
+			$currentToogle.removeClass('open').removeAttr('style');
+			return false;
+		}
+
+		var $currentToogleHeight = $currentToogle.css('height', 'auto').outerHeight();
+		$currentToogle.css("height",$currentToogleHeight).addClass('open');
 	});
 });

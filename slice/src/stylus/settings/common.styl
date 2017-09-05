@@ -98,8 +98,10 @@ textarea
 
 .toogle-block
 	height $toogleBlockHeight
+	transition height .5s linear
 	overflow hidden
-
+	&.open
+		transition height .5s linear
 
 .toogle
 	@extend $robotoMedium
