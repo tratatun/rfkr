@@ -15,7 +15,7 @@ block content
 					.slide__image(style="background-image: url(" + slide.imageHref + ")")
 					.slide__info-wrapper
 						.slide__info
-							h1.info__caption #{slide.caption}
+							h3.info__caption #{slide.caption}
 							.info__description !{slide.description}
 							a.info__link(href=slide.linkHref) #{slide.link}
 		.main-block__carousel-arrows
@@ -49,7 +49,7 @@ block content
 	.last-news-wrapper
 		section.last-news
 			header.last-news__header
-				h2.header__caption Последние новости
+				h4.header__caption Последние новости
 				button.header__btn Все Новости
 			.last-news__content
 				.content-block
@@ -58,7 +58,7 @@ block content
 
 	.adjacent-links-wrapper
 		section.adjacent-links
-			h2.adjacent-links__caption Смежные правительственные ресурсы
+			h4.adjacent-links__caption Смежные правительственные ресурсы
 			.adjacent-links__content
 				for item in adjacentLinks
 					+adjacentLink(item)

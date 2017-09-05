@@ -316,3 +316,157 @@
 		}
 	]
 
+-
+	var leaveMessageFields = [
+		{
+			classModificator: 'type',
+			fields: [
+				{
+					required: 'true',
+					label: 'Тип обращения',
+					type: 'select',
+					tip: 'Обязательное поле. Поля помеченные звёздочкой «<span class="required">*</span>» обязательные',
+					placeholder: 'Не выбрано',
+					options: [
+						{
+							content: 'Предложение',
+							value: 'proposal'
+						},
+						{
+							content: 'Заявление',
+							value: 'statement'
+						},
+						{
+							content: 'Жалоба',
+							value: 'complaint'
+						}
+					]
+				}
+			]
+		},
+		{
+			classModificator: 'user',
+			fields: [
+				{
+					required: 'true',
+					label: 'Фамилия',
+					nameInput: 'lastname',
+					tip: 'Используйте настоящее имя'
+				},
+				{
+					required: 'true',
+					label: 'Имя',
+					nameInput: 'firstname'
+				},
+				{
+					label: 'Отчество',
+					nameInput: 'patronymic'
+				},
+				{
+					label: 'Пол',
+					nameInput: 'gender'
+				}
+			]
+		},
+		{
+			classModificator: 'address',
+			fields: [
+				{
+					required: 'true',
+					label: 'Адрес дома',
+					placeholder: 'Например: г. Симферополь, пр. Кирова 1',
+					nameInput: 'address',
+					tip: 'Порядок заполнения: Город, дом, корпус'
+				}
+			]
+		},
+		{
+			classModificator: 'email',
+			fields: [
+				{
+					required: 'true',
+					label: 'Электронная почта',
+					nameInput: 'email',
+					tip: 'Срок ответа составляет до 3-х рабочих дней'
+				}
+			]
+		},
+		{
+			classModificator: 'additionally',
+			title: 'Дополнительные контактные данные',
+			toogle: 'toogle-block',
+			id: 'additionally-data',
+			fields: [
+				{
+					label: 'Почтовый адрес',
+					nameInput: 'post-address',
+					tip: 'Индекс, Страна, Край/округ/республика, город, дом, корпус, квартира'
+				},
+				{
+					label: 'Телефон',
+					nameInput: 'telephone',
+					tip: '+7(123) 45-67-89'
+				}
+			]
+		},
+		{
+			classModificator: 'thematics',
+			fields: [
+				{
+					required: 'true',
+					label: 'Тематика',
+					type: 'select',
+					tip: 'Выбирайте основную тему обращения',
+					options: [
+						{
+							content: 'Уплата взносов на капитальный ремонт',
+							value: 'payment-contributions'
+						},
+						{
+							content: 'Проведение капитального ремонта',
+							value: 'capital-repair'
+						}
+					]
+				}
+			]
+		},
+		{
+			classModificator: 'treatment',
+			fields: [
+				{
+					required: 'true',
+					label: 'Обращение',
+					type: 'textarea',
+					tip: 'Количество символов ограничено. Осталось: <span>440</span>',
+					textareaLength: '440'
+				}
+			]
+		},
+		{
+			classModificator: 'attach',
+			fields: [
+				{
+					label: 'Файл с компьютера',
+					type: 'button',
+					btnText: 'Выбрать файл',
+					tip: 'До 10 Мб. Формат: txt, doc, docx, pdf, img, png'
+				},
+				{
+					label: 'Указать ссылку на облачное хранилище',
+					btnText: 'Выбрать файл',
+					tip: 'Допустимы: Yandex Disk, Google Drive, Dropbox, Облако Mail.Ru, iCloud, OneDrive'
+				}
+			]
+		},
+		{
+			classModificator: 'captcha',
+			fields: [
+				{
+					required: 'true',
+					label: 'Защита от спама',
+					type: 'captcha',
+					tip: 'Поставьте флажок'
+				}
+			]
+		}
+	]

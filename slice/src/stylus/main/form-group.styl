@@ -1,0 +1,50 @@
+.form-group-block
+	padding 32px
+	background-color $whiteGray
+	margin-bottom 32px
+	position relative
+	&:after
+		@extend $clearBoth
+
+	.form-group__tip
+		@extend $smallerFontSize
+		@extend $defaultOpacity
+		.required
+			color $red
+
+.form-group-block_type
+	.form-group
+		width 47%
+
+.form-group-block_user
+	.form-group
+		float left
+		width 25%
+		padding-right 3%
+
+.form-group-block_address
+	.form-group
+		width 72%
+
+.form-group-block_email
+	.form-group
+		width 47%
+
+.form-group-block_additionally
+	.form-group
+		float left
+		&:nth-child(2)
+			width 75%
+			padding-right 3%
+		&:nth-child(3)
+			width 25%
+			padding-right 3%
+
+.form-group-block_thematics
+	.form-group
+		width 47%
+
+
+.form-group-block_treatment
+	.form-group
+		width 72%

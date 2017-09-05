@@ -1,0 +1,26 @@
+mixin formGroupBlock(item)
+	div(class="form-group-block form-group-block_" + item.classModificator + ' ' + item.toogle id=item.id)
+		if item.title
+			a(href="#" + item.id).toogle #{item.title}
+		for field in item.fields
+			.form-group
+				if field.required
+					label.form-group__label.required #{field.label}
+				else
+					label.form-group__label #{field.label}
+
+				if field.type === 'select'
+					select(placeholder=field.placeholder).form-group__select
+						for option in field.options
+							option(value=option.value).select__option #{option.content}
+				else if field.type === 'textarea'
+					textarea.form-group__textarea(minlength=5 maxlength=field.textareaLength)
+				else if field.type === 'button'
+					button.form-group__button #{field.btnText}
+				else if field.type === 'captcha'
+					.form-group__captcha
+				else
+					input(type="text" placeholder=field.placeholder name=field.nameInput).form-group__input
+
+				if field.tip
+					span.form-group__tip !{field.tip}

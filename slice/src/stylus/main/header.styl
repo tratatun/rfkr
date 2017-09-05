@@ -175,52 +175,13 @@
 		display flex
 		align-items center
 
-	.header__logo
-		position absolute
-		cursor pointer
-		sizeElement(56px, 45px)
-		margin-top 6px
-		left calc(-100vw * 65/1440)
-		.logo-default
-			opacity 1
-		.logo-hover
-			opacity 0
-
-	.logo
-		sizeElement(100%, 100%)
-		position absolute
-		@extend $transitionDefault
-
-	.header__logo:hover
-		.logo-default
-			opacity 0
-		.logo-hover
-			opacity 1
-
-
-	.company__type,
-	.company__name
-		color $white
-
-	.company__type
-		@extend $tinyFontSize
-		@extend $textUppercase
-		margin-bottom 5px
-		opacity .6
-		padding-left 10px
-
-	.company__name
-		@extend $robotoMedium
-		font-size linear-interpolation((320px 14px) (1600px 18px))
-		max-width 405px
-
 	.header__nav
 		position absolute
 		right 15px
 
 	.nav__link
 		@extend $robotoMedium
-		font-size linear-interpolation((320px 13px) (1600px 15px))
+		font-size 15px
 		&:not(:last-child)
 			margin-right 2.4em
 

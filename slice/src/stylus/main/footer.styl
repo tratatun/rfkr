@@ -5,18 +5,15 @@
 		@extend $mainContainer
 
 	.footer__caption
-		@extend $smallerFontSize
 		@extend $textUppercase
 		color $white
-		opacity .4
 		padding 32px 0 20px 0
-
 
 	.footer__content
 		position relative
 		border-bottom 1px solid $whiteSemi
 		margin-bottom 34px
-		padding-bottom 15px
+		padding-bottom 17px
 		&:after
 			@extend $clearBoth
 
@@ -35,18 +32,16 @@
 		padding-left 15px
 
 	.footer-link
+		@extend $firasansRegular
 		@extend $smallFontSize
 		@extend $transitionDefault
 		display inline-block
+		margin-bottom 9px
 
 	.item__link
 		opacity .6
-		margin-bottom 9px
 		&:hover
 			opacity 1
-
-	.sublist-item__link
-		margin-bottom 11px
 
 	.footer__bottom
 		display flex
@@ -57,12 +52,13 @@
 		width 27.8%
 
 	.copyright
+		@extend $firasansRegular
 		width 72.2%
 
 	.btn-up
 		position absolute
 		right 0
-		top -4px
+		top 0
 		sizeElement(26px, 26px)
 		cursor pointer
 		&:hover
@@ -90,7 +86,7 @@
 		display inline-block
 		opacity .6
 		&:not(:last-child)
-			margin-right 20px
+			margin-right 24px
 		&:hover
 			@extend $noneOpacity
 

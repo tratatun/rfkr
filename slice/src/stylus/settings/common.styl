@@ -7,7 +7,7 @@
 	list-style-type none
 
 body
-	font-family "Roboto-Regular"
+	font-family "Roboto-Regular", Arial, sans-serif
 	@extend $defaultFontSize
 	background-color $white
 	line-height 1.5
@@ -28,9 +28,189 @@ a
 	&:hover
 		color $blueLight
 
-h1
-	@extend $bigFontSize
+h1, h2, h3
 	@extend $robotoMedium
 
+h1
+	@extend $biggerFontSize
+
 h2
+	@extend $bigFontSize
+
+h3, h4
 	@extend $middleFontSize
+
+h4
+	@extend $textUppercase
+	opacity .6
+
+h5, h6
+	@extend $smallerFontSize
+
+h6
+	@extend $firasansMedium
+	opacity .4
+
+label, input, select, textarea
+	display block
+	width 100%
+
+label
+	@extend $robotoMedium
+	margin-bottom 11px
+	&.required
+		position relative
+		&:after
+			@extend $centerElementY
+			content '*'
+			display block
+			position absolute
+			top 50%
+			right 0
+			color $red
+
+input, select
+	height $inputHeight
+	line-height $inputHeight
+	padding 0 16px
+
+input, select, textarea
+	@extend $defaultFontSize
+	@extend $transitionDefault
+	font-family "Roboto-Regular"
+	border 1px solid rgba(28, 33, 47, 0.4)
+	margin-bottom 4px
+	//&:focus
+	//	border 1px solid $blueLight
+	//	box-shadow 0 0 1px $blueLight
+
+textarea
+	padding 16px
+	resize none
+	height $textareaHeight
+	color $defaultBlack
+
+.divider
+	sizeElement(96%, 1px)
+	background-color $defaultBlack
+	opacity .06
+	margin 0 auto
+
+.toogle-block
+	height $toogleBlockHeight
+	overflow hidden
+
+
+.toogle
+	@extend $robotoMedium
+	@extend $defaultOpacity
+	display block
+	color $defaultBlack
+	padding-left 30px
+	margin 0 0 33px 8px
+	position relative
+	&:hover
+		color $defaultBlack
+	&:after
+		@extend $pseudoElement
+		@extend $transitionDefault
+		sizeElement(0, 0)
+		border 5px solid transparent
+		border-top-color $fullBlackSemi
+		top 40%
+		left 0
+		transform-origin center top
+		//transform rotate(180deg)
+		//top 55%
+
+
+.header__logo
+	position absolute
+	cursor pointer
+	sizeElement(56px, 45px)
+	margin-top 6px
+	left calc(-100vw * 65/1440)
+	.logo-default
+		opacity 1
+	.logo-hover
+		opacity 0
+
+	.logo
+		sizeElement(100%, 100%)
+		position absolute
+		@extend $transitionDefault
+
+	&:hover
+		.logo-default
+			opacity 0
+		.logo-hover
+			opacity 1
+
+.header__company
+	.company__type,
+	.company__name
+		color $white
+
+	.company__type
+		@extend $tinyFontSize
+		@extend $textUppercase
+		margin-bottom 5px
+		opacity .6
+		padding-left 10px
+
+	.company__name
+		@extend $robotoMedium
+		font-size 18px
+		max-width 405px
+
+//селекты на всех страницах
+.minict_wrapper
+	margin-bottom 4px
+	color $defaultBlack !important
+	sizeElement(100% !important, $inputHeight !important)
+	border-radius 0 !important
+	line-height $inputHeight !important
+
+	span
+		height 100% !important
+		padding 0 16px !important
+		height $inputHeight !important
+		line-height $inputHeight !important
+		&:empty:before
+			display block !important
+			color $defaultBlack !important
+			height 'calc(%s - 2px)'% $inputHeight !important
+			line-height 'calc(%s - 2px)'% $inputHeight !important
+
+	&:after
+		@extend $cursorPointer
+		@extend $transitionDefault
+		content '' !important
+		display block
+		sizeElement(8px !important, 8px !important)
+		border 1px solid $fullBlackSemi
+		position absolute !important
+		top 33% !important
+		right 20px !important
+		transform rotate(45deg)
+		border-left-color transparent
+		border-top-color transparent
+
+	&.active:after
+		transform rotate(225deg)
+		top 46% !important
+
+	ul
+		margin-top 20px !important
+		box-shadow 0 2px 4px 0 rgba(0, 0, 0, 0.24)
+		li
+			@extend $transitionDefault
+			height $inputHeight !important
+			line-height $inputHeight !important
+			padding 0 16px !important
+			border-bottom 1px solid rgba(28, 33, 47, 0.1)
+			&:hover
+				background-color $whiteGray !important
+				color $defaultBlack !important
+
+

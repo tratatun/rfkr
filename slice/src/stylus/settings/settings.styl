@@ -11,15 +11,20 @@ $blue = #0072cc
 $blueDark = #2196f3
 $blueLight = #8ecdff
 $blueJeans = #304ffe
+$red = #f44336
 
 
 
 //numeric variables
 $subHeaderHeight = 64px
 $headerHeight = 134px
+$headerShortHeight = 110px
 $searchBlock = 210px
 $newsBlockShadowHeight = 134px
 $lastNewsHeight = 96px
+$inputHeight = 48px
+$textareaHeight = 144px
+$toogleBlockHeight = 86px
 
 
 //mixins
@@ -79,7 +84,7 @@ $grayBtn
 	text-transform uppercase
 	font-family "Roboto-Medium"
 	text-align center
-	font-size linear-interpolation((320px 10px) (1600px 12px))
+	font-size 12px
 	opacity .6
 	color $fullBlack
 	border 1px solid $fullBlackSemi
@@ -89,10 +94,6 @@ $grayBtn
 	&:hover
 		color $white
 		background-color $fullBlackSemi
-
-$semiCaption
-	opacity .6
-	text-transform uppercase
 
 $clearBoth
 	content ''
@@ -107,6 +108,10 @@ $pseudoElement
 $backgroundPosition
 	background-size cover
 	background-position center
+
+$flexBlock
+	display flex
+	align-items center
 
 $absoluteElementPosition
 	position absolute
@@ -131,6 +136,12 @@ $centerText
 $robotoMedium
 	font-family "Roboto-Medium"
 
+$firasansMedium
+	font-family "Firasans-Medium"
+
+$firasansRegular
+	font-family "Firasans-Regular"
+
 $fontWeight
 	font-wheight bold
 
@@ -141,22 +152,25 @@ $semiOpacity
 	opacity .5
 
 $tinyFontSize
-	font-size linear-interpolation((320px 8px) (1600px 10px))
+	font-size 10px
 
 $smallerFontSize
-	font-size linear-interpolation((320px 10px) (1600px 12px))
+	font-size 12px
 
 $smallFontSize
-	font-size linear-interpolation((320px 10px) (1600px 14px))
+	font-size 14px
 
 $defaultFontSize
-	font-size linear-interpolation((320px 12px) (1600px 16px))
+	font-size 16px
 
 $middleFontSize
-	font-size linear-interpolation((320px 16px) (1600px 20px))
+	font-size 20px
 
 $bigFontSize
-	font-size linear-interpolation((320px 18px) (1600px 24px))
+	font-size 24px
+
+$biggerFontSize
+	font-size 28px
 
 $transitionDefault
 	transition all .3s
@@ -169,6 +183,9 @@ $fullOpacity
 
 $semiOpacity
 	opacity .5
+
+$defaultOpacity
+	opacity .6
 
 $noneOpacity
 	opacity 1
