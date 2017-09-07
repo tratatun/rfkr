@@ -1,10 +1,12 @@
 $(function(){
+	var $searchBlock = $('.search-container');
+
 	$(document).on('click', '.subheader__search', function(){
-		GLOBALS.$body.addClass('open-search');
+		$searchBlock.addClass('open');
 	});
 
 	$(document).on('click', '.close__icon', function(){
-		GLOBALS.$body.removeClass('open-search');
+		$searchBlock.removeClass('open');
 	});
 
 	$('.toogle').click(function(e){

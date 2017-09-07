@@ -5,7 +5,7 @@ block content
 	include ../blocks/news-carousel-block.pug
 	include ../blocks/news-short-block.pug
 	include ../blocks/last-news-block.pug
-	include ../blocks/adjacent-links-block.pug
+	include ../blocks/link-block.pug
 	include ../blocks/footer.pug
 
 	section.main-block#top
@@ -61,7 +61,7 @@ block content
 			h4.adjacent-links__caption Смежные правительственные ресурсы
 			.adjacent-links__content
 				for item in adjacentLinks
-					+adjacentLink(item)
+					+link(item)
 
 	+footer(item)
 

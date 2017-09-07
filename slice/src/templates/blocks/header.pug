@@ -1,18 +1,7 @@
 include ../blocks/data.pug
 
 .headers-container
-	.search-container
-		.search
-			.search__top-row
-				.top-row__caption Найти на сайте
-				.top-row__close
-					img.close__icon(src="./assets/images/icons/close.svg" alt="")
-			.search__bottom-row
-				.bottom-row__left-col
-					label.left-col__search-label(for="search") Введите запрос для поиска
-					input.left-col__search-field(type="text" id="search")
-				.bottom-row__right-col
-					button.right-col__search-btn найти
+	include ../blocks/search-block.pug
 	.subheader-container
 		.subheader
 			.subheader_left-col

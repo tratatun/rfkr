@@ -1,0 +1,7 @@
+mixin link(item)
+	a(href=item.href target="_blank").link
+		h3.link__caption !{item.caption}
+		.link__row
+			p.row__link-text #{item.linkText}
+			svg.row__icon(role="img")
+				use(xlink:href="./assets/images/svg-sprite.svg#shape-link")

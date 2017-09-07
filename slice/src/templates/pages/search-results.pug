@@ -1,0 +1,19 @@
+extends ../blocks/default.pug
+block content
+	include ../blocks/data.pug
+	include ../blocks/link-block.pug
+	include ../blocks/footer.pug
+
+	.search-results
+		include ../blocks/search-block.pug
+		.results
+			for item in searchResults
+				+link(item)
+
+			.results__rul
+				|Для уточнения поиска введите
+				span  более точную формулировку
+				|  или вы можете
+				a(href="")  обратиться в поддержку
+
+	+footer(item)
