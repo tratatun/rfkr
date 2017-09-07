@@ -11,6 +11,7 @@ block content
 			for item in leaveMessageFields
 				+formGroupBlock(item)
 			.divider
-			button(type="reset").message-send__reset Отменить
-			button(type="submit").message-send__submit Отправить
+			.form__footer
+				button(type="reset").message-send__reset Отменить
+				button(type="submit").message-send__submit Отправить
 

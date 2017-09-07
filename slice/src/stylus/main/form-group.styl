@@ -12,6 +12,23 @@
 		.required
 			color $red
 
+	.form-group__button
+		@extend $grayBtn
+		display block
+		margin 16px 0
+		&[disabled]
+			opacity .12
+			&:hover
+				background-color transparent
+				cursor default
+				color $defaultBlack
+
+	.form-group__captcha
+		sizeElement(100%, 125px)
+		border solid 1px rgba(28, 33, 47, 0.4)
+		background-color $white
+		margin-bottom 4px
+
 .form-group-block_type
 	.form-group
 		width 47%
@@ -48,3 +65,13 @@
 .form-group-block_treatment
 	.form-group
 		width 72%
+
+.form-group-block_attach
+	.form-group
+		padding-right 3%
+		&:last-child
+			margin-top 32px
+
+.form-group-block_captcha
+	.form-group
+		width 36%

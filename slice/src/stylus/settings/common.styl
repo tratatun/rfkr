@@ -51,6 +51,14 @@ h6
 	@extend $firasansMedium
 	opacity .4
 
+.form-group.error
+	label.required
+		color $redOrange
+		+ input, + select, + textarea, + .form-group__captcha
+			border 1px solid rgba(255, 87, 34, 0.4)
+	.minict_wrapper
+		border 1px solid rgba(255, 87, 34, 0.4)
+
 label, input, select, textarea
 	display block
 	width 100%
@@ -68,6 +76,8 @@ label
 			top 50%
 			right 0
 			color $red
+	&.error
+		display none !important
 
 input, select
 	height $inputHeight
@@ -91,7 +101,7 @@ textarea
 	color $defaultBlack
 
 .divider
-	sizeElement(96%, 1px)
+	sizeElement(94%, 1px)
 	background-color $defaultBlack
 	opacity .06
 	margin 0 auto

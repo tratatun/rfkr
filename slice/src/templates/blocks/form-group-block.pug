@@ -10,11 +10,11 @@ mixin formGroupBlock(item)
 					label.form-group__label #{field.label}
 
 				if field.type === 'select'
-					select(placeholder=field.placeholder).form-group__select
+					select(placeholder=field.placeholder name=field.nameSelect).form-group__select
 						for option in field.options
 							option(value=option.value).select__option #{option.content}
 				else if field.type === 'textarea'
-					textarea.form-group__textarea(minlength=5 maxlength=field.textareaLength)
+					textarea.form-group__textarea(minlength=5 maxlength=field.textareaLength name=field.nameInput)
 				else if field.type === 'button'
 					button.form-group__button #{field.btnText}
 				else if field.type === 'captcha'

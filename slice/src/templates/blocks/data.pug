@@ -416,6 +416,7 @@
 					required: 'true',
 					label: 'Тематика',
 					type: 'select',
+					nameSelect: 'thematic',
 					tip: 'Выбирайте основную тему обращения',
 					options: [
 						{
@@ -437,6 +438,7 @@
 					required: 'true',
 					label: 'Обращение',
 					type: 'textarea',
+					nameInput: 'message',
 					tip: 'Количество символов ограничено. Осталось: <span>440</span>',
 					textareaLength: '440'
 				}
@@ -444,6 +446,9 @@
 		},
 		{
 			classModificator: 'attach',
+			title: 'Прикрепить файл',
+			toogle: 'toogle-block',
+			id: 'attach-file',
 			fields: [
 				{
 					label: 'Файл с компьютера',

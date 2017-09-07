@@ -4,7 +4,7 @@ $whiteOpacity = rgba(255, 255, 255, 0.2)
 $whiteSemi = rgba(255, 255, 255, 0.5)
 $whiteGray = #fafafa
 $fullBlack = #000
-$fullBlackSemi = rgba(0, 0, 0, .6)
+$fullBlackSemi = rgba(0, 0, 0, .5)
 $defaultBlack = #1c212f
 $shadow = rgba(28, 33, 47, 0.2)
 $blue = #0072cc
@@ -12,6 +12,7 @@ $blueDark = #2196f3
 $blueLight = #8ecdff
 $blueJeans = #304ffe
 $red = #f44336
+$redOrange = #ff5722
 
 
 
@@ -75,6 +76,7 @@ $blueBtn
 	min-width 226px
 	text-align center
 	color $white
+	cursor pointer
 	&:hover
 		color $white
 
@@ -94,6 +96,21 @@ $grayBtn
 	&:hover
 		color $white
 		background-color $fullBlackSemi
+
+$grayBtnBig
+	display inline-block
+	background-color transparent
+	text-transform uppercase
+	font-family "Roboto-Medium"
+	text-align center
+	font-size 16px
+	color rgba(28, 33, 47, 0.6)
+	border 2px solid $fullBlackSemi
+	cursor pointer
+	transition all .3s
+	line-height 52px
+	min-width 226px
+
 
 $clearBoth
 	content ''

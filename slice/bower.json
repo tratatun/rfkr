@@ -22,7 +22,8 @@
     "slick-carousel": "^1.7.1",
     "jquery.nicescroll": "nicescroll#^3.7.6",
     "animatescroll": "^1.0.7",
-    "chosen": "^1.8.0",
-    "minimalect": "*"
+    "minimalect": "*",
+    "jquery-validation": "^1.17.0",
+    "jquery-mask-plugin": "^1.14.11"
   }
 }

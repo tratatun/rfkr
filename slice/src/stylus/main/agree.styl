@@ -1,0 +1,36 @@
+.agree-container
+	@extend $mainContainer
+	padding-top "calc(44px + %s)" % $headerShortHeight
+
+	.agree
+		width 100%
+		max-width 742px
+
+	.agree__caption
+		margin-bottom 3px
+
+	.agree__subcaption
+		margin-bottom 32px
+
+	.agree-text__first-part
+		@extend $robotoMedium
+		margin-bottom 24px
+
+	.agree-text__second-part,
+	.divider
+		margin-bottom 32px
+
+	.divider
+		width 100%
+
+	.btn-container
+		text-align right
+		padding-bottom 40px
+
+	.btn-cancel
+		@extend $grayBtnBig
+		margin-right 28px
+
+	.btn-continue
+		@extend $blueBtn
+		@extend $defaultFontSize
