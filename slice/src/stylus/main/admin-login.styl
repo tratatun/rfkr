@@ -1,0 +1,26 @@
+.admin-login
+	@extend $mainContainer
+	padding-top 'calc(46px + %s)' % $headerAdmin
+
+	.login__subcaption
+		@extend $robotoMedium
+		margin-bottom 32px
+
+	.form-group-block
+		margin-bottom 28px
+
+	.form-group
+		float left
+		width 48.5%
+		&:not(:last-child)
+			margin-right 3%
+
+	.button-container
+		@extend $buttonContainer
+
+	.btn-reset
+		@extend $grayBtnBig
+		margin-right 28px
+
+	.btn-login
+		@extend $blueBtnBigger

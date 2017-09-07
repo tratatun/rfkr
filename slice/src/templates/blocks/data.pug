@@ -319,7 +319,7 @@
 -
 	var leaveMessageFields = [
 		{
-			classModificator: 'type',
+			classModificator: 'form-group-block_type',
 			fields: [
 				{
 					required: 'true',
@@ -345,7 +345,7 @@
 			]
 		},
 		{
-			classModificator: 'user',
+			classModificator: 'form-group-block_user',
 			fields: [
 				{
 					required: 'true',
@@ -369,7 +369,7 @@
 			]
 		},
 		{
-			classModificator: 'address',
+			classModificator: 'form-group-block_address',
 			fields: [
 				{
 					required: 'true',
@@ -381,7 +381,7 @@
 			]
 		},
 		{
-			classModificator: 'email',
+			classModificator: 'form-group-block_email',
 			fields: [
 				{
 					required: 'true',
@@ -392,7 +392,7 @@
 			]
 		},
 		{
-			classModificator: 'additionally',
+			classModificator: 'form-group-block_additionally',
 			title: 'Дополнительные контактные данные',
 			toogle: 'toogle-block',
 			id: 'additionally-data',
@@ -410,7 +410,7 @@
 			]
 		},
 		{
-			classModificator: 'thematics',
+			classModificator: 'form-group-block_thematics',
 			fields: [
 				{
 					required: 'true',
@@ -432,7 +432,7 @@
 			]
 		},
 		{
-			classModificator: 'treatment',
+			classModificator: 'form-group-block_treatment',
 			fields: [
 				{
 					required: 'true',
@@ -445,7 +445,7 @@
 			]
 		},
 		{
-			classModificator: 'attach',
+			classModificator: 'form-group-block_attach',
 			title: 'Прикрепить файл',
 			toogle: 'toogle-block',
 			id: 'attach-file',
@@ -464,7 +464,7 @@
 			]
 		},
 		{
-			classModificator: 'captcha',
+			classModificator: 'form-group-block_captcha',
 			fields: [
 				{
 					required: 'true',
@@ -492,5 +492,36 @@
 			caption: 'Результаты сортируются по соответствию поисковому запросу <span>123</span>',
 			linkText: 'Название страницы, где находится текст содержащий писковый запрос',
 			href: '/'
+		}
+	]
+
+-
+	var adminHeaderLinks = [
+		{
+			link: 'Страницы',
+			href: '/'
+		},
+		{
+			link: 'Команда',
+			href: '/'
+		},
+		{
+			link: 'Обращения',
+			href: '/'
+		}
+	]
+
+-
+	var adminLoginFields = [
+		{
+			classModificator: '',
+			fields: [
+				{
+					label: 'Электронная почта'
+				},
+				{
+					label: 'Пароль'
+				}
+			]
 		}
 	]

@@ -1,0 +1,38 @@
+.header-admin-container
+	background-color $red
+	absoluteElement(fixed, 0, 0)
+	width 100%
+	z-index 10
+
+	.header-admin
+		@extend $mainContainer
+		@extend $smallFontSize
+		height $headerAdmin
+		position relative
+
+	.navigation__item
+		height 100%
+		display inline-block
+		margin-right 20px
+		line-height $headerAdmin
+		&:hover
+			@extend $noneOpacity
+			color $white
+
+	.item__link
+		@extend $semiOpacity
+		@extend $transitionDefault
+		&:hover,
+		&.active
+			@extend $noneOpacity
+			color $white
+
+	.logout
+		@extend $cursorPointer
+		@extend $centerElementY
+		position absolute
+		top 50%
+		right 15px
+		background-color $transparent
+		color $white
+

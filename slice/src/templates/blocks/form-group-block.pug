@@ -1,5 +1,5 @@
 mixin formGroupBlock(item)
-	div(class="form-group-block form-group-block_" + item.classModificator + ' ' + item.toogle id=item.id)
+	div(class="form-group-block " + item.classModificator + ' ' + item.toogle id=item.id)
 		if item.title
 			a(href="#" + item.id).toogle #{item.title}
 		for field in item.fields

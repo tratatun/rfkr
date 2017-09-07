@@ -1,0 +1,8 @@
+include ../blocks/data.pug
+	.header-admin-container
+		header.header-admin
+			ul.navigation
+				for item in adminHeaderLinks
+					li.navigation__item
+						a(href=item.href).item__link #{item.link}
+			button.logout Войти
