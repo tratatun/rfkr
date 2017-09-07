@@ -1,0 +1,18 @@
+extends ../blocks/default.pug
+block content
+	include ../blocks/data.pug
+	include ../blocks/header-admin.pug
+	include ../blocks/form-group-block.pug
+	include ../blocks/table-team.pug
+
+	.admin-team
+		h1.login__caption Команда
+		h6.login__subcaption Добавление администраторов ресурса и управление ролями
+		.divider
+		for item in teamsTable
+			+tableTeam(item)
+		.divider
+		.button-container
+			button.btn-reset Отменить
+			button.btn-save Сохранить
+			button.btn-add Добавить администратора

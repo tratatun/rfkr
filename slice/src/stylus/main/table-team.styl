@@ -1,0 +1,34 @@
+.table-team
+	width 100%
+	border-spacing 0 2px
+	margin-top 21px
+	margin-bottom 6px
+
+	th, td
+		width 26%
+		text-align left
+		&:first-child,
+		&:nth-child(3)
+			width 26%
+		&:nth-child(2)
+			width 25.5%
+		&:last-child
+			width 22.5%
+
+	th
+		@extend $firasansMedium
+		@extend $smallerFontSize
+		opacity .4
+		line-height 30px
+
+	td
+		background-color $whiteGray
+		line-height 48px
+		&:last-child span
+			@extend $semiOpacity
+
+	button
+		@extend $defaultFontSize
+		@extend $cursorPointer
+		color $red
+		background-color $transparent

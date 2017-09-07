@@ -1,0 +1,13 @@
+mixin tableTeam(item)
+	table.table-team
+		if item.thead
+			tr
+				for subitem in item.thead
+					th #{subitem.th}
+
+		for subitem in item.defaultCell
+			tr
+				td #{subitem.login}
+				td #{subitem.password}
+				td !{subitem.management}
+				td !{subitem.lastVisit}
