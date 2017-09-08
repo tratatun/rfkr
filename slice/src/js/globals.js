@@ -9,5 +9,6 @@ var GLOBALS = {
 	$newsImageCarouselPrevBtn: $('.carousel-news-image .slick-prev'),
 	$newsImageCarouselNextBtn: $('.carousel-news-image .slick-next'),
 	VISIBLE_CLASS: 'visible',
-	INVISIBLE_CLASS: 'invisible'
-}
+	INVISIBLE_CLASS: 'invisible',
+	OPEN_CLASS: 'open'
+};
