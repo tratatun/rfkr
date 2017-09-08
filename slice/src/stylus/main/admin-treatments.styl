@@ -1,0 +1,67 @@
+.admin-treatments
+	@extend $adminContainer
+
+	.login__subcaption
+		@extend $robotoMedium
+		margin-bottom 9px
+
+	.tabs__header
+		height 64px
+		line-height 64px
+		border-bottom 1px solid rgba(28, 33, 47, .06)
+
+	.tabs-switch
+		@extend $transitionDefault
+		@extend $textUppercase
+		@extend $robotoMedium
+		@extend $smallerFontSize
+		@extend $defaultOpacity
+		color $fullBlack
+		&.active
+			@extend $noneOpacity
+			&:after
+				background-color $defaultBlack
+		&:after
+			@extend $transitionDefault
+			@extend $pseudoElement
+			sizeElement(100%, 4px)
+			background-color $transparent
+			left 0
+			bottom -2px
+
+	.tabs__content
+		position relative
+
+	.header__item
+		display inline-block
+		position relative
+		margin-right 29px
+		a
+			color $defaultBlack
+
+	.content__pane
+		@extend $transitionDefault
+		absoluteElement(absolute, 0, 0)
+		width 100%
+		opacity 0
+		z-index -1
+		&.visible
+			z-index 1
+
+	.table-team
+		margin-top 32px
+		td, th
+			&:first-child
+				width 27%
+			&:nth-child(2)
+				width 21.9%
+				max-width 227px
+				white-space nowrap
+				overflow hidden
+			&:nth-child(3)
+				width 29.6%
+				padding-left 3%
+			&:last-child
+				width 21.5%
+
+

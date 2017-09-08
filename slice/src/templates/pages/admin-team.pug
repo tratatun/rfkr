@@ -3,14 +3,14 @@ block content
 	include ../blocks/data.pug
 	include ../blocks/header-admin.pug
 	include ../blocks/form-group-block.pug
-	include ../blocks/table-team.pug
+	include ../blocks/table.pug
 
 	.admin-team
 		h1.login__caption Команда
 		h6.login__subcaption Добавление администраторов ресурса и управление ролями
 		.divider
 		for item in teamsTable
-			+tableTeam(item)
+			+table(item)
 
 		.add-admin
 			h3.add-admin__caption Новый администратор
