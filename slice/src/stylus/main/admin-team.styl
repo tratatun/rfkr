@@ -10,6 +10,11 @@
 	.divider
 		width 100%
 
+	.btn-control-add
+		transition all .8s
+		opacity 0
+		visibility hidden
+
 	.btn-reset
 		@extend $grayBtnBig
 		margin-right 28px
@@ -18,5 +23,21 @@
 		@extend $redOrangeBtn
 
 	.btn-add
+		@extend $transitionSlow
 		@extend $blueBorderBtn
 		float left
+
+	.add-admin
+		display none
+		padding-bottom 22px
+
+	.add-admin__caption
+		padding-top 24px
+		margin-bottom 34px
+
+	.form-group
+		float left
+		width 25%
+		&:not(:last-child)
+			padding-right 3%
+

@@ -11,8 +11,16 @@ block content
 		.divider
 		for item in teamsTable
 			+tableTeam(item)
+
+		.add-admin
+			h3.add-admin__caption Новый администратор
+			for item in newAdmin
+				+formGroupBlock(item)
+
 		.divider
 		.button-container
-			button.btn-reset Отменить
-			button.btn-save Сохранить
-			button.btn-add Добавить администратора
+			button.btn-control-add.btn-reset.btn-reset_add Отменить
+			button.btn-control-add.btn-save Сохранить
+			button.btn-add.btn-add-admin Добавить администратора
+
+

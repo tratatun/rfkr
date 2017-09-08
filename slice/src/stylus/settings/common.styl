@@ -96,6 +96,20 @@ textarea
 	height $textareaHeight
 	color $defaultBlack
 
+.visible
+	opacity 1 !important
+	visibility visible !important
+
+.invisible
+	opacity 0
+	visibility hidden
+
+.template
+	display none
+
+.red
+	color $red
+
 .divider
 	sizeElement(94%, 1px)
 	background-color $defaultBlack
@@ -178,12 +192,14 @@ textarea
 	sizeElement(100% !important, $inputHeight !important)
 	border-radius 0 !important
 	line-height $inputHeight !important
+	font-family "Roboto-Regular" !important
 
 	span
 		height 100% !important
 		padding 0 16px !important
 		height $inputHeight !important
 		line-height $inputHeight !important
+		font-family "Roboto-Regular" !important
 		&:empty:before
 			display block !important
 			color $defaultBlack !important
@@ -220,5 +236,19 @@ textarea
 			&:hover
 				background-color $whiteGray !important
 				color $defaultBlack !important
+			&.selected
+				color $defaultBlack !important
+				background-color $white !important
+			&.disabled
+				color rgba(28, 33, 47, .2) !important
+				span
+					opacity .2
+					cursor default
+			span
+				@extend $cursorPointer
+				color $red
+				padding 0 !important
+
+
 
 

@@ -517,10 +517,12 @@
 			classModificator: '',
 			fields: [
 				{
-					label: 'Электронная почта'
+					label: 'Электронная почта',
+					nameInput: 'email'
 				},
 				{
-					label: 'Пароль'
+					label: 'Пароль',
+					nameInput: 'password'
 				}
 			]
 		}
@@ -561,6 +563,63 @@
 					password: '12345@Support',
 					management: '<button>Изменить</button>',
 					lastVisit: '<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
+				}
+			]
+		}
+	]
+
+-
+	var newAdmin = [
+		{
+			classModificator: '',
+			fields: [
+				{
+					label: 'Логин',
+					nameInput: 'login'
+				},
+				{
+					label: 'Пароль',
+					nameInput: 'password'
+				},
+				{
+					label: 'Роль',
+					type: 'select',
+					nameSelect: 'role',
+					options: [
+						{
+							content: 'Поддержка',
+							value: 'support'
+						},
+						{
+							content: 'Автор записей',
+							value: 'author'
+						},
+						{
+							content: '<span>Superadmin</span>',
+							value: 'superadmin'
+						}
+					]
+				},
+				{
+					label: 'Управление',
+					type: 'select',
+					nameSelect: 'managment',
+					options: [
+						{
+							content: 'Войти с данными',
+							value: 'logindata'
+						},
+						{
+							content: 'Заблокировать',
+							value: 'block',
+							disabled: 'true'
+						},
+						{
+							content: '<span>Изгнать</span>',
+							value: 'banish',
+							disabled: 'true'
+						}
+					]
 				}
 			]
 		}
