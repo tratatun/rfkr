@@ -26,12 +26,14 @@ $(function(){
 
 	$('.btn-add-admin').click(function(){
 		var $this = $(this);
+		GLOBALS.$body.find('.button-container button').removeClass('visible').removeClass('invisible');
 		GLOBALS.$body.find('.btn-control-add').addClass('visible');
 		$this.addClass('invisible');
 		$('.add-admin').slideDown(400);
 	});
 
 	$('.btn-reset_add').click(function(){
+		GLOBALS.$body.find('.button-container button').removeClass('visible').removeClass('invisible');
 		GLOBALS.$body.find('.btn-add-admin').addClass('visible');
 		GLOBALS.$body.find('.btn-control-add').addClass('invisible');
 		$('.add-admin').slideUp(400);
