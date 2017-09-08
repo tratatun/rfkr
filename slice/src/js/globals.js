@@ -7,5 +7,7 @@ var GLOBALS = {
 	$searchContainer: $('.search-container'),
 	$newsImageCarousel: $('.carousel-news-image'),
 	$newsImageCarouselPrevBtn: $('.carousel-news-image .slick-prev'),
-	$newsImageCarouselNextBtn: $('.carousel-news-image .slick-next')
+	$newsImageCarouselNextBtn: $('.carousel-news-image .slick-next'),
+	VISIBLE_CLASS: 'visible',
+	INVISIBLE_CLASS: 'invisible'
 }

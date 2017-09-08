@@ -193,6 +193,11 @@ textarea
 	border-radius 0 !important
 	line-height $inputHeight !important
 	font-family "Roboto-Regular" !important
+	&.disabled
+		background none !important
+		opacity .2
+		&:after
+			cursor default
 
 	span
 		height 100% !important

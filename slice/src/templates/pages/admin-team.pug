@@ -16,11 +16,15 @@ block content
 			h3.add-admin__caption Новый администратор
 			for item in newAdmin
 				+formGroupBlock(item)
+		.change-admin
+			h3.change-admin__caption Изменить запись об администраторе
+			for item in newAdmin
+				+formGroupBlock(item)
 
 		.divider
 		.button-container
-			button.btn-control-add.btn-reset.btn-reset_add Отменить
-			button.btn-control-add.btn-save Сохранить
+			button.btn-control-save.btn-reset.btn-reset_add Отменить
+			button.btn-control-save.btn-save Сохранить
 			button.btn-add.btn-add-admin Добавить администратора
 
 
