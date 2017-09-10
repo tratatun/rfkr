@@ -1,10 +1,36 @@
 mixin formGroupBlock(item)
 	if item.toogle
-		div(class="form-group-block " + item.classModificator + ' ' + item.toogle id=item.id)
+		div(class="form-group-block toogle " + item.classModificator)
+			.toogle__header
+				a(data-role="toogle" href="#" + item.toogleId) #{item.toogleTitle}
+			.toogle__body(id=item.toogleId)
+				for field in item.fields
+					.form-group
+						if field.required
+							label.form-group__label.required #{field.label}
+						else
+							label.form-group__label #{field.label}
+
+						if field.type === 'select'
+							select(placeholder=field.placeholder name=field.nameSelect).form-group__select
+								for option in field.options
+									if option.disabled
+										option(value=option.value disabled).select__option #{option.content}
+									else
+										option(value=option.value).select__option #{option.content}
+						else if field.type === 'textarea'
+							textarea.form-group__textarea(minlength=5 maxlength=field.textareaLength name=field.nameInput)
+						else if field.type === 'button'
+							button.form-group__button #{field.btnText}
+						else if field.type === 'captcha'
+							.form-group__captcha
+						else
+							input(type="text" placeholder=field.placeholder name=field.nameInput).form-group__input
+
+						if field.tip
+							span.form-group__tip !{field.tip}
 	else
-		div(class="form-group-block " + item.classModificator id=item.id)
-			if item.title
-				a(href="#" + item.id).toogle #{item.title}
+		div(class="form-group-block " + item.classModificator)
 			for field in item.fields
 				.form-group
 					if field.required
