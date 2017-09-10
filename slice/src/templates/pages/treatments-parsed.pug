@@ -1,0 +1,47 @@
+extends ../blocks/default.pug
+block content
+	include ../blocks/data.pug
+	include ../blocks/form-group-block.pug
+	include ../blocks/table.pug
+
+	.treatments-parsed-container
+		include ../blocks/header-admin.pug
+		.treatments-reply
+			h1.treatments-parsed__caption Отвеченное обращение
+			h6.treatments-parsed__subcaption Проверить ответ на обращение
+			.divider
+			.toogle
+				.toogle__header
+					a(href="#treatments-text" data-role="toogle") Обращение
+				.toogle__body#treatments-text
+					for item in tableTypeTreatments
+						+table(item)
+					for item in tableUserData
+						+table(item)
+					for item in tableUserGender
+						+table(item)
+					for item in tableUserAddress
+						+table(item)
+					for item in tableUserEmail
+						+table(item)
+					for item in tableUserPostAddress
+						+table(item)
+					for item in tableTreatmentText
+						+table(item)
+					for item in tableAttachFile
+						+table(item)
+			.divider
+			.toogle.toogle_second
+				.toogle__header
+					a(href="#treatments-reply-text" data-role="toogle") Ответ
+				.toogle__body#treatments-reply-text
+					.text-container
+						|Даже если учесть разреженный газ, заполняющий пространство между звездами, то все равно солнечное затмение однократно. Южный Треугольник, и это следует подчеркнуть, изменяем.
+						a(href="").text-container__link-attach Приложенный_файл.doc
+						|Ионный хвост, сублимиpуя с повеpхности ядpа кометы, сложен. Тукан ничтожно притягивает непреложный популяционный индекс.
+						a(href="").text-container__link Ссылка на сторонний ресурс
+					.reply-again-text Сформировать повторный ответ
+			.divider
+			.button-container
+				btn.btn-reset Отменить
+				btn.btn-reply Ответить

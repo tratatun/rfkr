@@ -531,39 +531,26 @@
 -
 	var teamsTable = [
 		{
-			thead: [
-				{
-					th: 'Логин'
-				},
-				{
-					th: 'Пароль'
-				},
-				{
-					th: 'Управление'
-				},
-				{
-					th: 'Последнее действие'
-				}
-			],
-			defaultCell: [
-				{
-					login: 'petr',
-					password: '12345@Owner',
-					management: '<button class="btn-change">Изменить</button>',
-					lastVisit: '<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
-				},
-				{
-					login: 'oleg',
-					password: '12345@Autor',
-					management: '<button class="btn-change">Изменить</button>',
-					lastVisit: '<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
-				},
-				{
-					login: 'grigorii',
-					password: '12345@Support',
-					management: '<button class="btn-change">Изменить</button>',
-					lastVisit: '<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
-				}
+			thead: ['Логин', 'Пароль', 'Управление', 'Последнее действие'],
+			tbody: [
+				[
+					'petr',
+					'12345@Owner',
+					'<button class="btn-change">Изменить</button>',
+					'<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
+				],
+				[
+					'oleg',
+					'12345@Autor',
+					'<button class="btn-change">Изменить</button>',
+					'<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
+				],
+				[
+					'grigorii',
+					'12345@Support',
+					'<button class="btn-change">Изменить</button>',
+					'<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
+				]
 			]
 		}
 	]
@@ -628,39 +615,224 @@
 -
 	var newTreatmentsTable = [
 		{
-			thead: [
+			thead: ['Тип', 'Тематика', 'Управление', 'Дата добавления'],
+			tbody: [
+				[
+					'Предложение',
+					'Уплата взносов на капитальный ремонт',
+					'<a href="/">Ответить</a>',
+					'<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
+				],
+				[
+					'Заявление',
+					'Проведение капитального ремонта',
+					'<a href="/">Ответить</a>',
+					'<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
+				],
+				[
+					'Жалоба',
+					'Проведение капитального ремонта',
+					'<a href="/">Ответить</a>',
+					'<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
+				]
+			]
+		}
+	]
+
+-
+	var adminTreatmentFilter = [
+		{
+			classModificator: '',
+			fields: [
 				{
-					th: 'Тип'
+					label: 'Специалист',
+					type: 'select',
+					nameSelect: 'specialist',
+					options: [
+						{
+							content: 'oleg',
+							value: 'oleg'
+						},
+						{
+							content: 'petr',
+							value: 'petr'
+						}
+					]
 				},
 				{
-					th: 'Тематика'
+					label: 'Статус',
+					type: 'select',
+					nameSelect: 'status',
+					options: [
+						{
+							content: 'В работе',
+							value: 'process'
+						},
+						{
+							content: 'Обработано',
+							value: 'parsed'
+						},
+						{
+							content: 'Спам',
+							value: 'spam'
+						}
+					]
 				},
 				{
-					th: 'Управление'
+					label: 'Период от',
+					type: 'select',
+					nameSelect: 'periodFrom',
+					options: [
+						{
+							content: 'янв ‘17',
+							value: 'january17'
+						},
+						{
+							content: 'март ‘17',
+							value: 'march17'
+						},
+						{
+							content: 'фев ‘17',
+							value: 'february17'
+						}
+					]
 				},
 				{
-					th: 'Дата добавления'
-				}
-			],
-			defaultCell: [
-				{
-					login: 'Предложение',
-					password: 'Уплата взносов на капитальный ремонт',
-					management: '<a href="/">Ответить</a>',
-					lastVisit: '<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
-				},
-				{
-					login: 'Заявление',
-					password: 'Проведение капитального ремонта',
-					management: '<a href="/">Ответить</a>',
-					lastVisit: '<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
-				},
-				{
-					login: 'Жалоба',
-					password: 'Проведение капитального ремонта',
-					management: '<a href="/">Ответить</a>',
-					lastVisit: '<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span>'
+					label: 'Период до',
+					type: 'select',
+					nameSelect: 'periodTo',
+					options: [
+						{
+							content: 'Сегодня',
+							value: 'today'
+						},
+						{
+							content: 'Неделя',
+							value: 'week'
+						},
+						{
+							content: 'Месяц',
+							value: 'month'
+						}
+					]
 				}
 			]
 		}
 	]
+
+-
+	var parsedTreatmentsTable = [
+		{
+			thead: ['Тип', 'Тематика', 'Управление', 'Обработано'],
+			tbody: [
+				[
+					'Предложение',
+					'Уплата взносов на капитальный ремонт',
+					'<a href="/" class="reply-again">Ответить повторно</a>',
+					'<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span>'
+				],
+				[
+					'Заявление',
+					'Проведение капитального ремонта',
+					'<a href="/" class="reply-again">Ответить повторно</a>',
+					'<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span>'
+				],
+				[
+					'Жалоба',
+					'Проведение капитального ремонта',
+					'<a href="/" class="reply-again">Ответить повторно</a>',
+					'<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span>'
+				]
+			]
+		}
+	]
+
+-
+	var tableTypeTreatments = [
+		{
+			classModifier: 'table_type-treatments',
+			thead: ['Тип обращения', 'Тематика'],
+			tbody: [
+				['Предложение', 'Уплата взносов на капитальный ремонт']
+			]
+		}
+	]
+
+-
+	var tableUserData = [
+		{
+			classModifier: 'table_type-treatments',
+			thead: ['Имя', 'Фамилия', 'Отчество'],
+			tbody: [
+				['Константин', 'Константинопольский', 'Константинович']
+			]
+		}
+	]
+
+-
+	var tableUserGender = [
+		{
+			classModifier: 'table_user-gender',
+			thead: ['Пол'],
+			tbody: [
+				['Мужской']
+			]
+		}
+	]
+
+-
+	var tableUserAddress = [
+		{
+			classModifier: 'table_user-address',
+			thead: ['Адрес дома'],
+			tbody: [
+				['г. Симферополь, пр. Кирова 1']
+			]
+		}
+	]
+
+-
+	var tableUserEmail = [
+		{
+			classModifier: 'table_user-email',
+			thead: ['Электронная почта'],
+			tbody: [
+				['konstantin@mail.ru']
+			]
+		}
+	]
+
+-
+	var tableUserPostAddress = [
+		{
+			classModifier: 'table_user-post-address',
+			thead: ['Почтовый адрес', 'Телефон'],
+			tbody: [
+				['295000, Российская Федерация, Республика Крым, г. Симферополь, пр. Кирова 1', '+7(123) 456-78-90']
+			]
+		}
+	]
+
+-
+	var tableTreatmentText = [
+		{
+			classModifier: 'table_treatment-text',
+			thead: ['Обращение'],
+			tbody: [
+				['Даже если учесть разреженный газ, заполняющий пространство между звездами, то все равно солнечное затмение однократно. Южный Треугольник, и это следует подчеркнуть, изменяем. Ионный хвост, сублимиpуя с повеpхности ядpа кометы, сложен. Тукан ничтожно притягивает непреложный популяционный индекс.']
+			]
+		}
+	]
+
+-
+	var tableAttachFile = [
+		{
+			classModifier: 'table_attach-file',
+			thead: ['Приложенный файл'],
+			tbody: [
+				['<a href="/" class="table__attach-link">filename.doc</a>']
+			]
+		}
+	]
+
+

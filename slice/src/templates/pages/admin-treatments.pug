@@ -19,5 +19,14 @@ block content
 				.content__pane#new-treatments.visible
 					for item in newTreatmentsTable
 						+table(item)
-				.content__pane#parsed-treatments jhgjht
+				.content__pane#parsed-treatments
+					for item in adminTreatmentFilter
+						+formGroupBlock(item)
+					.divider
+					.button-container
+						button.btn-filter-clear очистить фильтр
+						button.btn-filter Отфильтровать
+					.divider
+					for item in parsedTreatmentsTable
+						+table(item)
 

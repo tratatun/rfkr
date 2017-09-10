@@ -1,0 +1,28 @@
+.toogle
+	.toogle__header
+		padding 26px 0 11px 0
+		a
+			@extend $robotoMedium
+			@extend $middleFontSize
+			display block
+			width 100%
+			color $defaultBlack
+			position relative
+			&:after
+				@extend $pseudoElement
+				@extend $centerElementY
+				@extend $transitionDefault
+				right 0
+				top 50%
+				sizeElement(6px, 6px)
+				border 1px solid $fullBlackSemi
+				transform rotate(45deg)
+				border-left-color $transparent
+				border-top-color $transparent
+	&.open
+		a:after
+			transform rotate(225deg)
+			top 40%
+
+	.toogle__body
+		display none

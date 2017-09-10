@@ -7,14 +7,14 @@
 	.header-admin
 		@extend $mainContainer
 		@extend $smallFontSize
-		height $headerAdmin
+		height $headerAdminHeight
 		position relative
 
 	.navigation__item
 		height 100%
 		display inline-block
 		margin-right 20px
-		line-height $headerAdmin
+		line-height $headerAdminHeight
 		&:hover
 			@extend $noneOpacity
 			color $white
@@ -27,6 +27,26 @@
 			@extend $noneOpacity
 			color $white
 
+	.come-back
+		line-height $headerAdminHeight
+		display none
+		a
+			@extend $robotoMedium
+			@extend $smallFontSize
+			&:hover
+				color $white
+			svg
+				sizeElement(24px, 24px)
+				transform rotate(180deg)
+				margin-bottom -8px
+				display inline-block
+			span
+				display inline-block
+				margin-left 16px
+
+
+
+	.login,
 	.logout
 		@extend $robotoMedium
 		@extend $cursorPointer
@@ -37,3 +57,20 @@
 		background-color $transparent
 		color $white
 
+	.login
+		display none
+
+.treatments-reply-container,
+.treatments-parsed-container
+	.header-admin-container
+		.navigation
+			display none
+		.come-back
+			display block
+
+.admin-login-container
+	.header-admin-container
+		.logout
+			display none
+		.login
+			display block

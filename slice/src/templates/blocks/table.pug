@@ -1,13 +1,13 @@
 mixin table(item)
-	table.table-team
+	table(class=item.classModifier).table
 		if item.thead
 			tr
-				for subitem in item.thead
-					th #{subitem.th}
+				for th in item.thead
+					th !{th}
 
-		for subitem in item.defaultCell
+		for tr in item.tbody
 			tr
-				td #{subitem.login}
-				td #{subitem.password}
-				td !{subitem.management}
-				td !{subitem.lastVisit}
+				for td in tr
+					td !{td}
+
+
