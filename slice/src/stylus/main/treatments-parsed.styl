@@ -1,10 +1,15 @@
 .treatments-parsed-container
+	.treatments-parsed
+		@extend $adminContainer
+
 	.treatments-parsed__subcaption
 		@extend $robotoMedium
 		margin-bottom 32px
 
 	.toogle_second
 		padding-top 30px
+		.toogle__body
+			padding-bottom 32px
 
 	.text-container
 		padding-top 36px
@@ -24,6 +29,7 @@
 
 	.button-container
 		text-align right
+		padding 32px 0
 
 	.btn-reset
 		@extend $grayBtnBig
@@ -31,3 +37,9 @@
 
 	.btn-reply
 		@extend $greenBtn
+
+	#cke_editor
+		margin-left 0
+
+	.divider
+		width 100%
