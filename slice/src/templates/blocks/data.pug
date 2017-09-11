@@ -518,10 +518,13 @@
 			fields: [
 				{
 					label: 'Электронная почта',
+					required: 'true',
 					nameInput: 'email'
 				},
 				{
 					label: 'Пароль',
+					required: 'true',
+					type: 'input-password',
 					nameInput: 'password'
 				}
 			]
@@ -831,6 +834,61 @@
 			thead: ['Приложенный файл'],
 			tbody: [
 				['<a href="/" class="table__attach-link">filename.doc</a>']
+			]
+		}
+	]
+
+-
+	var adminPagesControls = [
+		{
+			classModificator: '',
+			fields: [
+				{
+					label: 'Название'
+				},
+				{
+					label: 'Порядковый номер',
+					type: 'select',
+					nameSelect: 'number',
+					options: [
+						{
+							content: '1',
+							value: '1'
+						},
+						{
+							content: '2',
+							value: '2'
+						},
+						{
+							content: '3',
+							value: '3'
+						}
+					]
+				},
+				{
+					label: 'Управление',
+					type: 'select',
+					nameSelect: 'management',
+					options: [
+						{
+							content: 'Отображать',
+							value: 'show'
+						},
+						{
+							content: 'Скрыть',
+							value: 'hide'
+						},
+						{
+							content: '<span>Удалить</span>',
+							value: 'delete'
+						}
+					]
+				},
+				{
+					label: 'Последнее изменение',
+					type: 'last-visit',
+					lastVisitData: '<span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span>'
+				}
 			]
 		}
 	]
