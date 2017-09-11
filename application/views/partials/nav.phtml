@@ -1,9 +1,0 @@
-<div class="nav_wrapper">
-    <nav class="nav">
-        <ul class="nav_list">
-            <?php foreach ($this->menu as $uri => $item) :?>
-            <li><a href="<?php echo $item['url']; ?>" class="<?php if ($item['isActive'] == true) : ?>active<?php endif; ?>"><?php echo $item['title']?></a></li>
-            <?php endforeach; ?>
-        </ul>
-    </nav>
-</div>
