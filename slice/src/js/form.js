@@ -1,9 +1,14 @@
 $(function(){
-	$("select").minimalect({
+	$('select').minimalect({
 		placeholder: 'Не выбрано'
 	});
 
-
+	$('.message-send .form-group__textarea').keyup(function(){
+		var $this = $(this),
+			thisValue = $this.val(),
+			thisValueLenght = thisValue.length;
+		$this.closest('.form-group').find('.form-group__tip span').html(440 - thisValueLenght);
+	});
 
 	// $.validator.addMethod("checkSelect", function(value, element) {
 	// 	var $selectedOption = $(element).closest('.form-group').find('.minict_wrapper').find('li.selected');
