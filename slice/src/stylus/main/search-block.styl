@@ -55,19 +55,22 @@
 		padding 0 16px
 
 	.right-col__search-btn
-		sizeElement(100%, 48px)
-		border 1px solid $whiteOpacity
+		sizeElement(100%, 46px)
+		border 1px solid $white
 		background-color transparent
 		text-align center
-		line-height 48px
+		line-height 46px
 		@extend $robotoMedium
 		@extend $textUppercase
-		margin-top 23px
+		margin-top 25px
 		letter-spacing 1.3px
-		color $whiteSemi
+		color $white
 		@extend $transitionDefault
 		@extend $cursorPointer
-		&:hover
+		&:hover:enabled
 			background-color $white
 			color $blueDark
 			border-color $white
+		&[disabled]
+			opacity .2
+			cursor default
