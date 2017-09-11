@@ -50,4 +50,22 @@ $(function(){
 			}
 		}
 	});
+
+	$('.admin-login__form').validate({
+		highlight: function(element, errorClass, validClass) {
+			$(element).closest('.form-group').addClass(errorClass).removeClass(validClass);
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			$(element).parents(".error").removeClass(errorClass).addClass(validClass);
+		},
+		rules: {
+			email: {
+				required: true,
+				email: true
+			},
+			password: {
+				required: true
+			}
+		}
+	});
 });

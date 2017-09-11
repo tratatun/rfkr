@@ -53,6 +53,8 @@ mixin formGroupBlock(item)
 						.form-group__captcha
 					else if field.type === 'last-visit'
 						.form-group__last-visit !{field.lastVisitData}
+					else if field.type === 'input-password'
+						input(type="password" placeholder=field.placeholder name=field.nameInput minlength="2").form-group__input
 					else
 						input(type="text" placeholder=field.placeholder name=field.nameInput).form-group__input
 

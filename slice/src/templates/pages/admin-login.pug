@@ -8,9 +8,10 @@ block content
 		.admin-login
 			h1.login__caption Войти
 			h6.login__subcaption Управление веб-системой НО РФ КРМД РК
-			for item in adminLoginFields
-				+formGroupBlock(item)
-			.divider
-			.button-container
-				button.btn-reset Отменить
-				button.btn-login Войти
+			form.admin-login__form
+				for item in adminLoginFields
+					+formGroupBlock(item)
+				.divider
+				.button-container
+					button.btn-reset Отменить
+					button(type="submit").btn-login Войти
