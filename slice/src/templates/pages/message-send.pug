@@ -3,6 +3,7 @@ block content
 	include ../blocks/data.pug
 	include ../blocks/header-short.pug
 	include ../blocks/form-group-block.pug
+	include ../blocks/footer.pug
 
 	.message-send
 		h1.message-send__caption Оставить обращение
@@ -14,4 +15,6 @@ block content
 			.form__footer
 				button(type="reset").message-send__reset Отменить
 				button(type="submit").message-send__submit Отправить
+
+	+footer(item)
 

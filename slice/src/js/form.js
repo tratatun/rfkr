@@ -3,6 +3,8 @@ $(function(){
 		placeholder: 'Не выбрано'
 	});
 
+
+
 	// $.validator.addMethod("checkSelect", function(value, element) {
 	// 	var $selectedOption = $(element).closest('.form-group').find('.minict_wrapper').find('li.selected');
 	// 	if($selectedOption){

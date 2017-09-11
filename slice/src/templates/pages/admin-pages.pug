@@ -1,0 +1,48 @@
+extends ../blocks/default.pug
+block content
+	include ../blocks/data.pug
+	include ../blocks/form-group-block.pug
+	include ../blocks/table.pug
+
+	.admin-pages-container
+		include ../blocks/header-admin.pug
+		.admin-pages
+			h1.admin-pages__caption Страницы
+			h6.admin-pages__subcaption Управление разделами и страницами веб-системы
+			.divider
+			.toogle
+				.toogle__header
+					a(href="#admin-main-page" data-role="toogle") Главная страница
+				.toogle__body#admin-main-page
+					p Some content for main page
+			.divider
+
+			.toogle
+				.toogle__header
+					a(href="#admin-section-two" data-role="toogle") Имя раздела два
+				.toogle__body#admin-section-two
+					p Some content for section two
+			.divider
+
+			.toogle
+				.toogle__header
+					a(href="#admin-section-three" data-role="toogle") Имя раздела три
+				.toogle__body#admin-section-three
+					p Some content for section three
+			.divider
+
+			.toogle
+				.toogle__header
+					a(href="#admin-section-four" data-role="toogle") Имя раздела четыре
+				.toogle__body#admin-section-four
+					p Some content for section four
+			.divider
+
+			.toogle
+				.toogle__header
+					a(href="#admin-section-five" data-role="toogle") Имя раздела пять
+				.toogle__body#admin-section-five
+					p Some content for section five
+			.divider
+
+			button.btn-add-section Добавить раздел
