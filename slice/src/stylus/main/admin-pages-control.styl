@@ -1,10 +1,45 @@
 .admin-pages-control
 	@extend $adminContainer
-	padding-bottom 140px
+	padding-bottom 78px
+
+	.admin-pages-control__subcaption,
+	.admin-pages-control__subtitle
+		@extend $robotoMedium
 
 	.admin-pages-control__subcaption
-		@extend $robotoMedium
-		margin-bottom 22px
+		margin-bottom 32px
 
 	.divider
 		width 100%
+
+	.form-group-block
+		margin-bottom 54px
+
+	.form-group
+		float left
+		width 25%
+		&:not(:last-child)
+			padding-right 3%
+		&:last-child
+			@extend $semiOpacity
+
+	.admin-pages-control__title
+		margin 25px 0 34px 0
+
+	.admin-pages-control__subtitle
+		margin-bottom 14px
+
+	#cke_editor
+		margin-left 0
+		margin-bottom 32px
+
+	.button-container
+		padding 32px 0
+		text-align right
+
+	.btn-reset
+		@extend $grayBtnBig
+		margin-right 28px
+
+	.btn-save
+		@extend $redOrangeBtn

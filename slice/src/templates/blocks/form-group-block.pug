@@ -51,6 +51,8 @@ mixin formGroupBlock(item)
 						button.form-group__button #{field.btnText}
 					else if field.type === 'captcha'
 						.form-group__captcha
+					else if field.type === 'last-visit'
+						.form-group__last-visit !{field.lastVisitData}
 					else
 						input(type="text" placeholder=field.placeholder name=field.nameInput).form-group__input
 
