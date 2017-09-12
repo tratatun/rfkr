@@ -13,7 +13,7 @@
                 <div class="company__type">Некоммерческая организация</div>
                 <div class="company__name">«Региональный Фонд Капитального Ремонта Многоквартирных Домов Республики Крым»</div>
             </div>
-            <div class="close-block">Отменить</div>
+            <a href="/" class="close-block">Отменить</a>
         </header>
     </div>
     <div class="agree-container" id="top">
@@ -39,8 +39,8 @@
             </p>
             <div class="divider"></div>
             <div class="btn-container">
-                <button class="btn-cancel">Отменить</button>
-                <button class="btn-continue">Я согласен</button>
+                <a href="/" class="btn-cancel">Отменить</a>
+                <a href="/treatment" class="btn-continue">Я согласен</a>
             </div>
         </div>
     </div>
