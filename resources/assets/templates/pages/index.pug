@@ -1,0 +1,75 @@
+extends ../blocks/default
+block content
+	include ../blocks/data
+	include ../blocks/header
+	include ../blocks/news-carousel-block
+	include ../blocks/news-short-block
+	include ../blocks/last-news-block
+	include ../blocks/link-block
+	include ../blocks/footer
+
+	section.main-block#top
+		.main-block__carousel
+			each slide in carouselMainSlides
+				.carousel__slide
+					.slide__image(style="background-image: url(" + slide.imageHref + ")")
+					.slide__info-wrapper
+						.slide__info
+							h3.info__caption #{slide.caption}
+							.info__description !{slide.description}
+							a.info__link(href=slide.linkHref) #{slide.link}
+		.main-block__carousel-arrows
+			.carousel-arrow.carousel-arrow_prev
+				svg.carousel-arrow_default(role="img")
+					use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel")
+				svg.carousel-arrow_hover(role="img")
+					use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel-blue")
+			.carousel-arrow.carousel-arrow_next
+				svg.carousel-arrow_default(role="img")
+					use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel")
+				svg.carousel-arrow_hover(role="img")
+					use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel-blue")
+
+	section.news-block
+		.news-block__carousel
+			.carousel-news-image
+				each image in newsImageCarouselBlock
+					.carousel__slide
+						.slide__img(style="background-image: url(" + image.imageHref + ")")
+
+			.carousel-news
+				for item in newsCarouselBlock
+					+newsCarouselBlock(item)
+
+		.news-block__scroll
+			.news-container
+				for item in newsShortBlock
+					+newsShortBlock(item)
+
+	.last-news-wrapper
+		section.last-news
+			header.last-news__header
+				h4.header__caption Последние новости
+				button.header__btn Все Новости
+			.last-news__content
+				.content-block
+					for item in lastNews
+						+lastNew(item)
+
+	.adjacent-links-wrapper
+		section.adjacent-links
+			h4.adjacent-links__caption Смежные правительственные ресурсы
+			.adjacent-links__content
+				for item in adjacentLinks
+					+link(item)
+
+	+footer(item)
+
+
+
+
+
+
+
+
+

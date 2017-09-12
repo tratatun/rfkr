@@ -1,0 +1,39 @@
+include data
+
+.headers-container
+	include search-block
+	.subheader-container
+		.subheader
+			.subheader_left-col
+				.subheader__search
+					.search__icon
+						svg(role="img")
+							use(xlink:href="./assets/images/svg-sprite.svg#shape-search")
+					span.search__text Поиск
+			.subheader_right-col
+				.subheader__treatment
+					.treatment__icon
+						svg(role="img")
+							use(xlink:href="./assets/images/svg-sprite.svg#shape-megaphone")
+					span.treatment__text Оставить обращение
+				.subheader__account
+					.account__icon
+						svg(role="img")
+							use(xlink:href="./assets/images/svg-sprite.svg#shape-user")
+					span.account__text Личный кабинет
+	.header-wrapper
+		header.header
+			a(href="/").header__logo
+				svg.logo.logo-default(role="img")
+					use(xlink:href="./assets/images/svg-sprite.svg#shape-logo")
+				svg.logo.logo-hover(role="img")
+					use(xlink:href="./assets/images/svg-sprite.svg#shape-logo-hover")
+			.header__company
+				.company__type Некоммерческая организация
+				.company__name «Региональный Фонд Капитального Ремонта Многоквартирных Домов Республики Крым»
+			nav.header__nav
+				each link in navLinks
+					a.nav__link(href=link.href) #{link.text}
+
+
+

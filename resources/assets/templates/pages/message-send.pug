@@ -1,0 +1,20 @@
+extends ../blocks/default
+block content
+	include ../blocks/data
+	include ../blocks/header-short
+	include ../blocks/form-group-block
+	include ../blocks/footer
+
+	.message-send#top
+		h1.message-send__caption Оставить обращение
+		h6.message-send__subcaption Добавить обращение
+		form.message-send__form
+			for item in leaveMessageFields
+				+formGroupBlock(item)
+			.divider
+			.form__footer
+				button(type="reset").message-send__reset Отменить
+				button(type="submit").message-send__submit Отправить
+
+	+footer(item)
+

@@ -1,0 +1,29 @@
+{
+  "name": "rfkr",
+  "authors": [
+    "Mayorov V.",
+    "Orekhov E.<oeswww@gmail.com>",
+    "Shurlachakova S.<svetlana.shurla4acova@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/assets/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.8.0",
+    "jquery.nicescroll": "^3.7.6",
+    "animatescroll": "^1.0.7",
+    "minimalect": "*",
+    "jquery-validation": "^1.17.0",
+    "jquery-mask-plugin": "^1.14.11"
+  }
+}

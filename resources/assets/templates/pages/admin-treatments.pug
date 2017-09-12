@@ -1,0 +1,32 @@
+extends ../blocks/default
+block content
+	include ../blocks/data
+	include ../blocks/header-admin
+	include ../blocks/form-group-block
+	include ../blocks/table
+
+	.admin-treatments
+		h1.login__caption Обращения
+		h6.login__subcaption Просмотр обращений и формирование ответов
+
+		.tabs
+			ul.tabs__header
+				li.header__item
+					a(href="#new-treatments").tabs-switch.active Новые
+				li.header__item
+					a(href="#parsed-treatments").tabs-switch Обработанные
+			.tabs__content
+				.content__pane#new-treatments.visible
+					for item in newTreatmentsTable
+						+table(item)
+				.content__pane#parsed-treatments
+					for item in adminTreatmentFilter
+						+formGroupBlock(item)
+					.divider
+					.button-container
+						button.btn-filter-clear очистить фильтр
+						button.btn-filter Отфильтровать
+					.divider
+					for item in parsedTreatmentsTable
+						+table(item)
+
