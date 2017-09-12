@@ -11,6 +11,34 @@
 		margin-top 24px
 		padding 0 36px
 
+	.toogle__body__top-row
+		position relative
+		&:after
+			@extend $clearBoth
+
+	.top-row__title
+		@extend $robotoMedium
+		line-height 2.25
+		float left
+
+	.top-row__add-btn
+		@extend $grayBtn
+		padding 6px 32px
+		float right
+
 	.toogle
 		.toogle__header
 			padding 34px 0
+		.toogle__body
+			padding-bottom 20px
+
+	.table
+		margin 18px 0 28px 0
+		&.news-table
+			td,th
+				&:first-child
+					width 51.5%
+				&:nth-child(2)
+					width 26%
+				&:last-child
+					width 22.5%

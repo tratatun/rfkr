@@ -14,14 +14,39 @@ block content
 				.toogle__header
 					a(href="#admin-main-page" data-role="toogle") Главная страница
 				.toogle__body#admin-main-page
-					p Some content for main page
+					.toogle__body__top-row
+						.top-row__title Обложка
+						.top-row__add-btn Добавить
+					for item in indexCoverTable
+						+table(item)
+					.toogle__body__top-row
+						.top-row__title Слайдер
+						.top-row__add-btn Добавить
+					for item in indexSliderTable
+						+table(item)
+					.toogle__body__top-row
+						.top-row__title Рекламные записи (SEO)
+						.top-row__add-btn Добавить
+					for item in indexSeoTable
+						+table(item)
+					.toogle__body__top-row
+						.top-row__title Новости
+						.top-row__add-btn Добавить
+					for item in indexNewsTable
+						+table(item)
+					.toogle__body__top-row
+						.top-row__title Ссылки на смежные ресурсы
+						.top-row__add-btn Добавить
+					for item in indexLinksTable
+						+table(item)
 			.divider
 
 			.toogle
 				.toogle__header
 					a(href="#admin-section-two" data-role="toogle") Имя раздела два
 				.toogle__body#admin-section-two
-					p Some content for section two
+					for item in sectionTwoTable
+						+table(item)
 			.divider
 
 			.toogle
