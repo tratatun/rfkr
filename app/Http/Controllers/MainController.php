@@ -15,4 +15,9 @@ class MainController extends Controller
     {
         return view('main.agree');
     }
+
+    public function treatment()
+    {
+        return view('main.treatment');
+    }
 }
