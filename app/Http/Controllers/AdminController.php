@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function pages()
     {
         return view('admin.pages');
     }
@@ -14,6 +14,11 @@ class AdminController extends Controller
     public function addPage()
     {
         return view('admin.page');
+    }
+
+    public function team()
+    {
+        return view('admin.team');
     }
 
     public function login()

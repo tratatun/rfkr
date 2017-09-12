@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="admin-pages-control-container">
-        @include('admin.layouts.menu-back')
+        @include('admin.layouts.menu-back', ['back' => '/admin/pages'])
         <div class="admin-pages-control">
             <h1 class="admin-pages-control__caption">Управление страницей</h1>
             <h6 class="admin-pages-control__subcaption">Изменение свойств и/или содержимого страницы</h6>

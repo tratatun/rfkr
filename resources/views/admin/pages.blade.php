@@ -348,7 +348,7 @@
                 </div>
             </div>
             <div class="divider"></div>
-            <button class="btn-add-section">Добавить раздел</button>
+            <a href="/admin/pages/add" class="btn-add-section">Добавить раздел</a>
         </div>
     </div>
 @endsection

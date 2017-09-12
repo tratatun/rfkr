@@ -1,8 +1,8 @@
 <div class="header-admin-container">
     <header class="header-admin">
         <ul class="navigation">
-            <li class="navigation__item"><a class="item__link" href="/">Страницы</a></li>
-            <li class="navigation__item"><a class="item__link" href="/">Команда</a></li>
+            <li class="navigation__item"><a class="item__link" href="/admin/pages">Страницы</a></li>
+            <li class="navigation__item"><a class="item__link" href="/admin/team">Команда</a></li>
             <li class="navigation__item"><a class="item__link" href="/">Обращения</a></li>
         </ul>
         <div class="come-back"><a href="/">
