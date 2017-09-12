@@ -31,6 +31,11 @@ class AdminController extends Controller
         return view('admin.treatment-answer');
     }
 
+    public function reviewTreatment()
+    {
+        return view('admin.treatment-review');
+    }
+
     public function login()
     {
         return view('admin.login');
