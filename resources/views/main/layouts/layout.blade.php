@@ -12,6 +12,7 @@
 </head>
 <body>
     @yield('content')
+    @include('main.layouts.footer')
     <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="./assets/libs/slick-carousel/slick/slick.min.js"></script>
     <script src="./assets/libs/animatescroll/animatescroll.min.js"></script>

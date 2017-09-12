@@ -10,4 +10,9 @@ class MainController extends Controller
     {
         return view('main.home');
     }
+
+    public function agree()
+    {
+        return view('main.agree');
+    }
 }
