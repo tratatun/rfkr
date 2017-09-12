@@ -1,5 +1,12 @@
-.idea
-slice/node_modules
-slice/.idea
-slice/tmp
-slice/*.html
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
