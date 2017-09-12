@@ -2,21 +2,7 @@
 
 @section('content')
     <div class="admin-pages-container">
-        <div class="header-admin-container">
-            <header class="header-admin">
-                <ul class="navigation">
-                    <li class="navigation__item"><a class="item__link" href="/">Страницы</a></li>
-                    <li class="navigation__item"><a class="item__link" href="/">Команда</a></li>
-                    <li class="navigation__item"><a class="item__link" href="/">Обращения</a></li>
-                </ul>
-                <div class="come-back"><a href="/">
-                        <svg role="img">
-                            <use xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel"></use>
-                        </svg><span>Назад к списку</span></a></div>
-                <button class="login">Войти</button>
-                <button class="logout">Выйти</button>
-            </header>
-        </div>
+        @include('admin.layouts.menu')
         <div class="admin-pages">
             <h1 class="admin-pages__caption">Страницы</h1>
             <h6 class="admin-pages__subcaption">Управление разделами и страницами веб-системы</h6>

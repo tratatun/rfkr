@@ -2,21 +2,7 @@
 
 @section('content')
     <div class="admin-login-container">
-        <div class="header-admin-container">
-            <header class="header-admin">
-                <ul class="navigation">
-                    <li class="navigation__item"><a class="item__link" href="/">Страницы</a></li>
-                    <li class="navigation__item"><a class="item__link" href="/">Команда</a></li>
-                    <li class="navigation__item"><a class="item__link" href="/">Обращения</a></li>
-                </ul>
-                <div class="come-back"><a href="/">
-                        <svg role="img">
-                            <use xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel"></use>
-                        </svg><span>Назад к списку</span></a></div>
-                <button class="login">Войти</button>
-                <button class="logout">Выйти</button>
-            </header>
-        </div>
+        @include('admin.layouts.menu')
         <div class="admin-login">
             <h1 class="login__caption">Войти</h1>
             <h6 class="login__subcaption">Управление веб-системой НО РФ КРМД РК</h6>
