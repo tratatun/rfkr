@@ -122,6 +122,10 @@ module.exports = function(grunt) {
 			}
 		},
 
+		clean: {
+			tmp: ['resources/tmp']
+		},
+
 		watch: {
 			stylus_watch: {
 				files: ['resources/assets/stylus/**/*.styl'], //Изменяемые файлы
@@ -161,12 +165,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-w3c-html-validation');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default task(s).
 	grunt.registerTask('build_styles', ['concat_css', 'stylus', 'autoprefixer', 'cssmin']);
 	grunt.registerTask('build_js', ['concat', 'uglify']);
 	grunt.registerTask('svg_concat', ['svgstore']);
 	grunt.registerTask('html_validation', ['validation']);
-	grunt.registerTask('build', ['pug', 'build_styles', 'build_js', 'svg_concat']);
+	grunt.registerTask('build', ['pug', 'build_styles', 'build_js', 'svg_concat', 'clean']);
 	grunt.registerTask('default', ['build', 'watch']);
 };
