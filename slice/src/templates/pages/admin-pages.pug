@@ -53,21 +53,24 @@ block content
 				.toogle__header
 					a(href="#admin-section-three" data-role="toogle") Имя раздела три
 				.toogle__body#admin-section-three
-					p Some content for section three
+					for item in sectionTwoTable
+						+table(item)
 			.divider
 
 			.toogle
 				.toogle__header
 					a(href="#admin-section-four" data-role="toogle") Имя раздела четыре
 				.toogle__body#admin-section-four
-					p Some content for section four
+					for item in sectionTwoTable
+						+table(item)
 			.divider
 
 			.toogle
 				.toogle__header
 					a(href="#admin-section-five" data-role="toogle") Имя раздела пять
 				.toogle__body#admin-section-five
-					p Some content for section five
+					for item in sectionTwoTable
+						+table(item)
 			.divider
 
 			button.btn-add-section Добавить раздел
