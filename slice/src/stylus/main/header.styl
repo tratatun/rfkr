@@ -5,6 +5,15 @@
 	&.scrolled
 		.header-wrapper
 			background-color rgba(13, 59, 95, .5)
+			.header__logo
+				left 15px
+				transform: scale(0.8)
+				margin-top 0
+			.header__company
+				transform: translateY(-150%);
+			.header
+				height $subHeaderHeight
+
 
 	.subheader-container
 		background-color $blueDark
@@ -98,13 +107,21 @@
 
 	.header-wrapper
 		border-bottom 1px solid rgba(255, 255, 255, .2)
+		overflow hidden
+
+	.header__company
+		@extend $transitionSlow
 
 	.header
+		@extend $transitionSlow
 		@extend $mainContainer
 		position relative
 		height $headerHeight
 		display flex
 		align-items center
+
+	.header__logo
+		@extend $transitionSlow
 
 	.header__nav
 		position absolute
