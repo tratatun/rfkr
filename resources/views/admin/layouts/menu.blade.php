@@ -3,7 +3,7 @@
         <ul class="navigation">
             <li class="navigation__item"><a class="item__link" href="/admin/pages">Страницы</a></li>
             <li class="navigation__item"><a class="item__link" href="/admin/team">Команда</a></li>
-            <li class="navigation__item"><a class="item__link" href="/">Обращения</a></li>
+            <li class="navigation__item"><a class="item__link" href="/admin/treatments">Обращения</a></li>
         </ul>
         <div class="come-back"><a href="/">
                 <svg role="img">

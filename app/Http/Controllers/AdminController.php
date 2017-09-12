@@ -21,6 +21,11 @@ class AdminController extends Controller
         return view('admin.team');
     }
 
+    public function treatments()
+    {
+        return view('admin.treatments');
+    }
+
     public function login()
     {
         return view('admin.login');

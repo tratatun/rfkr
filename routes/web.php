@@ -21,4 +21,5 @@ Route::get('/search', 'MainController@search');
 Route::get('/admin/pages', 'AdminController@pages');
 Route::get('/admin/pages/add', 'AdminController@addPage');
 Route::get('/admin/team', 'AdminController@team');
+Route::get('/admin/treatments', 'AdminController@treatments');
 Route::get('/admin/login', 'AdminController@login');
