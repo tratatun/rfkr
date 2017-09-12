@@ -14,3 +14,4 @@
 Route::get('/', 'MainController@index');
 Route::get('/agree', 'MainController@agree');
 Route::get('/treatment', 'MainController@treatment');
+Route::get('/search', 'MainController@search');

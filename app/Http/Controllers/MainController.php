@@ -20,4 +20,11 @@ class MainController extends Controller
     {
         return view('main.treatment');
     }
+
+    public function search()
+    {
+        return view('main.search');
+    }
+
+
 }
