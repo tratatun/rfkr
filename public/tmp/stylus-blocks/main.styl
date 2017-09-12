@@ -1,0 +1,1285 @@
+.adjacent-links-wrapper
+	background-color rgba(28, 33, 47, 0.05)
+	padding 43px 0 40px 0
+
+	.adjacent-links
+		@extend $mainContainer
+
+	.adjacent-links__caption
+		margin-bottom 32px
+.admin-login
+	@extend $adminContainer
+
+	.login__subcaption
+		@extend $adminSubcaption
+
+	.form-group-block
+		margin-bottom 28px
+
+	.form-group
+		float left
+		width 48.5%
+		&:not(:last-child)
+			margin-right 3%
+
+	.button-container
+		@extend $buttonContainer
+
+	.btn-reset
+		@extend $grayBtnBig
+		margin-right 28px
+
+	.btn-login
+		@extend $blueBtnBigger
+.admin-team
+	@extend $adminContainer
+
+	.login__subcaption
+		@extend $adminSubcaption
+
+	.button-container
+		@extend $buttonContainer
+
+	.divider
+		width 100%
+
+	.btn-control-add
+		@extend $transitionSlow
+		opacity 0
+		visibility hidden
+
+	.btn-reset
+		@extend $grayBtnBig
+		margin-right 28px
+
+	.btn-save
+		@extend $redOrangeBtn
+
+	.btn-add
+		@extend $transitionSlow
+		@extend $blueBorderBtn
+		float left
+
+	.add-admin,
+	.change-admin
+		display none
+		padding-bottom 22px
+
+	.add-admin__caption,
+	.change-admin__caption
+		padding-top 24px
+		margin-bottom 34px
+
+	.form-group
+		float left
+		width 25%
+		&:not(:last-child)
+			padding-right 3%
+.admin-treatments
+	@extend $adminContainer
+
+	.login__subcaption
+		@extend $robotoMedium
+		margin-bottom 9px
+
+	.tabs__header
+		height 64px
+		line-height 64px
+		border-bottom 1px solid rgba(28, 33, 47, .06)
+
+	.tabs-switch
+		@extend $transitionDefault
+		@extend $textUppercase
+		@extend $robotoMedium
+		@extend $smallerFontSize
+		@extend $defaultOpacity
+		color $fullBlack
+		&.active
+			@extend $noneOpacity
+			&:after
+				background-color $defaultBlack
+		&:after
+			@extend $transitionDefault
+			@extend $pseudoElement
+			sizeElement(100%, 4px)
+			background-color $transparent
+			left 0
+			bottom -2px
+
+	.tabs__content
+		position relative
+
+	.header__item
+		display inline-block
+		position relative
+		margin-right 29px
+		a
+			color $defaultBlack
+
+	.content__pane
+		@extend $transitionDefault
+		absoluteElement(absolute, 0, 0)
+		width 100%
+		opacity 0
+		z-index -1
+		&.visible
+			z-index 1
+
+	.table
+		margin-top 32px
+		td, th
+			&:first-child
+				width 27%
+			&:nth-child(2)
+				width 21.9%
+				max-width 227px
+				white-space nowrap
+				overflow hidden
+			&:nth-child(3)
+				width 29.6%
+				padding-left 3%
+			&:last-child
+				width 21.5%
+		.reply-again
+			color $red
+
+	.form-group-block
+		margin-top 35px
+		margin-bottom 29px
+
+	.form-group
+		float left
+		width 25%
+		&:not(:last-child)
+			padding-right 3%
+
+	.divider
+		width 100%
+			
+	.button-container
+		text-align right
+		padding 32px 0
+
+	.btn-filter-clear
+		@extend $grayBtnBig
+		margin-right 28px
+
+	.btn-filter
+		@extend $redOrangeBtn
+
+	#parsed-treatments
+		padding-bottom 40px
+.agree-container
+	@extend $mainContainer
+	padding-top "calc(44px + %s)" % $headerShortHeight
+
+	.agree
+		width 100%
+		max-width 742px
+
+	.agree__caption
+		margin-bottom 3px
+
+	.agree__subcaption
+		margin-bottom 32px
+
+	.agree-text__first-part
+		@extend $robotoMedium
+		margin-bottom 24px
+
+	.agree-text__second-part,
+	.divider
+		margin-bottom 32px
+
+	.divider
+		width 100%
+
+	.btn-container
+		text-align right
+		padding-bottom 40px
+
+	.btn-cancel
+		@extend $grayBtnBig
+		margin-right 28px
+
+	.btn-continue
+		@extend $blueBtn
+		@extend $defaultFontSize
+@keyframes rotateY
+	from
+		transform: perspective(300px) rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+		opacity: 0;
+
+	40%
+		transform: perspective(300px) rotate3d(0, 1, 0, -20deg);
+		animation-timing-function: ease-in;
+
+	60%
+		transform: perspective(300px) rotate3d(0, 1, 0, 10deg);
+
+	80%
+		transform: perspective(300px) rotate3d(0, 1, 0, -5deg);
+
+	to
+		transform: perspective(300px);
+		opacity: 1;
+.footer-wrapper
+	background-color $defaultBlack
+
+	.footer
+		@extend $mainContainer
+
+	.footer__caption
+		@extend $textUppercase
+		color $white
+		padding 32px 0 20px 0
+
+	.footer__content
+		position relative
+		border-bottom 1px solid $whiteSemi
+		margin-bottom 34px
+		padding-bottom 17px
+		&:after
+			@extend $clearBoth
+
+	.content__col
+		float left
+		&:nth-child(1)
+			width 26%
+		&:nth-child(2)
+			width 25.5%
+		&:nth-child(3)
+			width 26%
+		&:nth-child(4)
+			width 22.5%
+
+	.content-col__sublist
+		padding-left 15px
+
+	.footer-link
+		@extend $firasansRegular
+		@extend $smallFontSize
+		@extend $transitionDefault
+		display inline-block
+		margin-bottom 9px
+
+	.item__link
+		opacity .6
+		&:hover
+			opacity 1
+
+	.footer__bottom
+		display flex
+		position relative
+		padding-bottom 34px
+
+	.social-block
+		width 27.8%
+
+	.copyright
+		@extend $firasansRegular
+		width 72.2%
+
+	.btn-up
+		position absolute
+		right 0
+		top 0
+		sizeElement(26px, 26px)
+		cursor pointer
+		&:hover
+			.btn-up__icon_default
+				@extend $fullOpacity
+			.btn-up__icon_hover
+				@extend $noneOpacity
+
+	.btn-up__icon
+		@extend $transitionDefault
+		position absolute
+		sizeElement(100%, 100%)
+		top 0
+		left 0
+
+	.btn-up__icon_default
+		@extend $noneOpacity
+
+	.btn-up__icon_hover
+		@extend $fullOpacity
+
+	.social-block__link
+		@extend $transitionDefault
+		@extend $cursorPointer
+		display inline-block
+		opacity .6
+		&:not(:last-child)
+			margin-right 24px
+		&:hover
+			@extend $noneOpacity
+
+	.link__icon_youtube
+		sizeElement(26px, 20px)
+
+	.link__icon_odnoklassniki
+		sizeElement(13px, 22px)
+
+	.link__icon_facebook,
+	.link__icon_vk,
+	.link__icon_instagram
+		sizeElement(22px, 22px)
+
+	.copyright
+		color $white
+		opacity .2
+		line-height 1.9
+		@extend $smallerFontSize
+.header-admin-container
+	background-color $red
+	absoluteElement(fixed, 0, 0)
+	width 100%
+	z-index 10
+
+	.header-admin
+		@extend $mainContainer
+		@extend $smallFontSize
+		height $headerAdminHeight
+		position relative
+
+	.navigation__item
+		height 100%
+		display inline-block
+		margin-right 20px
+		line-height $headerAdminHeight
+		&:hover
+			@extend $noneOpacity
+			color $white
+
+	.item__link
+		@extend $semiOpacity
+		@extend $transitionDefault
+		&:hover,
+		&.active
+			@extend $noneOpacity
+			color $white
+
+	.come-back
+		line-height $headerAdminHeight
+		display none
+		a
+			@extend $robotoMedium
+			@extend $smallFontSize
+			&:hover
+				color $white
+			svg
+				sizeElement(24px, 24px)
+				transform rotate(180deg)
+				margin-bottom -8px
+				display inline-block
+			span
+				display inline-block
+				margin-left 16px
+
+
+
+	.login,
+	.logout
+		@extend $robotoMedium
+		@extend $cursorPointer
+		@extend $centerElementY
+		position absolute
+		top 50%
+		right 15px
+		background-color $transparent
+		color $white
+
+	.login
+		display none
+
+.treatments-reply-container,
+.treatments-parsed-container
+	.header-admin-container
+		.navigation
+			display none
+		.come-back
+			display block
+
+.admin-login-container
+	.header-admin-container
+		.logout
+			display none
+		.login
+			display block
+.header-short-container
+	absoluteElement(fixed, 0, 0)
+	width 100%
+	z-index 10
+	background-color $blueDark
+
+	.header-short
+		@extend $mainContainer
+		@extend $flexBlock
+		position relative
+		color $white
+		height $headerShortHeight
+
+	.header__logo
+		left calc(-100vw * 50 / 1440)
+
+	.close-block
+		@extend $robotoMedium
+		@extend $smallFontSize
+		@extend $transitionDefault
+		@extend $cursorPointer
+		opacity .6
+		padding-right 35px
+		background-image url(../images/icons/close.svg)
+		background-size 14px 14px
+		background-repeat no-repeat
+		background-position right center
+		position absolute
+		right 20px
+		&:hover
+			opacity 1
+
+	.header__logo
+		sizeElement(40px, 31px)
+		margin-top 11px
+
+	.header__company
+		.company__type
+			@extend $robotoMedium
+			padding-left 7px
+
+		.company__name
+			@extend $smallFontSize
+			line-height 1.6
+.headers-container
+	absoluteElement(fixed, 0, 0)
+	width 100%
+	z-index 10
+	&.scrolled
+		.header-wrapper
+			background-color rgba(13, 59, 95, .5)
+
+	.subheader-container
+		background-color $blueDark
+		height $subHeaderHeight
+
+	.subheader
+		@extend $mainContainer
+		height 100%
+		display flex
+		align-items center
+
+	.subheader_right-col,
+	.subheader_left-col,
+	.subheader__treatment,
+	.subheader__account,
+	.search__icon,
+	.treatment__icon,
+	.account__icon,
+	.subheader__search,
+	.subheader__treatment,
+	.subheader__account
+		display inline-block
+
+	.subheader_left-col
+		width 20%
+		text-align left
+
+	.subheader_right-col
+		width 80%
+		text-align right
+
+	.subheader__search,
+	.subheader__treatment,
+	.subheader__account
+		position relative
+		white-space nowrap
+		@extend $smallFontSize
+		color $white
+		cursor pointer
+		opacity .5
+		@extend $transitionDefault
+		&:hover
+			opacity 1
+
+	.subheader__account:hover
+		.account__text:after
+			transform rotate(180deg)
+			top 70%
+
+
+	.search__icon svg,
+	.treatment__icon svg
+		sizeElement(20px, 24px)
+
+
+	.account__icon svg
+		sizeElement(32px, 32px)
+
+	.search__icon,
+	.treatment__icon,
+	.account__icon
+		absoluteElement(absolute, 50%, 0)
+		@extend $centerElement
+
+	.search__icon
+		left 11px
+
+	.search__text
+		padding-left 40px
+
+	.treatment__text
+		padding-left 26px
+		padding-right 3.8em
+
+	.account__text
+		padding-left 32px
+		padding-right 35px
+		position relative
+		&:after
+			@extend $pseudoElement
+			sizeElement(0, 0)
+			border 5px solid transparent
+			border-top-color $white
+			top 43%
+			right 7px
+			transform-origin center top
+			@extend $transitionDefault
+
+	.header-wrapper
+		border-bottom 1px solid rgba(255, 255, 255, .2)
+
+	.header
+		@extend $mainContainer
+		position relative
+		height $headerHeight
+		display flex
+		align-items center
+
+	.header__nav
+		position absolute
+		right 15px
+
+	.nav__link
+		@extend $robotoMedium
+		font-size 15px
+		&:not(:last-child)
+			margin-right 2.4em
+.last-news-wrapper
+	background-color rgba(28, 33, 47, 0.05)
+	padding-top 32px
+
+	.last-news
+		@extend $mainContainer
+
+	.last-news__header
+		position relative
+		margin-bottom 30px
+		&:after
+			@extend $clearBoth
+
+	.header__caption
+		float left
+
+	.header__btn
+		@extend $grayBtn
+		float right
+		margin -4px -4px 0 0
+
+	.last-news__content
+		max-height 624px
+		position relative
+		overflow hidden
+		padding-bottom 72px
+		&:after
+			@extend $pseudoElement
+			sizeElement(100%, 72px)
+			bottom 0
+			left 0
+			background-image linear-gradient(to bottom, rgba(243, 244, 244, 0.5), #f3f4f4)
+			pointer-events none
+
+	.content-block
+		position relative
+		width 100%
+		max-height 624px
+		&:after
+			@extend $clearBoth
+
+	.last-new
+		position relative
+		float left
+		margin-bottom 35px
+		&:after
+			@extend $pseudoElement
+			bottom 0
+			left 0
+			sizeElement(97%, 1px)
+			background-color $defaultBlack
+			opacity .06
+		&:nth-child(odd)
+			width 50%
+			margin-right 1.5%
+
+		&:nth-child(even)
+			width 48.5%
+
+	.last-new__data
+		@extend $smallerFontSize
+		opacity .4
+		margin-bottom 5px
+
+	.last-new__description
+		@extend $robotoMedium
+		@extend $middleFontSize
+		@extend $transitionDefault
+		@extend $cursorPointer
+		display block
+		line-height 1.7
+		height $lastNewsHeight
+		overflow hidden
+		margin-bottom 32px
+		color $defaultBlack
+		max-width 97%
+		&:hover
+			color $blue
+.link
+	@extend $transitionDefault
+	display inline-block
+	width 48.3%
+	background-color $whiteGray
+	padding 24px
+	margin-bottom 42px
+	&:nth-child(odd)
+		margin-right 3.4%
+	&:hover
+		background-color rgba(28, 33, 47, 0.05)
+		.row__link-text
+			color $blue
+
+	.link__caption
+		@extend $defaultFontSize
+		color $defaultBlack
+		margin-bottom 48px
+
+	.link__row
+		position relative
+		&:after
+			@extend $clearBoth
+
+	.row__link-text
+		@extend $transitionDefault
+		color $blueJeans
+		float left
+
+	.row__icon
+		float right
+		sizeElement(24px, 24px)
+.main-block
+	sizeElement(100%, 100vh)
+	color $white
+
+	.main-block__carousel,
+	.slick-list,
+	.slick-track,
+	.slide__image,
+	.slide__image:after
+		sizeElement(100%, 100%)
+
+
+	.carousel__slide
+		position relative
+
+	.slide__image
+		@extend $backgroundPosition
+		absoluteElement(absolute, 0, 0)
+		z-index 1
+		&:after
+			@extend $pseudoElement
+			background-color $shadow
+			z-index 2
+			
+
+	.slide__info-wrapper
+		width 100%
+		position absolute
+		top calc(100vh * 289/600)
+		z-index 3
+		@extend $transitionDefault
+
+	.slide__info
+		@extend $mainContainer
+
+	.info__caption
+		margin-bottom 22px
+
+	.info__description
+		margin-bottom 34px
+
+	.info__link
+		@extend $blueBtn
+
+	.slick-arrow
+		position absolute
+
+	.main-block__carousel-arrows
+		@extend $mainContainer
+		position absolute
+		left 0
+		right 0
+		bottom calc(100vh * 56/600)
+		z-index 3
+
+	.carousel-arrow
+		sizeElement(24px, 24px)
+		position absolute
+		cursor pointer
+		&.inactive
+			@extend $semiOpacity
+			cursor default
+		svg
+			sizeElement(24px, 24px)
+			@extend $transitionDefault
+			absoluteElement(absolute, 0, 0)
+		&:hover
+			.carousel-arrow_default
+				opacity 0
+			.carousel-arrow_hover
+				opacity 1
+
+
+	.carousel-arrow_prev
+		right 63px
+		svg
+			transform rotate(180deg)
+
+	.carousel-arrow_next
+		right 14px
+
+	.carousel-arrow.inactive:hover .carousel-arrow_default,
+	.carousel-arrow_default
+		opacity 1
+
+	.carousel-arrow.inactive:hover .carousel-arrow_hover,
+	.carousel-arrow_hover
+		opacity 0
+.form-group-block
+	padding 32px
+	background-color $whiteGray
+	margin-bottom 32px
+	position relative
+	&:after
+		@extend $clearBoth
+
+	.form-group__tip
+		@extend $smallerFontSize
+		@extend $defaultOpacity
+		.required
+			color $red
+
+	.form-group__button
+		@extend $grayBtn
+		display block
+		margin 16px 0
+		&[disabled]
+			opacity .12
+			&:hover
+				background-color transparent
+				cursor default
+				color $defaultBlack
+
+	.form-group__captcha
+		sizeElement(100%, 125px)
+		border solid 1px rgba(28, 33, 47, 0.4)
+		background-color $white
+		margin-bottom 4px
+
+.form-group-block_type
+	.form-group
+		width 47%
+
+.form-group-block_user
+	.form-group
+		float left
+		width 25%
+		padding-right 3%
+
+.form-group-block_address
+	.form-group
+		width 72%
+
+.form-group-block_email
+	.form-group
+		width 47%
+
+.form-group-block_additionally .toogle__body
+	.form-group
+		float left
+		&:nth-child(1)
+			width 75%
+			padding-right 3%
+		&:nth-child(2)
+			width 25%
+			padding-right 3%
+
+.form-group-block_thematics
+	.form-group
+		width 47%
+
+
+.form-group-block_treatment
+	.form-group
+		width 72%
+
+.form-group-block_attach
+	.form-group
+		padding-right 3%
+		&:last-child
+			margin-top 32px
+
+.form-group-block_captcha
+	.form-group
+		width 36%
+.message-send
+	@extend $mainContainer
+	padding-top "calc(44px + %s)" % $headerShortHeight
+
+	.message-send__caption
+		margin-bottom 3px
+
+	.message-send__subcaption
+		margin-bottom 32px
+
+	.message-send__caption,
+	.message-send__subcaption
+		padding-left 32px
+		
+	.form__footer
+		text-align right
+		padding 32px 32px 40px 0
+
+	.message-send__reset
+		@extend $grayBtnBig
+		margin-right 32px
+
+	.message-send__submit
+		@extend $blueBtn
+		font-size 16px
+
+	.toogle
+		.toogle__header
+			padding 0
+			a
+				@extend $robotoMedium
+				@extend $defaultOpacity
+				@extend $defaultFontSize
+				display block
+				color $defaultBlack
+				padding-left 40px
+				position relative
+				&:hover
+					color $defaultBlack
+				&:after
+					@extend $transitionDefault
+					sizeElement(0, 0)
+					border 5px solid transparent
+					border-top-color $fullBlackSemi
+					top 38%
+					left 7px
+					transform-origin center top
+					transform rotate(0)
+		&.open
+			a:after
+				transform rotate(180deg)
+				top 50%
+
+		.toogle__body
+			padding-top 30px
+.news-block
+	@extend $mainContainer
+	padding 40px 15px 43px 15px
+	display flex
+
+	.news-block__carousel
+		width 74%
+
+	.news-block__scroll
+		width 26%
+		padding-left 3.4%
+		max-height 540px
+		overflow hidden
+		position relative
+		&:after
+			@extend $pseudoElement
+			sizeElement(100%, $newsBlockShadowHeight)
+			background-image linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #ffffff)
+			bottom 0
+			left 0
+			pointer-events none
+
+	.news-container
+		sizeElement(100%, 100%)
+		overflow-y auto
+		overflow-x hidden
+		padding-bottom $newsBlockShadowHeight
+		padding-right 5px
+
+	.news
+		margin-bottom 26px
+
+	.news__caption
+		@extend $textUppercase
+		margin-bottom 8px
+		letter-spacing 0.3px
+
+	.news__caption,
+	.news__description
+		@extend $smallerFontSize
+
+	.news__description
+		a
+			color $blueJeans
+			&:hover
+				color $blue
+
+	.slide__img
+		sizeElement(100%, 422px)
+		@extend $backgroundPosition
+
+	.slick-arrow
+		position absolute
+		top 0
+		font-size 0
+		sizeElement(56px, 100%)
+		background-color rgba(0, 0, 0, .4)
+		@extend $transitionDefault
+		@extend $cursorPointer
+		z-index 2
+		&:after
+			@extend $pseudoElement
+			position absolute
+			top 50%
+			left 50%
+			@extend $centerElement
+			sizeElement(24px, 24px)
+			background-image url(../images/icons-sprite/arrow-carousel.svg)
+			background-size 100%
+			background-repeat no-repeat
+			background-position center
+			@extend $transitionDefault
+		&:hover
+			background-color rgba(0, 0, 0, .6)
+			&.slick-next:after,
+			&.slick-prev:after
+				left 55%
+		&.slick-disabled
+			@extend $fullOpacity
+
+	.slick-next
+		right 0
+
+	.slick-prev
+		left 0
+		transform: rotate(180deg);
+
+	.carousel-slide__caption
+		margin 17px 0 13px 0
+
+	.description__link
+		color $blueJeans
+		@extend $transitionDefault
+		@extend $cursorPointer
+		&:hover
+			color $blue
+
+	.slick-dots
+		margin 17px 0 0 5px
+		height 24px
+		li
+			display inline-block
+			&:not(:last-child)
+				margin-right 13px
+			&.slick-active
+				button
+					sizeElement(16px, 16px)
+					background-color transparent
+					border 1px solid rgba(28, 33, 47, 0.2)
+			&:not(.slick-active):hover
+				button
+					background-color $blue
+					&:before
+						@extend $noneOpacity
+
+			button
+				font-size 0
+				sizeElement(10px, 10px)
+				border-radius 50%
+				background-color rgba(28, 33, 47, 0.2)
+				@extend $transitionDefault
+				@extend $cursorPointer
+				position relative
+				&:before
+					@extend $pseudoElement
+					sizeElement(24px, 24px)
+					background-color rgba(28, 33, 47, 0.05)
+					top 50%
+					left 50%
+					@extend $centerElement
+					border-radius 50%
+					@extend $fullOpacity
+					@extend $transitionDefault
+.search-container
+	height 0
+	background-color $blueDark
+	@extend $transitionSlow
+	overflow hidden
+	border-bottom 1px solid $whiteOpacity
+	&.open
+		height $searchBlock
+
+	.search
+		@extend $mainContainer
+		color $white
+
+	.search__top-row
+		position relative
+		&:after
+			@extend $clearBoth
+
+	.top-row__close
+		float right
+		margin 46px 4px 0 0
+		@extend $semiOpacity
+		@extend $transitionDefault
+		@extend $cursorPointer
+		&:hover
+			@extend $noneOpacity
+
+	.top-row__caption
+		float left
+		@extend $robotoMedium
+		margin 40px 0 35px 0
+
+	.search__bottom-row
+		position relative
+		&:after
+			@extend $clearBoth
+
+	.bottom-row__left-col
+		float left
+		width 74.3%
+
+	.bottom-row__right-col
+		float right
+		width 25.7%
+		padding-left 32px
+
+	.left-col__search-label
+		display block
+		color rgba(255, 255, 255, 0.6)
+		@extend $smallerFontSize
+		margin-bottom 7px
+
+	.left-col__search-field
+		sizeElement(100%, 48px)
+		padding 0 16px
+
+	.right-col__search-btn
+		sizeElement(100%, 48px)
+		border 1px solid $whiteOpacity
+		background-color transparent
+		text-align center
+		line-height 48px
+		@extend $robotoMedium
+		@extend $textUppercase
+		margin-top 23px
+		letter-spacing 1.3px
+		color $whiteSemi
+		@extend $transitionDefault
+		@extend $cursorPointer
+		&:hover
+			background-color $white
+			color $blueDark
+			border-color $white
+.search-results
+	.search-container
+		height 210px
+
+	.right-col__search-btn
+		color $white
+		border-color $white
+
+	.results
+		@extend $mainContainer
+		padding-top 33px
+
+	.link
+		display block
+		width 74.3%
+		margin-right 0
+		margin-bottom 30px
+
+	.results__rul
+		@extend $smallerFontSize
+		margin-bottom 40px
+		span, a
+			@extend $transitionDefault
+			color $blueJeans
+		a:hover
+			color $blue
+.table
+	width 100%
+	border-spacing 0 2px
+	margin-top 21px
+	margin-bottom 6px
+
+	th, td
+		text-align left
+		&:first-child
+			padding-left 10px
+		&:first-child,
+		&:nth-child(3)
+			width 26%
+		&:nth-child(2)
+			width 25.5%
+		&:last-child
+			width 22.5%
+
+	th
+		@extend $firasansMedium
+		@extend $smallerFontSize
+		opacity .4
+		line-height 30px
+
+	td
+		background-color $whiteGray
+		height $inputHeight
+		line-height 1.2
+		&:last-child span
+			@extend $semiOpacity
+		a
+			@extend $transitionDefault
+			@extend $cursorPointer
+			color $blueJeans
+			&:hover
+				color $blue
+
+	button
+		@extend $defaultFontSize
+		@extend $cursorPointer
+		color $red
+		background-color $transparent
+.toogle
+	.toogle__header
+		padding 26px 0 11px 0
+		a
+			@extend $robotoMedium
+			@extend $middleFontSize
+			display block
+			width 100%
+			color $defaultBlack
+			position relative
+			&:after
+				@extend $pseudoElement
+				@extend $centerElementY
+				@extend $transitionDefault
+				right 0
+				top 50%
+				sizeElement(6px, 6px)
+				border 1px solid $fullBlackSemi
+				transform rotate(45deg)
+				border-left-color $transparent
+				border-top-color $transparent
+	&.open
+		a:after
+			transform rotate(225deg)
+			top 40%
+
+	.toogle__body
+		display none
+.treatments-parsed-container
+	.treatments-parsed
+		@extend $adminContainer
+
+	.treatments-parsed__subcaption
+		@extend $robotoMedium
+		margin-bottom 32px
+
+	.toogle_second
+		padding-top 30px
+		.toogle__body
+			padding-bottom 32px
+
+	.text-container
+		padding-top 36px
+		line-height 1.2
+		margin-bottom 48px
+
+	.text-container__link-attach,
+	.text-container__link
+		display block
+		color $blueJeans
+		&:hover
+			color $blue
+
+	.reply-again-text
+		@extend $robotoMedium
+		margin-bottom 32px
+
+	.button-container
+		text-align right
+		padding 32px 0
+
+	.btn-reset
+		@extend $grayBtnBig
+		margin-right 32px
+
+	.btn-reply
+		@extend $greenBtn
+
+	#cke_editor
+		margin-left 0
+
+	.divider
+		width 100%
+.treatments-reply
+	@extend $adminContainer
+
+	.treatments-reply__subcaption,
+	.treatments-reply__title
+		@extend $robotoMedium
+
+	.treatments-reply__subcaption
+		margin-bottom 54px
+
+	.treatments-reply__title
+		margin 29px 0 13px 10px
+
+	.table
+		margin-top 11px
+
+	.table_user-post-address
+		td,th
+			&:first-child
+				width 78.4%
+
+	.divider
+		width 100%
+
+	.button-container
+		padding 32px 0
+		position relative
+		&:after
+			@extend $clearBoth
+
+	.btn-spam
+		@extend $redOrangeBtn
+		float left
+
+	.btn-reply
+		@extend $greenBtn
+		float right
+
+	#cke_editor
+		margin-bottom 32px
