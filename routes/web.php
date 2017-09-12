@@ -18,4 +18,5 @@ Route::get('/treatment', 'MainController@treatment');
 Route::get('/search', 'MainController@search');
 
 // Admin pages (private pages)
+Route::get('/admin', 'AdminController@index');
 Route::get('/admin/login', 'AdminController@login');
