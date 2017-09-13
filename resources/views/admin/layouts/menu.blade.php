@@ -14,6 +14,6 @@
                 <li class="navigation__item"><a class="item__link" href="/admin/treatments">Обращения</a></li>
             </ul>
         @endif
-        <button class="logout">Выйти</button>
+        <a href="/admin/logout" class="logout">Выйти</a>
     </header>
 </div>

@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    public function index()
+    {
+        return redirect('/admin/pages');
+    }
+
     public function pages()
     {
         return view('admin.pages');
@@ -39,5 +44,10 @@ class AdminController extends Controller
     public function login()
     {
         return view('admin.login');
+    }
+
+    public function logout()
+    {
+        return redirect('/');
     }
 }
