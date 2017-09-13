@@ -1,9 +1,8 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-
+    @include('admin.layouts.menu', ['back' => '/admin/treatments'])
     <div class="treatments-reply-container">
-        @include('admin.layouts.menu-back', ['back' => '/admin/treatments'])
         <div class="treatments-reply">
             <h1 class="treatments-reply__caption">Обращение</h1>
             <h6 class="treatments-reply__subcaption">Ответ на обращение</h6>

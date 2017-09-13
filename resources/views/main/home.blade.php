@@ -9,7 +9,7 @@
     <section class="main-block" id="top">
         <div class="main-block__carousel">
             <div class="carousel__slide">
-                <div class="slide__image" style="background-image: url(./assets/images/main-carousel/slide-01.jpg);"></div>
+                <div class="slide__image" style="background-image: url(/assets/images/main-carousel/slide-01.jpg);"></div>
                 <div class="slide__info-wrapper">
                     <div class="slide__info">
                         <h3 class="info__caption">Программа капитального ремонта</h3>
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="carousel__slide">
-                <div class="slide__image" style="background-image: url(./assets/images/main-carousel/slide-02.jpg);"></div>
+                <div class="slide__image" style="background-image: url(/assets/images/main-carousel/slide-02.jpg);"></div>
                 <div class="slide__info-wrapper">
                     <div class="slide__info">
                         <h3 class="info__caption">Программа капитального ремонта</h3>
@@ -36,18 +36,18 @@
         <div class="main-block__carousel-arrows">
             <div class="carousel-arrow carousel-arrow_prev">
                 <svg class="carousel-arrow_default" role="img">
-                    <use xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel"></use>
+                    <use xlink:href="/assets/images/svg-sprite.svg#shape-arrow-carousel"></use>
                 </svg>
                 <svg class="carousel-arrow_hover" role="img">
-                    <use xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel-blue"></use>
+                    <use xlink:href="/assets/images/svg-sprite.svg#shape-arrow-carousel-blue"></use>
                 </svg>
             </div>
             <div class="carousel-arrow carousel-arrow_next">
                 <svg class="carousel-arrow_default" role="img">
-                    <use xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel"></use>
+                    <use xlink:href="/assets/images/svg-sprite.svg#shape-arrow-carousel"></use>
                 </svg>
                 <svg class="carousel-arrow_hover" role="img">
-                    <use xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel-blue"></use>
+                    <use xlink:href="/assets/images/svg-sprite.svg#shape-arrow-carousel-blue"></use>
                 </svg>
             </div>
         </div>
@@ -56,16 +56,16 @@
         <div class="news-block__carousel">
             <div class="carousel-news-image">
                 <div class="carousel__slide">
-                    <div class="slide__img" style="background-image: url(./assets/images/news/new-01.jpg);"></div>
+                    <div class="slide__img" style="background-image: url(/assets/images/news/new-01.jpg);"></div>
                 </div>
                 <div class="carousel__slide">
-                    <div class="slide__img" style="background-image: url(./assets/images/news/new-01.jpg);"></div>
+                    <div class="slide__img" style="background-image: url(/assets/images/news/new-01.jpg);"></div>
                 </div>
                 <div class="carousel__slide">
-                    <div class="slide__img" style="background-image: url(./assets/images/news/new-01.jpg);"></div>
+                    <div class="slide__img" style="background-image: url(/assets/images/news/new-01.jpg);"></div>
                 </div>
                 <div class="carousel__slide">
-                    <div class="slide__img" style="background-image: url(./assets/images/news/new-01.jpg);"></div>
+                    <div class="slide__img" style="background-image: url(/assets/images/news/new-01.jpg);"></div>
                 </div>
             </div>
             <div class="carousel-news">
@@ -209,7 +209,7 @@
                     <div class="link__row">
                         <p class="row__link-text">minstroyrf.ru</p>
                         <svg class="row__icon" role="img">
-                            <use xlink:href="./assets/images/svg-sprite.svg#shape-link"></use>
+                            <use xlink:href="/assets/images/svg-sprite.svg#shape-link"></use>
                         </svg>
                     </div>
                 </a><a class="link" href="/" target="_blank">
@@ -217,7 +217,7 @@
                     <div class="link__row">
                         <p class="row__link-text">http://rk.gov.ru/</p>
                         <svg class="row__icon" role="img">
-                            <use xlink:href="./assets/images/svg-sprite.svg#shape-link"></use>
+                            <use xlink:href="/assets/images/svg-sprite.svg#shape-link"></use>
                         </svg>
                     </div>
                 </a><a class="link" href="/" target="_blank">
@@ -225,7 +225,7 @@
                     <div class="link__row">
                         <p class="row__link-text">minstroyrf.ru</p>
                         <svg class="row__icon" role="img">
-                            <use xlink:href="./assets/images/svg-sprite.svg#shape-link"></use>
+                            <use xlink:href="/assets/images/svg-sprite.svg#shape-link"></use>
                         </svg>
                     </div>
                 </a><a class="link" href="/" target="_blank">
@@ -233,7 +233,7 @@
                     <div class="link__row">
                         <p class="row__link-text">minstroyrf.ru</p>
                         <svg class="row__icon" role="img">
-                            <use xlink:href="./assets/images/svg-sprite.svg#shape-link"></use>
+                            <use xlink:href="/assets/images/svg-sprite.svg#shape-link"></use>
                         </svg>
                     </div>
                 </a>

@@ -2,7 +2,7 @@
     <div class="search">
         <div class="search__top-row">
             <div class="top-row__caption">Найти на сайте</div>
-            <div class="top-row__close"><img class="close__icon" src="./assets/images/icons/close.svg" alt=""></div>
+            <div class="top-row__close"><img class="close__icon" src="/assets/images/icons/close.svg" alt=""></div>
         </div>
         <div class="search__bottom-row">
             <form action="/search">

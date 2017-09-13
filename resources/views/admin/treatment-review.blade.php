@@ -1,8 +1,8 @@
 @extends('admin.layouts.layout')
 
 @section('content')
+    @include('admin.layouts.menu', ['back' => '/admin/treatments'])
     <div class="treatments-parsed-container">
-        @include('admin.layouts.menu-back', ['back' => '/admin/treatments'])
         <div class="treatments-parsed">
             <h1 class="treatments-parsed__caption">Отвеченное обращение</h1>
             <h6 class="treatments-parsed__subcaption">Проверить ответ на обращение</h6>

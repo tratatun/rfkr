@@ -1,10 +1,10 @@
 <div class="header-wrapper">
     <header class="header"><a class="header__logo" href="/">
             <svg class="logo logo-default" role="img">
-                <use xlink:href="./assets/images/svg-sprite.svg#shape-logo"></use>
+                <use xlink:href="/assets/images/svg-sprite.svg#shape-logo"></use>
             </svg>
             <svg class="logo logo-hover" role="img">
-                <use xlink:href="./assets/images/svg-sprite.svg#shape-logo-hover"></use>
+                <use xlink:href="/assets/images/svg-sprite.svg#shape-logo-hover"></use>
             </svg>
         </a>
         <div class="header__company">
