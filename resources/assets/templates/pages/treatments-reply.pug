@@ -3,31 +3,30 @@ block content
 	include ../blocks/data
 	include ../blocks/form-group-block
 	include ../blocks/table
+	include ../blocks/header-admin
 
-	.treatments-reply-container
-		include ../blocks/header-admin
-		.treatments-reply
-			h1.treatments-reply__caption Обращение
-			h6.treatments-reply__subcaption Ответ на обращение
-			for item in tableTypeTreatments
-				+table(item)
-			for item in tableUserData
-				+table(item)
-			for item in tableUserGender
-				+table(item)
-			for item in tableUserAddress
-				+table(item)
-			for item in tableUserEmail
-				+table(item)
-			for item in tableUserPostAddress
-				+table(item)
-			for item in tableTreatmentText
-				+table(item)
-			for item in tableAttachFile
-				+table(item)
-			.treatments-reply__title Ответ на обращение
-			textarea(name="editor" id="editor")
-			.divider
-			.button-container
-				button.btn-spam Спам
-				button.btn-reply Ответить
+	.treatments-reply
+		h1.treatments-reply__caption Обращение
+		h6.treatments-reply__subcaption Ответ на обращение
+		for item in tableTypeTreatments
+			+table(item)
+		for item in tableUserData
+			+table(item)
+		for item in tableUserGender
+			+table(item)
+		for item in tableUserAddress
+			+table(item)
+		for item in tableUserEmail
+			+table(item)
+		for item in tableUserPostAddress
+			+table(item)
+		for item in tableTreatmentText
+			+table(item)
+		for item in tableAttachFile
+			+table(item)
+		.treatments-reply__title Ответ на обращение
+		textarea(name="editor" id="editor")
+		.divider
+		.button-container
+			button.btn-spam Спам
+			button.btn-reply Ответить

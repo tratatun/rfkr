@@ -5,10 +5,9 @@ include data
 				for item in adminHeaderLinks
 					li.navigation__item
 						a(href=item.href).item__link #{item.link}
-			.come-back
+			.come-back(style="display: none")
 				a(href="/")
 					svg(role="img")
 						use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-carousel")
 					span Назад к списку
-			button.login Войти
 			button.logout Выйти

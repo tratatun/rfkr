@@ -29,7 +29,6 @@
 
 	.come-back
 		line-height $headerAdminHeight
-		display none
 		a
 			@extend $robotoMedium
 			@extend $smallFontSize
@@ -44,9 +43,6 @@
 				display inline-block
 				margin-left 16px
 
-
-
-	.login,
 	.logout
 		@extend $robotoMedium
 		@extend $cursorPointer
@@ -57,21 +53,3 @@
 		background-color $transparent
 		color $white
 
-	.login
-		display none
-
-.treatments-reply-container,
-.treatments-parsed-container,
-.admin-pages-control-container
-	.header-admin-container
-		.navigation
-			display none
-		.come-back
-			display block
-
-.admin-login-container
-	.header-admin-container
-		.logout
-			display none
-		.login
-			display block
