@@ -15,7 +15,6 @@
 	.form-group__button
 		@extend $grayBtn
 		display block
-		margin 16px 0
 		&[disabled]
 			opacity .12
 			&:hover
@@ -28,6 +27,63 @@
 		border solid 1px rgba(28, 33, 47, 0.4)
 		background-color $white
 		margin-bottom 4px
+
+	.attach-block
+		margin 16px 0
+		position relative
+		&:after
+			@extend $clearBoth
+
+	.attach-error
+		@extend $smallerFontSize
+		@extend $transitionDefault
+		color $red
+		max-height 0
+		overflow hidden
+		margin-top -5px
+		&.visible
+			max-height 20px
+
+	.attach-block__left-col
+		width 160px
+
+	.attach-block__right-col
+		line-height 32px
+		span
+			display inline-block
+		.file-name
+			@extend $robotoMedium
+			color $green
+			max-width 150px
+			text-overflow ellipsis
+			white-space nowrap
+			overflow hidden
+			float left
+		.remove-file
+			@extend $semiOpacity
+			@extend $cursorPointer
+			sizeElement(14px, 14px)
+			margin-left 13px
+			position relative
+			&:after,
+			&:before
+				@extend $pseudoElement
+				sizeElement(100%, 1px)
+				background-color $fullBlack
+				top 3.4px
+			&:after
+				left 0
+				transform-origin left top
+				transform rotate(45deg)
+			&:before
+				left -4px
+				transform-origin right top
+				transform rotate(-45deg)
+
+
+	.attach-block__left-col,
+	.attach-block__right-col
+		float left
 
 .form-group-block_type
 	.form-group

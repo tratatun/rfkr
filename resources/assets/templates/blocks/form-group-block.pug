@@ -21,7 +21,12 @@ mixin formGroupBlock(item)
 						else if field.type === 'textarea'
 							textarea.form-group__textarea(minlength=5 maxlength=field.textareaLength name=field.nameInput)
 						else if field.type === 'button'
-							button.form-group__button #{field.btnText}
+							.attach-block
+								.attach-block__left-col
+									input(type="file" accept="image/jpeg, image/png, text/plain, .doc, .docx, .pdf")#attach-input
+									button(type="button").form-group__button#attach-btn #{field.btnText}
+								.attach-block__right-col
+							.attach-error Размер файла должен быть не более 10МВ
 						else if field.type === 'captcha'
 							.form-group__captcha
 						else
@@ -48,7 +53,12 @@ mixin formGroupBlock(item)
 					else if field.type === 'textarea'
 						textarea.form-group__textarea(minlength=5 maxlength=field.textareaLength name=field.nameInput)
 					else if field.type === 'button'
-						button.form-group__button #{field.btnText}
+						.attach-block
+							.attach-block__left-col
+								input(type="file" accept="image/jpeg, image/png, text/plain, .doc, .docx, .pdf")#attach-input
+								button(type="button").form-group__button#attach-btn #{field.btnText}
+							.attach-block__right-col
+						.attach-error Размер файла должен быть не более 10МВ
 					else if field.type === 'captcha'
 						.form-group__captcha
 					else if field.type === 'last-visit'
