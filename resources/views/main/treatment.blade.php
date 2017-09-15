@@ -79,11 +79,11 @@
                 <div class="toogle__body" id="attach-file">
                     <div class="form-group">
                         <label class="form-group__label">Файл с компьютера</label>
-                        <button class="form-group__button">Выбрать файл</button><span class="form-group__tip">До 10 Мб. Формат: txt, doc, docx, pdf, img, png</span>
+                        <button class="form-group__button">Выбрать файл</button><span class="form-group__tip">До 10 Мб. Формат: txt, doc, docx, pdf, jpg, png</span>
                     </div>
                     <div class="form-group">
                         <label class="form-group__label">Указать ссылку на облачное хранилище</label>
-                        <input class="form-group__input" type="text"><span class="form-group__tip">Допустимы: Yandex Disk, Google Drive, Dropbox, Облако Mail.Ru, iCloud, OneDrive</span>
+                        <input class="form-group__input" type="text" name="cloud-links"><span class="form-group__tip">Допустимы: Yandex Disk, Google Drive, Dropbox, Облако Mail.Ru, iCloud, OneDrive</span>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,11 @@
 	.form-group__tip
 		@extend $smallerFontSize
 		@extend $defaultOpacity
+		@extend $transitionDefault
 		.required
+			color $red
+		&.error
+			@extend $noneOpacity
 			color $red
 
 	.form-group__button

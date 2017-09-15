@@ -41,6 +41,20 @@ $(function(){
 		$attachFileContainer.html('');
 		$attachInput.val('');
 		$attachBtn.attr('disabled', false);
+	});
+
+	$('.form-group__input[name="cloud-links"]').on('change', function(){
+		var $this = $(this),
+			value = $this.val(),
+			regex = new RegExp('https?:\/\/(drive\.google\.com)|(yadi\.sk)|(www\.dropbox\.com)|(cloud\.mail\.ru)|(www\.icloud\.com)|(onedrive\.live\.com)', 'i'),
+			valueCheckExp = regex.test(value),
+			$errorTip = $this.closest('.form-group').find('.form-group__tip');
+		if(!valueCheckExp){
+			$errorTip.addClass('error');
+			$this.val('');
+		} else {
+			$errorTip.removeClass('error');
+		}
 	})
 
 	// $.validator.addMethod("checkSelect", function(value, element) {
