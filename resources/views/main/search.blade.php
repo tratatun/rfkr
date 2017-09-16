@@ -1,4 +1,4 @@
-@extends('main.layouts.layout')
+@extends('main.layout')
 
 @section('content')
     <div class="search-results" id="top">

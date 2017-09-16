@@ -1,4 +1,4 @@
-@extends('admin.layouts.layout')
+@extends('admin.layout')
 
 @section('content')
     <div class="admin-login">

@@ -1,6 +1,6 @@
-@extends('admin.layouts.layout')
+@extends('admin.layout')
 @section('content')
-    @include('admin.layouts.menu')
+    @include('admin.parts.menu')
     <div class="admin-team">
         <h1 class="login__caption">Команда</h1>
         <h6 class="login__subcaption">Добавление администраторов ресурса и управление ролями</h6>

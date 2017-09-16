@@ -1,7 +1,7 @@
-@extends('admin.layouts.layout')
+@extends('admin.layout')
 
 @section('content')
-    @include('admin.layouts.menu')
+    @include('admin.parts.menu')
     <div class="admin-pages">
         <h1 class="admin-pages__caption">Страницы</h1>
         <h6 class="admin-pages__subcaption">Управление разделами и страницами веб-системы</h6>

@@ -1,10 +1,10 @@
-@extends('main.layouts.layout')
+@extends('main.layout')
 
 @section('content')
     <div class="headers-container">
-        @include('main.layouts.search')
-        @include('main.layouts.topbar')
-        @include('main.layouts.topmenu')
+        @include('main.parts.search')
+        @include('main.parts.topbar')
+        @include('main.parts.topmenu')
     </div>
     <section class="main-block" id="top">
         <div class="main-block__carousel">

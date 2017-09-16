@@ -1,7 +1,7 @@
-@extends('main.layouts.layout')
+@extends('main.layout')
 
 @section('content')
-    @include('main.layouts.header-close')
+    @include('main.parts.header-close')
     <div class="agree-container" id="top">
         <div class="agree">
             <h1 class="agree__caption">Оставить обращение</h1>

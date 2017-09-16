@@ -1,7 +1,7 @@
-@extends('main.layouts.layout')
+@extends('main.layout')
 
 @section('content')
-    @include('main.layouts.header-close')
+    @include('main.parts.header-close')
     <div class="message-send" id="top">
         <h1 class="message-send__caption">Оставить обращение</h1>
         <h6 class="message-send__subcaption">Добавить обращение</h6>
