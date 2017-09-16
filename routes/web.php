@@ -27,3 +27,6 @@ Route::get('/admin/treatments/answer', 'AdminController@answerTreatment');
 Route::get('/admin/treatments/review', 'AdminController@reviewTreatment');
 Route::get('/admin/login', 'AdminController@login');
 Route::get('/admin/logout', 'AdminController@logout');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

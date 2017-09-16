@@ -79,7 +79,14 @@
                 <div class="toogle__body" id="attach-file">
                     <div class="form-group">
                         <label class="form-group__label">Файл с компьютера</label>
-                        <button class="form-group__button">Выбрать файл</button><span class="form-group__tip">До 10 Мб. Формат: txt, doc, docx, pdf, jpg, png</span>
+                        <div class="attach-block">
+                            <div class="attach-block__left-col">
+                                <input type="file" accept="image/jpeg, image/png, text/plain, .doc, .docx, .pdf" id="attach-input">
+                                <button class="form-group__button" type="button" id="attach-btn">Выбрать файл</button>
+                            </div>
+                            <div class="attach-block__right-col"></div>
+                        </div>
+                        <div class="attach-error">Размер файла должен быть не более 10МВ</div><span class="form-group__tip">До 10 Мб. Формат: txt, doc, docx, pdf, img, png</span>
                     </div>
                     <div class="form-group">
                         <label class="form-group__label">Указать ссылку на облачное хранилище</label>
