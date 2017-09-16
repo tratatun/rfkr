@@ -2,17 +2,30 @@
 
 namespace App\Http\Controllers\Admin;
 
-use \App\Http\Controllers\Auth\LoginController as BaseLoginController;
+use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
-class LoginController extends BaseLoginController
+class LoginController extends Controller
 {
+    use AuthenticatesUsers;
+
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
     protected $redirectTo = '/admin';
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
 
     /**
      * Show the application's login form.
@@ -36,6 +49,6 @@ class LoginController extends BaseLoginController
 
         $request->session()->invalidate();
 
-        return redirect('/admin/login');
+        return redirect()->route('login-admin');
     }
 }
