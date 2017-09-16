@@ -18,15 +18,16 @@ Route::get('/treatment', 'MainController@treatment');
 Route::get('/search', 'MainController@search');
 
 // Admin pages (private pages)
-Route::get('/admin', 'AdminController@index');
-Route::get('/admin/pages', 'AdminController@pages');
-Route::get('/admin/pages/add', 'AdminController@addPage');
-Route::get('/admin/team', 'AdminController@team');
-Route::get('/admin/treatments', 'AdminController@treatments');
-Route::get('/admin/treatments/answer', 'AdminController@answerTreatment');
-Route::get('/admin/treatments/review', 'AdminController@reviewTreatment');
-Route::get('/admin/login', 'AdminController@login');
-Route::get('/admin/logout', 'AdminController@logout');
-Auth::routes();
+Route::get('/admin', 'Admin\DefaultController@index');
+Route::get('/admin/pages', 'Admin\PagesController@pages');
+Route::get('/admin/pages/add', 'Admin\PagesController@addPage');
+Route::get('/admin/team', 'Admin\UsersController@users');
+Route::get('/admin/treatments', 'Admin\TreatmentsController@treatments');
+Route::get('/admin/treatments/answer', 'Admin\TreatmentsController@answerTreatment');
+Route::get('/admin/treatments/review', 'Admin\TreatmentsController@reviewTreatment');
+Route::get('/admin/login', 'Admin\LoginController@showLoginForm')->name('login');
+Route::get('/admin/logout', 'Admin\LoginController@logout')->name('logout');
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
