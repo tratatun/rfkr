@@ -37,7 +37,7 @@
         <textarea name="editor" id="editor"></textarea>
         <div class="divider"></div>
         <div class="button-container">
-            <button class="btn-reset">Отменить</button>
+            <a href="{{ url('/admin/pages') }}" class="btn-reset">Отменить</a>
             <button class="btn-save">Сохранить</button>
         </div>
     </div>

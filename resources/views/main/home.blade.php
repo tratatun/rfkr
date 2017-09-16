@@ -36,18 +36,18 @@
         <div class="main-block__carousel-arrows">
             <div class="carousel-arrow carousel-arrow_prev">
                 <svg class="carousel-arrow_default" role="img">
-                    <use xlink:href="/assets/images/svg-sprite.svg#shape-arrow-carousel"></use>
+                    <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-arrow-carousel') }}"></use>
                 </svg>
                 <svg class="carousel-arrow_hover" role="img">
-                    <use xlink:href="/assets/images/svg-sprite.svg#shape-arrow-carousel-blue"></use>
+                    <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-arrow-carousel-blue') }}"></use>
                 </svg>
             </div>
             <div class="carousel-arrow carousel-arrow_next">
                 <svg class="carousel-arrow_default" role="img">
-                    <use xlink:href="/assets/images/svg-sprite.svg#shape-arrow-carousel"></use>
+                    <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-arrow-carousel') }}"></use>
                 </svg>
                 <svg class="carousel-arrow_hover" role="img">
-                    <use xlink:href="/assets/images/svg-sprite.svg#shape-arrow-carousel-blue"></use>
+                    <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-arrow-carousel-blue') }}"></use>
                 </svg>
             </div>
         </div>
@@ -209,7 +209,7 @@
                     <div class="link__row">
                         <p class="row__link-text">minstroyrf.ru</p>
                         <svg class="row__icon" role="img">
-                            <use xlink:href="/assets/images/svg-sprite.svg#shape-link"></use>
+                            <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-link') }}"></use>
                         </svg>
                     </div>
                 </a><a class="link" href="/" target="_blank">
@@ -217,7 +217,7 @@
                     <div class="link__row">
                         <p class="row__link-text">http://rk.gov.ru/</p>
                         <svg class="row__icon" role="img">
-                            <use xlink:href="/assets/images/svg-sprite.svg#shape-link"></use>
+                            <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-link') }}"></use>
                         </svg>
                     </div>
                 </a><a class="link" href="/" target="_blank">
@@ -225,7 +225,7 @@
                     <div class="link__row">
                         <p class="row__link-text">minstroyrf.ru</p>
                         <svg class="row__icon" role="img">
-                            <use xlink:href="/assets/images/svg-sprite.svg#shape-link"></use>
+                            <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-link') }}"></use>
                         </svg>
                     </div>
                 </a><a class="link" href="/" target="_blank">
@@ -233,7 +233,7 @@
                     <div class="link__row">
                         <p class="row__link-text">minstroyrf.ru</p>
                         <svg class="row__icon" role="img">
-                            <use xlink:href="/assets/images/svg-sprite.svg#shape-link"></use>
+                            <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-link') }}"></use>
                         </svg>
                     </div>
                 </a>

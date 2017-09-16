@@ -102,7 +102,7 @@
             </div>
             <div class="divider"></div>
             <div class="form__footer">
-                <a href="/" class="message-send__reset" type="reset">Отменить</a>
+                <a href="{{ url('/') }}" class="message-send__reset" type="reset">Отменить</a>
                 <button class="message-send__submit" type="submit">Отправить</button>
             </div>
         </form>

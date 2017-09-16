@@ -1,7 +1,7 @@
 <div class="header-admin-container">
     <header class="header-admin">
         @if(isset($back))
-            <div class="come-back"><a href="{{$back}}">
+            <div class="come-back"><a href="{{ url($back) }}">
                 <svg role="img">
                     <use xlink:href="/assets/images/svg-sprite.svg#shape-arrow-carousel"></use>
                 </svg>
