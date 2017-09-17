@@ -29,7 +29,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-//        $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -45,7 +45,7 @@ class RegisterController extends Controller
 
         $user = $this->create($request->all());
 
-        return redirect()->route('register-admin');
+        return redirect()->route('admin.users');
     }
 
     /**

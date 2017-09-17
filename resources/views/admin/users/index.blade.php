@@ -34,7 +34,7 @@
         <div class="add-admin">
             <h3 class="add-admin__caption">Новый администратор</h3>
             <div class="form-group-block ">
-                <form id="teamCreateUserForm" method="POST" action="{{ route('register-admin') }}">
+                <form id="teamCreateUserForm" method="POST" action="{{ route('admin.users') }}">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label class="form-group__label">Имя</label>

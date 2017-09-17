@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 
 class TreatmentsController extends BaseController
 {
-    public function treatments()
+    public function index()
     {
         return view('admin.treatments');
     }

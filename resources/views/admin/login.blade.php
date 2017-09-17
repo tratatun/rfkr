@@ -4,7 +4,7 @@
     <div class="admin-login">
         <h1 class="login__caption">Войти</h1>
         <h6 class="login__subcaption">Управление веб-системой НО РФ КРМД РК</h6>
-        <form class="admin-login__form" method="POST" action="{{ route('login-admin') }}">
+        <form class="admin-login__form" method="POST" action="{{ route('admin.login') }}">
             {{ csrf_field() }}
             <div class="form-group-block ">
                 <div class="form-group {{ $errors->has('email') ? ' error' : '' }}">

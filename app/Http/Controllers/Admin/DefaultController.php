@@ -7,6 +7,6 @@ class DefaultController extends BaseController
 {
     public function index()
     {
-        return redirect('/admin/pages');
+        return redirect()->route('admin.pages');
     }
 }
