@@ -13,9 +13,10 @@
                 Крым»
             </div>
         </div>
-        <nav class="header__nav"><a class="nav__link" href="/">О Фонде</a><a class="nav__link"
-                                                                             href="/">Программа</a><a
-                    class="nav__link" href="/">Деятельность</a><a class="nav__link" href="/">Собственникам</a>
+        <nav class="header__nav">
+            @foreach ($sections as $section)
+                <a class="nav__link" href="{{ url($section->url) }}">{{ $section->title }}</a>
+            @endforeach
         </nav>
     </header>
 </div>
