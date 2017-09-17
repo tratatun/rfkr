@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 					expand: true, //свойство, которое позволяет нам указать сразу все файлы, а не каждый по отдельности
 					cwd: 'resources/assets/templates/pages', //папка в которой грунт возьмет файлы
 					src: ['*.pug'], //возьми все файлы (*) с расширением pug
-					dest: 'public/', //скомпилируй их в корневую папку
+					dest: 'public/slice', //скомпилируй их в корневую папку
 					ext: '.html' //с расширением html
 				}]
 			}
