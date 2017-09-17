@@ -13,13 +13,13 @@ class PagesController extends BaseController
         View::share('currentMenuItem', 'pages');
     }
 
-    public function pages()
+    public function index()
     {
-        return view('admin.pages');
+        return view('admin.pages.index');
     }
 
-    public function addPage()
+    public function create()
     {
-        return view('admin.page');
+        return view('admin.pages.create');
     }
 }

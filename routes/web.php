@@ -20,8 +20,8 @@ Route::get('/search', 'MainController@search');
 // Admin pages (private pages)
 Route::get('/admin', 'Admin\DefaultController@index');
 
-Route::get('/admin/pages', 'Admin\PagesController@pages')->name('admin.pages');
-Route::get('/admin/pages/add', 'Admin\PagesController@addPage');
+Route::get('/admin/pages', 'Admin\PagesController@index')->name('admin.pages');
+Route::get('/admin/pages/create', 'Admin\PagesController@create')->name('admin.pages.create');
 
 Route::get('/admin/users', 'Admin\UsersController@index')->name('admin.users');
 Route::get('/admin/users/create', 'Admin\UsersController@create')->name('admin.users.create');

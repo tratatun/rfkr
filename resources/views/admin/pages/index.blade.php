@@ -347,6 +347,6 @@
             </div>
         </div>
         <div class="divider"></div>
-        <a href="{{ url('/admin/pages/add') }}" class="btn-add-section">Добавить раздел</a>
+        <a href="{{ route('admin.pages.create', ['type' => 'section']) }}" class="btn-add-section">Добавить раздел</a>
     </div>
 @endsection
