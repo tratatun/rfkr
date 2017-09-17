@@ -10,6 +10,9 @@
 		height $headerAdminHeight
 		position relative
 
+	.navigation
+		float left
+
 	.navigation__item
 		height 100%
 		display inline-block
@@ -29,6 +32,7 @@
 
 	.come-back
 		line-height $headerAdminHeight
+		float left
 		a
 			@extend $robotoMedium
 			@extend $smallFontSize
@@ -43,13 +47,24 @@
 				display inline-block
 				margin-left 16px
 
+	.account-block
+		float right
+		height 100%
+
+	.account-block__item
+		*
+			@extend $robotoMedium
+			@extend $smallFontSize
+			color $white
+			display inline
+		height inherit
+		line-height $headerAdminHeight
+		display inline-block
+		&:not(:last-child)
+			margin-right 15px
+
 	.logout
-		@extend $robotoMedium
 		@extend $cursorPointer
-		@extend $centerElementY
-		position absolute
-		top 50%
-		right 15px
 		background-color $transparent
-		color $white
+
 

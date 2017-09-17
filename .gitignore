@@ -22,3 +22,4 @@ yarn-error.log
 /public/assets/css/styles.min.css
 /public/assets/css/styles.css
 /public/assets/vendor/
+/public/slice/
