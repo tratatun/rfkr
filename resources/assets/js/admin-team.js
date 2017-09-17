@@ -1,17 +1,8 @@
 $(function(){
 	var $addAdminBlock = $('.add-admin'),
-		$btnAddAdmin = $('.btn-add-admin'),
 		$btnChangeAdmin = $('.change-admin');
 
 	$btnChangeAdmin.find('select').attr('disabled', true);
-
-	$btnAddAdmin.click(function(){
-		var $this = $(this);
-		removeBtnClasses();
-		GLOBALS.$body.find('.btn-control-save').addClass(GLOBALS.VISIBLE_CLASS);
-		$this.addClass(GLOBALS.INVISIBLE_CLASS);
-		$addAdminBlock.addClass(GLOBALS.OPEN_CLASS).slideDown(400);
-	});
 
 	$('.btn-reset_add').click(function(){
 		if($addAdminBlock.hasClass(GLOBALS.OPEN_CLASS)){

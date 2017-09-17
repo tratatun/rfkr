@@ -24,10 +24,10 @@ Route::get('/admin/pages', 'Admin\PagesController@pages')->name('admin.pages');
 Route::get('/admin/pages/add', 'Admin\PagesController@addPage');
 
 Route::get('/admin/users', 'Admin\UsersController@index')->name('admin.users');
-Route::get('/admin/users/create', 'Admin\UsersController@create');
-Route::get('/admin/users/edit/:user', 'Admin\UsersController@edit');
+Route::get('/admin/users/create', 'Admin\UsersController@create')->name('admin.users.create');
+Route::get('/admin/users/{user}/edit', 'Admin\UsersController@edit')->name('admin.users.edit');
 Route::post('/admin/users', 'Admin\RegisterController@register');
-Route::put('/admin/users/{id}', 'Admin\UsersController@update');
+Route::post('/admin/users/{user}', 'Admin\UsersController@update')->name('admin.users.update');
 
 Route::get('/admin/treatments', 'Admin\TreatmentsController@index')->name('admin.treatments');
 Route::get('/admin/treatments/answer', 'Admin\TreatmentsController@answerTreatment');
