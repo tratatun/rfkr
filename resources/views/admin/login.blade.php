@@ -11,18 +11,14 @@
                     <label class="form-group__label required">Электронная почта</label>
                     <input class="form-group__input" type="text" name="email">
                     @if ($errors->has('email'))
-                        <span class="error-message">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
+                        <span class="error-message">{{ $errors->first('email') }}</span>
                     @endif
                 </div>
                 <div class="form-group {{ $errors->has('password') ? ' error' : '' }}">
                     <label class="form-group__label required">Пароль</label>
                     <input class="form-group__input" type="password" name="password" minlength="2">
                     @if ($errors->has('password'))
-                        <span class="error-message">
-                        <strong>{{ $errors->first('password') }}</strong>
-                        </span>
+                        <span class="error-message">{{ $errors->first('password') }}</span>
                     @endif
                 </div>
             </div>

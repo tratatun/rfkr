@@ -15,27 +15,21 @@
                         <label class="form-group__label">Имя</label>
                         <input class="form-group__input" type="text" name="name" value="{{ $user->name }}">
                         @if ($errors->has('name'))
-                            <span class="error-message">
-                            <strong>{{ $errors->first('name') }}</strong>
-                        </span>
+                            <span class="error-message">{{ $errors->first('name') }}</span>
                         @endif
                     </div>
                     <div class="form-group">
                         <label class="form-group__label">Электронная почта</label>
                         <input class="form-group__input" type="text" name="email" value="{{ $user->email }}">
                         @if ($errors->has('email'))
-                            <span class="error-message">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
+                            <span class="error-message">{{ $errors->first('email') }}</span>
                         @endif
                     </div>
                     <div class="form-group">
                         <label class="form-group__label">Пароль</label>
                         <input title="@lang('admin.change_pswd_if_exists')" class="form-group__input" type="password" name="password" value="">
                         @if ($errors->has('password'))
-                            <span class="error-message">
-                            <strong>{{ $errors->first('password') }}</strong>
-                        </span>
+                            <span class="error-message">{{ $errors->first('password') }}</span>
                         @endif
                     </div>
                     <div class="form-group">
@@ -47,9 +41,7 @@
                             <option class="select__option" value="superadmin" {{$user->role === 'superadmin' ? 'selected' : ''}}><span>Супер администратор</span></option>
                         </select>
                         @if ($errors->has('role'))
-                            <span class="error-message">
-                                <strong>{{ $errors->first('role') }}</strong>
-                            </span>
+                            <span class="error-message">{{ $errors->first('role') }}</span>
                         @endif
                     </div>
                     <div class="form-group">

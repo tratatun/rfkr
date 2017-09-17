@@ -23,6 +23,7 @@
 <script src="{{ asset('assets/vendor/jquery-mask-plugin/dist/jquery.mask.min.js') }}"></script>
 <script src="{{ asset('assets/libs/svgpolyfill/js/svg-icon-polyfill.js') }}"></script>
 <script src="{{ asset('assets/libs/ckeditor/ckeditor.js') }}"></script>
+<script src="{{ asset('assets/libs/ckeditor/adapters/jquery.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 </html>
