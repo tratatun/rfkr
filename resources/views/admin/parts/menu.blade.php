@@ -10,13 +10,13 @@
         @else
             <ul class="navigation">
                 <li class="navigation__item ">
-                    <a class="item__link {{ $currentMenuItem == 'pages' ? 'active' : '' }}" href="{{ route('admin.pages') }}">Страницы</a>
+                    <a class="item__link {{ request()->is('admin/pages*') ? 'active' : '' }}" href="{{ route('admin.pages') }}">Страницы</a>
                 </li>
                 <li class="navigation__item">
-                    <a class="item__link {{ $currentMenuItem == 'users' ? 'active' : '' }}" href="{{ route('admin.users') }}">Команда</a>
+                    <a class="item__link {{ request()->is('admin/users*') ? 'active' : '' }}" href="{{ route('admin.users') }}">Команда</a>
                 </li>
                 <li class="navigation__item">
-                    <a class="item__link {{ $currentMenuItem == 'treatments' ? 'active' : '' }}" href="{{ route('admin.treatments') }}">Обращения</a>
+                    <a class="item__link {{ request()->is('admin/treatments*') ? 'active' : '' }}" href="{{ route('admin.treatments') }}">Обращения</a>
                 </li>
 
                 <li class="navigation__item" style="margin-left: 460px;">Привет, {{ Auth::user()->name }}</li>

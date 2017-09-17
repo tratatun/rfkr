@@ -4,16 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\View;
 
 class UsersController extends BaseController
 {
-    public function __construct()
-    {
-        parent::__construct();
-
-        View::share('currentMenuItem', 'users');
-    }
 
     public function index()
     {

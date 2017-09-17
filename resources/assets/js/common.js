@@ -9,8 +9,6 @@ $(function(){
 		$searchBlock.removeClass('open');
 	});
 
-	if(GLOBALS.$body.find('#editor').length){
-		CKEDITOR.replace( 'editor' );
-	}
+	$('#editor').ckeditor();
 
 });

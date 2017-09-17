@@ -16,8 +16,8 @@
                         <input class="form-group__input" type="text" name="name" value="{{ old('name') }}">
                         @if ($errors->has('name'))
                             <span class="error-message">
-                            <strong>{{ $errors->first('name') }}</strong>
-                        </span>
+                                <strong>{{ $errors->first('name') }}</strong>
+                            </span>
                         @endif
                     </div>
                     <div class="form-group">
