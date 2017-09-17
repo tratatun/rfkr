@@ -37,7 +37,7 @@ mixin formGroupBlock(item)
 	else
 		div(class="form-group-block " + item.classModificator)
 			for field in item.fields
-				.form-group
+				div.form-group(class=field.formGroupModificator)
 					if field.required
 						label.form-group__label.required #{field.label}
 					else
