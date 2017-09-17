@@ -10,7 +10,9 @@ class PagesController extends BaseController
 {
     public function index()
     {
-        return view('admin.pages.index');
+        $sections = Page::sections()->get();
+
+        return view('admin.pages.index', compact('sections'));
     }
 
     public function create()

@@ -18,10 +18,16 @@
                 <li class="navigation__item">
                     <a class="item__link {{ request()->is('admin/treatments*') ? 'active' : '' }}" href="{{ route('admin.treatments') }}">Обращения</a>
                 </li>
-
-                <li class="navigation__item" style="margin-left: 460px;">Привет, {{ Auth::user()->name }}</li>
             </ul>
         @endif
-        <a href="{{ route('admin.logout') }}" class="logout">Выйти</a>
+        <ul class="account-block">
+            <li class="account-block__item">
+                <a href="{{ route('admin.logout') }}" class="logout">Привет, {{ Auth::user()->name }}</a>
+            </li>
+            <li class="account-block__item">
+                <a href="{{ route('admin.logout') }}" class="logout">Выйти</a>
+            </li>
+        </ul>
+
     </header>
 </div>

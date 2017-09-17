@@ -122,7 +122,9 @@
                 </table>
             </div>
         </div>
-        @include('admin.pages.section')
+        @foreach ($sections as $section)
+            @include('admin.pages.section', ['section' => $section, 'index' => $loop->index])
+        @endforeach
         <div class="divider"></div>
         <a href="{{ route('admin.pages.create') }}" class="btn-add-section">Добавить раздел</a>
     </div>

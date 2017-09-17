@@ -15,9 +15,7 @@
                     <label class="form-group__label">Название</label>
                     <input class="form-group__input" type="text" name="title" value="{{ old('title') }}">
                     @if ($errors->has('title'))
-                        <span class="error-message">
-                            <strong>{{ $errors->first('title') }}</strong>
-                        </span>
+                        <span class="error-message">{{ $errors->first('title') }}</span>
                     @endif
                 </div>
                 <div class="form-group">
@@ -25,9 +23,7 @@
                     <input class="form-group__input" type="text" name="url" value="{{ old('url') }}"
                            placeholder="/example-of-url">
                     @if ($errors->has('url'))
-                        <span class="error-message">
-                            <strong>{{ $errors->first('url') }}</strong>
-                        </span>
+                        <span class="error-message">{{ $errors->first('url') }}</span>
                     @endif
                 </div>
                 {{--<div class="form-group">--}}
@@ -55,9 +51,7 @@
             <div>
                 <textarea name="text" id="editor"></textarea>
                 @if ($errors->has('text'))
-                    <span class="error-message">
-                    <strong>{{ $errors->first('text') }}</strong>
-                </span>
+                    <span class="error-message">{{ $errors->first('text') }}</span>
                 @endif
             </div>
             <br>
