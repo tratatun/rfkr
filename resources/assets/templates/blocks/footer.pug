@@ -16,10 +16,10 @@ mixin footer(item)
 					for item in social
 						a.social-block__link(href=item.href target="_blank")
 							svg(class="link__icon link__icon_" + item.title role="img")
-								use(xlink:href="./assets/images/svg-sprite.svg#shape-" + item.title)
+								use(xlink:href="../assets/images/svg-sprite.svg#shape-" + item.title)
 				.copyright НО РФ КРМД РК • 2017 • Материалы доступны по лицензии: CCA 4.0 International
 				.btn-up.animate-anchor(data-id="#top")
 					svg.btn-up__icon.btn-up__icon_default(role="img")
-						use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-up")
+						use(xlink:href="../assets/images/svg-sprite.svg#shape-arrow-up")
 					svg.btn-up__icon.btn-up__icon_hover(role="img")
-						use(xlink:href="./assets/images/svg-sprite.svg#shape-arrow-up-blue")
+						use(xlink:href="../assets/images/svg-sprite.svg#shape-arrow-up-blue")
