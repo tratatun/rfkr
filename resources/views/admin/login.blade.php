@@ -7,14 +7,14 @@
         <form class="admin-login__form" method="POST" action="{{ route('admin.login') }}">
             {{ csrf_field() }}
             <div class="form-group-block ">
-                <div class="form-group {{ $errors->has('email') ? ' error' : '' }}">
+                <div class="form-group col-2 {{ $errors->has('email') ? ' error' : '' }}">
                     <label class="form-group__label required">Электронная почта</label>
                     <input class="form-group__input" type="text" name="email">
                     @if ($errors->has('email'))
                         <span class="error-message">{{ $errors->first('email') }}</span>
                     @endif
                 </div>
-                <div class="form-group {{ $errors->has('password') ? ' error' : '' }}">
+                <div class="form-group col-2 {{ $errors->has('password') ? ' error' : '' }}">
                     <label class="form-group__label required">Пароль</label>
                     <input class="form-group__input" type="password" name="password" minlength="2">
                     @if ($errors->has('password'))

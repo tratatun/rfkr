@@ -11,14 +11,14 @@
             {{ csrf_field() }}
             <input type="hidden" name="parent_id" value="{{ request('parent_id') }}">
             <div class="form-group-block ">
-                <div class="form-group">
+                <div class="form-group col-2">
                     <label class="form-group__label">Название</label>
                     <input class="form-group__input" type="text" name="title" value="{{ old('title') }}">
                     @if ($errors->has('title'))
                         <span class="error-message">{{ $errors->first('title') }}</span>
                     @endif
                 </div>
-                <div class="form-group">
+                <div class="form-group col-2">
                     <label class="form-group__label">URL</label>
                     <input class="form-group__input" type="text" name="url" value="{{ old('url') }}"
                            placeholder="/example-of-url">
@@ -26,7 +26,7 @@
                         <span class="error-message">{{ $errors->first('url') }}</span>
                     @endif
                 </div>
-                {{--<div class="form-group">--}}
+                {{--<div class="form-group col-2">--}}
                     {{--<label class="form-group__label">Порядковый номер</label>--}}
                     {{--<select class="form-group__select" name="number">--}}
                         {{--<option class="select__option" value="1">1</option>--}}
@@ -34,7 +34,7 @@
                         {{--<option class="select__option" value="3">3</option>--}}
                     {{--</select>--}}
                 {{--</div>--}}
-                {{--<div class="form-group">--}}
+                {{--<div class="form-group col-2">--}}
                     {{--<label class="form-group__label">Управление</label>--}}
                     {{--<select class="form-group__select" name="management">--}}
                         {{--<option class="select__option" value="show">Отображать</option>--}}
@@ -42,7 +42,7 @@
                         {{--<option class="select__option" value="delete">&lt;span&gt;Удалить&lt;/span&gt;</option>--}}
                     {{--</select>--}}
                 {{--</div>--}}
-                {{--<div class="form-group">--}}
+                {{--<div class="form-group col-2">--}}
                     {{--<label class="form-group__label">Последнее изменение</label>--}}
                     {{--<div class="form-group__last-visit"><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></div>--}}
                 {{--</div>--}}

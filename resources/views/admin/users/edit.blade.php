@@ -11,48 +11,53 @@
             <div class="form-group-block ">
                 <form id="createUserForm" method="POST" action="{{ route('admin.users.update', ['user' => $user->id]) }}">
                     {{ csrf_field() }}
-                    <div class="form-group">
-                        <label class="form-group__label">Имя</label>
-                        <input class="form-group__input" type="text" name="name" value="{{ $user->name }}">
-                        @if ($errors->has('name'))
-                            <span class="error-message">{{ $errors->first('name') }}</span>
-                        @endif
+                    <div class="form-row">
+                        <div class="form-group col-3">
+                            <label class="form-group__label">Имя</label>
+                            <input class="form-group__input" type="text" name="name" value="{{ $user->name }}">
+                            @if ($errors->has('name'))
+                                <span class="error-message">{{ $errors->first('name') }}</span>
+                            @endif
+                        </div>
+                        <div class="form-group col-3">
+                            <label class="form-group__label">Электронная почта</label>
+                            <input class="form-group__input" type="text" name="email" value="{{ $user->email }}">
+                            @if ($errors->has('email'))
+                                <span class="error-message">{{ $errors->first('email') }}</span>
+                            @endif
+                        </div>
+                        <div class="form-group col-3">
+                            <label class="form-group__label">Пароль</label>
+                            <input title="@lang('admin.change_pswd_if_exists')" class="form-group__input" type="password" name="password" value="">
+                            @if ($errors->has('password'))
+                                <span class="error-message">{{ $errors->first('password') }}</span>
+                            @endif
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="form-group__label">Электронная почта</label>
-                        <input class="form-group__input" type="text" name="email" value="{{ $user->email }}">
-                        @if ($errors->has('email'))
-                            <span class="error-message">{{ $errors->first('email') }}</span>
-                        @endif
+                    <div class="form-row">
+                        <div class="form-group col-2">
+                            <label class="form-group__label">Роль</label>
+                            <select class="form-group__select" name="role" value="{{ $user->role }}">
+                                <option class="select__option" value=""></option>
+                                <option class="select__option" value="support" {{$user->role === 'support' ? 'selected' : ''}}>Поддержка</option>
+                                <option class="select__option" value="author" {{$user->role === 'author' ? 'selected' : ''}}>Автор записей</option>
+                                <option class="select__option" value="superadmin" {{$user->role === 'superadmin' ? 'selected' : ''}}><span>Супер администратор</span></option>
+                            </select>
+                            @if ($errors->has('role'))
+                                <span class="error-message">{{ $errors->first('role') }}</span>
+                            @endif
+                        </div>
+                        <div class="form-group col-2">
+                            <label class="form-group__label">Управление</label>
+                            <select class="form-group__select" name="managment">
+                                <option class="select__option" value=""></option>
+                                <option class="select__option" value="logindata">Войти с данными</option>
+                                <option class="select__option" value="block" disabled>Заблокировать</option>
+                                <option class="select__option" value="banish" disabled><span>Изгнать</span></option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="form-group__label">Пароль</label>
-                        <input title="@lang('admin.change_pswd_if_exists')" class="form-group__input" type="password" name="password" value="">
-                        @if ($errors->has('password'))
-                            <span class="error-message">{{ $errors->first('password') }}</span>
-                        @endif
-                    </div>
-                    <div class="form-group">
-                        <label class="form-group__label">Роль</label>
-                        <select class="form-group__select" name="role" value="{{ $user->role }}">
-                            <option class="select__option" value=""></option>
-                            <option class="select__option" value="support" {{$user->role === 'support' ? 'selected' : ''}}>Поддержка</option>
-                            <option class="select__option" value="author" {{$user->role === 'author' ? 'selected' : ''}}>Автор записей</option>
-                            <option class="select__option" value="superadmin" {{$user->role === 'superadmin' ? 'selected' : ''}}><span>Супер администратор</span></option>
-                        </select>
-                        @if ($errors->has('role'))
-                            <span class="error-message">{{ $errors->first('role') }}</span>
-                        @endif
-                    </div>
-                    <div class="form-group">
-                        <label class="form-group__label">Управление</label>
-                        <select class="form-group__select" name="managment">
-                            <option class="select__option" value=""></option>
-                            <option class="select__option" value="logindata">Войти с данными</option>
-                            <option class="select__option" value="block" disabled>Заблокировать</option>
-                            <option class="select__option" value="banish" disabled><span>Изгнать</span></option>
-                        </select>
-                    </div>
+                    
             </form>
             </div>
         </div>
