@@ -2,47 +2,20 @@
     <footer class="footer">
         <h6 class="footer__caption">Структура сайта</h6>
         <div class="footer__content">
-            <ul class="content__col">
-                <li class="content__col__item"><a class="footer-link item__link" href="/">О фонде</a></li>
-                <ul class="content-col__sublist">
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Цели и задачи</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Уставные документы</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Правовая база</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Попечительский совет</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Общественный совет</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Руководство</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Научно-технический совет</a></li>
-                </ul>
+            @foreach ($sections as $section)
+                <ul class="content__col">
+                    <li class="content__col__item"><a class="footer-link item__link" href="{{$section->url}}">{{ $section->title }}</a></li>
+                    <ul class="content-col__sublist">
+                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Цели и задачи</a></li>
+                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Уставные документы</a></li>
+                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Правовая база</a></li>
+                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Попечительский совет</a></li>
+                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Общественный совет</a></li>
+                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Руководство</a></li>
+                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Научно-технический совет</a></li>
+                    </ul>
             </ul>
-            <ul class="content__col">
-                <li class="content__col__item"><a class="footer-link item__link" href="/">Программа</a></li>
-                <ul class="content-col__sublist">
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Краткосрочный план</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Региональная программа</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Ход выполнения программы</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Новости программы</a></li>
-                </ul>
-            </ul>
-            <ul class="content__col">
-                <li class="content__col__item"><a class="footer-link item__link" href="/">Деятельность фонда</a></li>
-                <ul class="content-col__sublist">
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Торги и закупки</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Отчетность</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Результаты работы</a></li>
-                </ul>
-            </ul>
-            <ul class="content__col">
-                <li class="content__col__item"><a class="footer-link item__link" href="/">Собственникам</a></li>
-                <ul class="content-col__sublist">
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Новости фонда</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Информационные материалы</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">В помощь собственнику</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Образцы документов</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Часто задаваемые вопросы</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Юридическим лицам</a></li>
-                    <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Форма обращения</a></li>
-                </ul>
-            </ul>
+            @endforeach
         </div>
         <div class="footer__bottom">
             <div class="social-block"><a class="social-block__link" href="/" target="_blank">

@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('main.parts.topmenu', function ($view) {
+        View::composer(['main.parts.topmenu', 'main.parts.footer'], function ($view) {
             $sections = Page::sections()->get();
             $view->with('sections', $sections);
         });
