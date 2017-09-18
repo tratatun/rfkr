@@ -21,7 +21,6 @@ class AppServiceProvider extends ServiceProvider
             $view->with('sections', $sections);
         });
 
-        Carbon::setLocale('ru');
     }
 
     /**
@@ -31,6 +30,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        Carbon::setLocale(config('app.locale'));
     }
 }
