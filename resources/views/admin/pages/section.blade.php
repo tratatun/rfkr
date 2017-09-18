@@ -1,4 +1,3 @@
-{{--<div>->diffForHumans()</div>--}}
 <div class="toogle">
     <div class="toogle__header"><a href="#admin-section-{{ $index }}" data-role="toogle">{{$section->title}}</a></div>
     <div class="toogle__body" id="admin-section-{{ $index }}">
