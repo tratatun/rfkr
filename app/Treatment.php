@@ -46,4 +46,9 @@ class Treatment extends Model
         $this->status = self::$STATUS_SPAMED;
         return $this->save();
     }
+
+    public function opened()
+    {
+        return $this->status === self::$STATUS_OPENED;
+    }
 }

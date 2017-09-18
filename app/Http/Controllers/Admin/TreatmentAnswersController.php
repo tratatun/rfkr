@@ -30,7 +30,9 @@ class TreatmentAnswersController extends BaseController
             'user_id' => Auth::id(),
         ]);
 
-        $treatment->close();
+        if ($treatment->opened()) {
+            $treatment->close();
+        }
 
         return redirect()->route('admin.treatments');
     }
