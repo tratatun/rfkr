@@ -21,6 +21,11 @@ class PagesController extends BaseController
         return view('admin.pages.create');
     }
 
+    public function edit(Page $page)
+    {
+        return view('admin.pages.edit', compact('page'));
+    }
+
     public function store(Request $request)
     {
         $this->validator($request->all())->validate();
@@ -47,6 +52,20 @@ class PagesController extends BaseController
         ]);
 
         return redirect()->route('admin.pages');
+    }
+
+    public function update(Request $request, Page $page)
+    {
+        $this->validator($request->all())->validate();
+
+        $page->title = request('title');
+        $page->url = request('url');
+        $page->text = request('text', '');
+
+        $page->save();
+
+        return redirect()->route('admin.pages');
+
     }
 
     /**
