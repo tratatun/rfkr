@@ -18,13 +18,8 @@
             <div class="toogle__body" id="treatments-reply-text">
                 <div class="text-container">Даже если учесть разреженный газ, заполняющий пространство между звездами, то все равно солнечное затмение однократно. Южный Треугольник, и это следует подчеркнуть, изменяем.<a class="text-container__link-attach" href="">Приложенный_файл.doc</a>Ионный хвост, сублимиpуя с повеpхности ядpа кометы, сложен. Тукан ничтожно притягивает непреложный популяционный индекс.<a class="text-container__link" href="">Ссылка на сторонний ресурс</a></div>
                 <div class="reply-again-text">Сформировать повторный ответ</div>
-                <textarea name="editor" id="editor"></textarea>
+                @include('admin.treatment-answers.form', ['treatment' => $treatment])
             </div>
         </div>
         <div class="divider"></div>
-        <div class="button-container">
-            <btn class="btn-reset">Отменить</btn>
-            <btn class="btn-reply">Ответить</btn>
-        </div>
-    </div>
 @endsection
