@@ -22,7 +22,7 @@
         @endif
         <ul class="account-block">
             <li class="account-block__item">
-                <a href="{{ route('admin.logout') }}" class="logout">Привет, {{ Auth::user()->name }}</a>
+                <a href="{{ route('admin.logout') }}" style="opacity: 0.6">{{ Auth::user()->name }}</a>
             </li>
             <li class="account-block__item">
                 <a href="{{ route('admin.logout') }}" class="logout">Выйти</a>

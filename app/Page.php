@@ -58,7 +58,7 @@ class Page extends Model
      * @param $data
      * @return Model
      */
-    public function addSubPage($data)
+    public function createSubPage($data)
     {
         return $this->subPages()->create($data);
     }

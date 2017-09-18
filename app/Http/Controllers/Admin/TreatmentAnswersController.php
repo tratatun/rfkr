@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Treatment;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TreatmentAnswersController extends BaseController
 {
@@ -17,8 +19,19 @@ class TreatmentAnswersController extends BaseController
         return view('admin.treatment-answers.review', compact('treatment'));
     }
 
-    public function store()
+    public function store(Request $request, Treatment $treatment)
     {
+        $request->validate([
+            'text' => 'required|string'
+        ]);
 
+        $treatment->createAnswer([
+            'text' => request('text'),
+            'user_id' => Auth::id(),
+        ]);
+
+        $treatment->close();
+
+        return redirect()->route('admin.treatments');
     }
 }

@@ -45,7 +45,7 @@ class PagesController extends BaseController
     {
         $this->validator($request->all())->validate();
 
-        $page->addSubPage([
+        $page->createSubPage([
             'title' => request('title'),
             'url' => request('url'),
             'text' => request('text', ''),
