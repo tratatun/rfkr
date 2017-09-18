@@ -1,9 +1,21 @@
+{{--<div>->diffForHumans()</div>--}}
 <div class="toogle">
     <div class="toogle__header"><a href="#admin-section-{{ $index }}" data-role="toogle">{{$section->title}}</a></div>
     <div class="toogle__body" id="admin-section-{{ $index }}">
-        <a href="{{ route('admin.pages.edit', ['page' => $section->id]) }}" class="btn-add-section">Редактировать раздел</a>
-        <br>
-        <br>
+        <table class="table">
+            <tr>
+                <th>Название раздела</th>
+                <th>Управление разделом</th>
+                <th>Добавлен раздел</th>
+                <th>Последнее изменение раздела</th>
+            </tr>
+            <tr>
+                <td>{{ $section->title }}</td>
+                <td><a href="{{ route('admin.pages.edit', ['page' => $section->id]) }}" class="link-change">Изменить</a></td>
+                <td>{{ $section->created_at->diffForHumans() }} ({{ $section->user->getFirstName() }})</td>
+                <td>{{ $section->updated_at->diffForHumans() }} (petr)</td>
+            </tr>
+        </table>
         <br>
         <table class="table">
             <tr>
@@ -16,8 +28,8 @@
                 <tr>
                     <td>{{ $page->title }}</td>
                     <td><a href="{{ route('admin.pages.edit', ['page' => $page->id]) }}" class="link-change">Изменить</a></td>
-                    <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
-                    <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
+                    <td>{{ $page->created_at->diffForHumans() }} ({{ $page->user->getFirstName() }})</td>
+                    <td>{{ $page->updated_at->diffForHumans() }} (petr)</td>
                 </tr>
             @empty
                 <tr>

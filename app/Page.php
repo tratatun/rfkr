@@ -4,9 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use App\User;
+use Laravelrus\LocalizedCarbon\Traits\LocalizedEloquentTrait;
 
 class Page extends Model
 {
+    use LocalizedEloquentTrait;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -27,6 +31,14 @@ class Page extends Model
     public function subPages()
     {
         return $this->hasMany(self::class);
+    }
+
+    /**
+     * Get the an author (admin) of the page.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
     /**
