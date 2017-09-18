@@ -47,6 +47,18 @@ h6
 	@extend $firasansMedium
 	opacity .4
 
+blockquote
+	padding-left 26px
+	position relative
+	margin 10px 0
+	&:before
+		@extend $pseudoElement
+		sizeElement(4px, 100%)
+		top 0
+		left 0
+		background-color $defaultBlack
+		opacity .06
+
 .form-group.error
 	label.required
 		color $redOrange

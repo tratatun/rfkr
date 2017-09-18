@@ -1,5 +1,35 @@
 .page-content
+	@extend $mainContainer
 	padding-top 210px
+
+	a
+		@extend $cursorPointer
+		color $blueJeans
+		&:hover
+			color $blue
+
+	ol, ul
+		@extend $robotoMedium
+		margin 10px 0
+		li
+			font-family "Roboto-Regular"
+			padding-bottom 8px
+			list-style-position inside
+			&:first-child
+				padding-top 15px
+
+	ol li
+		list-style-type decimal
+
+	ul li
+		position relative
+		padding-left 15px
+		&:before
+			content '•'
+			position absolute
+			left 0
+			color rgba(28, 33, 47, 0.4)
+
 	.headers-container
 		.header
 			height 110px
@@ -14,7 +44,15 @@
 		&.scrolled
 			.header-wrapper .header__logo
 				transform scale(.9)
+
 	.header__logo
 		sizeElement(40px, 32px)
 		margin-top 11px
 		left calc(-100vw * 50 / 1440)
+
+	table
+		margin 15px 0
+		tr
+			&:nth-child(odd)
+				td, th
+					background-color $white
