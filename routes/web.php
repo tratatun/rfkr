@@ -21,7 +21,7 @@ Route::post('/treatment', 'TreatmentsController@store')->name('treatments.store'
 Route::get('/search', 'MainController@search')->name('search');
 
 // Admin pages (private pages)
-Route::get('/admin', 'Admin\DefaultController@index');
+Route::get('/admin', 'Admin\DefaultController@index')->name('admin.main');
 
 Route::get('/admin/pages', 'Admin\PagesController@index')->name('admin.pages');
 Route::get('/admin/pages/create', 'Admin\PagesController@create')->name('admin.pages.create');
