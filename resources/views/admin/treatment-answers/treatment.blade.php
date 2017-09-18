@@ -4,8 +4,8 @@
         <th>Тематика</th>
     </tr>
     <tr>
-        <td>Предложение</td>
-        <td>Уплата взносов на капитальный ремонт</td>
+        <td>@lang('admin.' . $treatment->type )</td>
+        <td>@lang('admin.' . $treatment->thematic )</td>
     </tr>
 </table>
 <table class="table_type-treatments table">
@@ -15,9 +15,9 @@
         <th>Отчество</th>
     </tr>
     <tr>
-        <td>Константин</td>
-        <td>Константинопольский</td>
-        <td>Константинович</td>
+        <td>{{ $treatment->lastname }}</td>
+        <td>{{ $treatment->firstname }}</td>
+        <td>{{ $treatment->patronymic }}</td>
     </tr>
 </table>
 <table class="table_user-gender table">
@@ -25,7 +25,7 @@
         <th>Пол</th>
     </tr>
     <tr>
-        <td>Мужской</td>
+        <td>{{ $treatment->gender }}</td>
     </tr>
 </table>
 <table class="table_user-address table">
@@ -33,7 +33,7 @@
         <th>Адрес дома</th>
     </tr>
     <tr>
-        <td>г. Симферополь, пр. Кирова 1</td>
+        <td>{{ $treatment->address }}</td>
     </tr>
 </table>
 <table class="table_user-email table">
@@ -41,7 +41,7 @@
         <th>Электронная почта</th>
     </tr>
     <tr>
-        <td>konstantin@mail.ru</td>
+        <td>{{ $treatment->email }}</td>
     </tr>
 </table>
 <table class="table_user-post-address table">
@@ -50,8 +50,8 @@
         <th>Телефон</th>
     </tr>
     <tr>
-        <td>295000, Российская Федерация, Республика Крым, г. Симферополь, пр. Кирова 1</td>
-        <td>+7(123) 456-78-90</td>
+        <td>{{ $treatment->post_address }}</td>
+        <td>{{ $treatment->phone }}</td>
     </tr>
 </table>
 <table class="table_treatment-text table">
@@ -59,7 +59,7 @@
         <th>Обращение</th>
     </tr>
     <tr>
-        <td>Даже если учесть разреженный газ, заполняющий пространство между звездами, то все равно солнечное затмение однократно. Южный Треугольник, и это следует подчеркнуть, изменяем. Ионный хвост, сублимиpуя с повеpхности ядpа кометы, сложен. Тукан ничтожно притягивает непреложный популяционный индекс.</td>
+        <td>{{ $treatment->message }}</td>
     </tr>
 </table>
 <table class="table_attach-file table">
