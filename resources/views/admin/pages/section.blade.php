@@ -12,7 +12,7 @@
                 <td>{{ $section->title }}</td>
                 <td><a href="{{ route('admin.pages.edit', ['page' => $section->id]) }}" class="link-change">Изменить</a></td>
                 <td>{{ $section->created_at->diffForHumans() }} ({{ $section->user->getFirstName() }})</td>
-                <td>{{ $section->updated_at->diffForHumans() }} (petr)</td>
+                <td>{{ $section->updated_at->diffForHumans() }} ({{ $section->userUpdated->getFirstName() }})</td>
             </tr>
         </table>
         <br>
@@ -28,7 +28,7 @@
                     <td>{{ $page->title }}</td>
                     <td><a href="{{ route('admin.pages.edit', ['page' => $page->id]) }}" class="link-change">Изменить</a></td>
                     <td>{{ $page->created_at->diffForHumans() }} ({{ $page->user->getFirstName() }})</td>
-                    <td>{{ $page->updated_at->diffForHumans() }} (petr)</td>
+                    <td>{{ $page->updated_at->diffForHumans() }} ({{ $page->userUpdated->getFirstName() }})</td>
                 </tr>
             @empty
                 <tr>

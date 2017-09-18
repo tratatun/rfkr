@@ -34,7 +34,8 @@ class PagesController extends BaseController
             'title' => request('title'),
             'url' => request('url'),
             'text' => request('text', ''),
-            'user_id' => Auth::id()
+            'user_id' => Auth::id(),
+            'updated_user_id' => Auth::id()
         ]);
 
         return redirect()->route('admin.pages');
@@ -48,7 +49,8 @@ class PagesController extends BaseController
             'title' => request('title'),
             'url' => request('url'),
             'text' => request('text', ''),
-            'user_id' => Auth::id()
+            'user_id' => Auth::id(),
+            'updated_user_id' => Auth::id()
         ]);
 
         return redirect()->route('admin.pages');
@@ -61,6 +63,7 @@ class PagesController extends BaseController
         $page->title = request('title');
         $page->url = request('url');
         $page->text = request('text', '');
+        $page->updated_user_id = Auth::id();
 
         $page->save();
 

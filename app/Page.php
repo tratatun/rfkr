@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use App\User;
@@ -16,7 +15,7 @@ class Page extends Model
      * @var array
      */
     protected $fillable = [
-        'type', 'title', 'url', 'text', 'user_id', 'page_id'
+        'type', 'title', 'url', 'text', 'user_id', 'updated_user_id', 'page_id'
     ];
 
     public function __construct(array $attributes = [])
@@ -43,6 +42,14 @@ class Page extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the an author (admin) of the page.
+     */
+    public function userUpdated()
+    {
+        return $this->belongsTo(User::class, 'updated_user_id')->withDefault();
     }
 
     /**
