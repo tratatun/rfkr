@@ -51,7 +51,7 @@
             <tr>
                 <td>@lang('admin.' . $treatment->type )</td>
                 <td>@lang('admin.' . $treatment->thematic )</td>
-                <td><a href="/">Ответить повторно</a></td>
+                <td><a href="{{ route('admin.treatment-answers.index', ['treatment' => $treatment->id]) }}">Ответить повторно</a></td>
                 <td>{{ $treatment->updated_at->diffForHumans()}}</td>
             </tr>
         @empty

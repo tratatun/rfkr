@@ -10,7 +10,7 @@
             <tr>
                 <td>@lang('admin.' . $treatment->type )</td>
                 <td>@lang('admin.' . $treatment->thematic )</td>
-                <td><a href="/">Ответить</a></td>
+                <td><a href="{{ route('admin.treatment-answers.create', ['treatment' => $treatment->id]) }}">Ответить</a></td>
                 <td>{{ $treatment->created_at->diffForHumans()}}</td>
             </tr>
         @empty
