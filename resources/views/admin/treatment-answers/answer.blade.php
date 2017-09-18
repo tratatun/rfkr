@@ -1,0 +1,1 @@
+<div class="text-container">{!! $answer->text !!}</div>
