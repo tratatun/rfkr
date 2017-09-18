@@ -7,18 +7,18 @@ use App\Treatment;
 class TreatmentAnswersController extends BaseController
 {
 
-    public function create()
+    public function create(Treatment $treatment)
     {
-        return view('admin.treatments.answer');
+        return view('admin.treatment-answers.create', compact('treatment'));
+    }
+
+    public function index(Treatment $treatment)
+    {
+        return view('admin.treatment-answers.review', compact('treatment'));
     }
 
     public function store()
     {
 
-    }
-
-    public function index()
-    {
-        return view('admin.treatments.review');
     }
 }
