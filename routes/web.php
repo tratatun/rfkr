@@ -37,8 +37,8 @@ Route::post('/admin/users', 'Admin\RegisterController@register');
 Route::post('/admin/users/{user}', 'Admin\UsersController@update')->name('admin.users.update');
 
 Route::get('/admin/treatments', 'Admin\TreatmentsController@index')->name('admin.treatments');
-Route::get('/admin/treatments/answer', 'Admin\TreatmentsController@answerTreatment');
-Route::get('/admin/treatments/review', 'Admin\TreatmentsController@reviewTreatment');
+Route::get('/admin/treatments/answer', 'Admin\TreatmentsController@showAnswer')->name('admin.treatments.answer');
+Route::get('/admin/treatments/review', 'Admin\TreatmentsController@reviewAnswers')->name('admin.treatments.answers');
 
 
 Route::get('/admin/login', 'Admin\LoginController@showLoginForm')->name('admin.login');
