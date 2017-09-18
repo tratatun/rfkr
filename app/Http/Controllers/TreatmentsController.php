@@ -51,7 +51,7 @@ class TreatmentsController extends Controller
         }
 
         $data = request()->all();
-        $data['status'] = Treatment::$STATUS_NEW;
+        $data['status'] = Treatment::$STATUS_OPENED;
 
         Treatment::create($data);
 

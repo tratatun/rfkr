@@ -2,21 +2,26 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Treatment;
+
 class TreatmentsController extends BaseController
 {
 
     public function index()
     {
-        return view('admin.treatments');
+        $newTreatments = Treatment::newOnes()->get();
+        $oldTreatments = Treatment::oldOnes()->get();
+
+        return view('admin.treatments.index', compact('newTreatments', 'oldTreatments'));
     }
 
-    public function answerTreatment()
+    public function showAnswer()
     {
-        return view('admin.treatment-answer');
+        return view('admin.treatments.answer');
     }
 
-    public function reviewTreatment()
+    public function reviewAnswers()
     {
-        return view('admin.treatment-review');
+        return view('admin.treatments.review');
     }
 }
