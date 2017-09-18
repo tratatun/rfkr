@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Page;
+use Illuminate\Support\Facades\Validator;
 
 class PagesController extends BaseController
 {
@@ -22,10 +23,7 @@ class PagesController extends BaseController
 
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|string|min:3|max:255',
-            'url' => 'required|string|min:1|max:255',
-        ]);
+        $this->validator($request->all())->validate();
 
         Page::create([
             'title' => request('title'),
@@ -35,5 +33,31 @@ class PagesController extends BaseController
         ]);
 
         return redirect()->route('admin.pages');
+    }
+
+    public function storeSubPage(Request $request, Page $page)
+    {
+        $this->validator($request->all())->validate();
+
+        $page->addSubPage([
+            'title' => request('title'),
+            'url' => request('url'),
+            'text' => request('text', ''),
+            'user_id' => Auth::id()
+        ]);
+
+        return redirect()->route('admin.pages');
+    }
+
+    /**
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'title' => 'required|string|min:3|max:255',
+            'url' => 'required|string|min:1|max:255',
+        ]);
     }
 }

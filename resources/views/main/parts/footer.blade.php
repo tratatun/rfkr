@@ -6,13 +6,9 @@
                 <ul class="content__col">
                     <li class="content__col__item"><a class="footer-link item__link" href="{{$section->url}}">{{ $section->title }}</a></li>
                     <ul class="content-col__sublist">
-                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Цели и задачи</a></li>
-                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Уставные документы</a></li>
-                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Правовая база</a></li>
-                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Попечительский совет</a></li>
-                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Общественный совет</a></li>
-                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Руководство</a></li>
-                        <li class="sublist-item"><a class="footer-link sublist-item__link" href="/">Научно-технический совет</a></li>
+                        @foreach ($section->subPages as $page)
+                            <li class="sublist-item"><a class="footer-link sublist-item__link" href="{{ url($page->url) }}">{{ $page->title }}</a></li>
+                        @endforeach
                     </ul>
             </ul>
             @endforeach

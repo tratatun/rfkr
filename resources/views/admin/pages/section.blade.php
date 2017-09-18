@@ -13,6 +13,6 @@
                 <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
             </tr>
         </table>
-        <a href="{{ route('admin.pages.create') }}" class="btn-add-section">Добавить страницу</a>
+        <a href="{{ route('admin.pages.create', ['page_id' => $section->id]) }}" class="btn-add-section">Добавить страницу</a>
     </div>
 </div>

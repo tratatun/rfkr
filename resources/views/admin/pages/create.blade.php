@@ -1,15 +1,22 @@
 @extends('admin.layout')
 
+{{$page_id = request()->query('page_id')}}
+
 @section('content')
     @include('admin.parts.menu', ['back' => route('admin.pages')])
     <div class="admin-pages-control">
         <h1 class="admin-pages-control__caption">Управление страницей</h1>
         <h6 class="admin-pages-control__subcaption">Изменение свойств и/или содержимого страницы</h6>
         <div class="divider"></div>
-        <h3 class="admin-pages-control__title">Новая страница</h3>
-        <form action="{{ route('admin.pages.store') }}" method="POST">
+        @if ($page_id)
+            <h3 class="admin-pages-control__title">Новая страница</h3>
+        @else
+            <h3 class="admin-pages-control__title">Новый Раздел</h3>
+        @endif
+        <form method="POST"
+              action="{{ $page_id ? route('admin.pages.store.subpage', ['page' => $page_id]) : route('admin.pages.store') }}" >
             {{ csrf_field() }}
-            <input type="hidden" name="parent_id" value="{{ request('parent_id') }}">
+            <input type="hidden" name="page_id" value="{{ $page_id }}">
             <div class="form-group-block ">
                 <div class="form-group col-2">
                     <label class="form-group__label">Название</label>

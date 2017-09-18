@@ -23,6 +23,7 @@ Route::get('/admin', 'Admin\DefaultController@index');
 Route::get('/admin/pages', 'Admin\PagesController@index')->name('admin.pages');
 Route::get('/admin/pages/create', 'Admin\PagesController@create')->name('admin.pages.create');
 Route::post('/admin/pages', 'Admin\PagesController@store')->name('admin.pages.store');
+Route::post('/admin/pages/{page}/pages', 'Admin\PagesController@storeSubPage')->name('admin.pages.store.subpage');
 
 Route::get('/admin/users', 'Admin\UsersController@index')->name('admin.users');
 Route::get('/admin/users/create', 'Admin\UsersController@create')->name('admin.users.create');
