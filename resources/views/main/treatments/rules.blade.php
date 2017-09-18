@@ -25,8 +25,13 @@
             </p>
             <div class="divider"></div>
             <div class="btn-container">
-                <a href="/" class="btn-cancel">Отменить</a>
-                <a href="/treatment" class="btn-continue">Я согласен</a>
+
+                <form action="{{ route('treatments.create') }}" method="get">
+                    <input type="hidden" name="agree" value="1">
+                    <a href="{{ route('home') }}" class="btn-cancel">Отменить</a>
+                    <button type="submit" class="btn-continue">Я согласен</button>
+                </form>
+
             </div>
         </div>
     </div>

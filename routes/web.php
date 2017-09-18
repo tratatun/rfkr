@@ -12,10 +12,13 @@
 */
 
 // Public pages
-Route::get('/', 'MainController@index');
-Route::get('/agree', 'MainController@agree');
-Route::get('/treatment', 'MainController@treatment');
-Route::get('/search', 'MainController@search');
+Route::get('/', 'MainController@index')->name('home');
+
+Route::get('/rules', 'TreatmentsController@rules')->name('treatments.rules');
+Route::get('/treatment', 'TreatmentsController@create')->name('treatments.create');
+Route::post('/treatment', 'TreatmentsController@store')->name('treatments.store');
+
+Route::get('/search', 'MainController@search')->name('search');
 
 // Admin pages (private pages)
 Route::get('/admin', 'Admin\DefaultController@index');

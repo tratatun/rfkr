@@ -17,7 +17,7 @@
                         <use xlink:href="/assets/images/svg-sprite.svg#shape-megaphone"></use>
                     </svg>
                 </div>
-                <a href="{{ url('/agree') }}" class="treatment__text">Оставить обращение</a>
+                <a href="{{ route('treatments.rules') }}" class="treatment__text">Оставить обращение</a>
             </div>
             <div class="subheader__account">
                 <div class="account__icon">

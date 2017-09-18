@@ -17,6 +17,8 @@ class PagesTableSeeder extends Seeder
             'text' => 'О фонде',
             'user_id' => 1,
             'updated_user_id' => 1,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -25,6 +27,8 @@ class PagesTableSeeder extends Seeder
             'text' => 'Программа',
             'user_id' => 1,
             'updated_user_id' => 1,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -33,6 +37,8 @@ class PagesTableSeeder extends Seeder
             'text' => 'Деятельность фонда',
             'user_id' => 1,
             'updated_user_id' => 1,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -41,6 +47,8 @@ class PagesTableSeeder extends Seeder
             'text' => 'Собственникам',
             'user_id' => 1,
             'updated_user_id' => 1,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -49,7 +57,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Цели и задачи',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 1
+            'page_id' => 1,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -58,7 +68,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Уставные документы',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 1
+            'page_id' => 1,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -67,7 +79,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Правовая база',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 1
+            'page_id' => 1,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
         DB::table('pages')->insert([
             'title' => 'Попечительский совет',
@@ -75,7 +89,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Попечительский совет',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 1
+            'page_id' => 1,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -84,7 +100,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Общественный совет',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 1
+            'page_id' => 1,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
         DB::table('pages')->insert([
             'title' => 'Руководство',
@@ -92,7 +110,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Руководство',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 1
+            'page_id' => 1,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -101,7 +121,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Научно-технический совет',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 1
+            'page_id' => 1,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
 
@@ -112,7 +134,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Краткосрочный план',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 2
+            'page_id' => 2,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -121,7 +145,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Региональная программа',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 2
+            'page_id' => 2,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -130,7 +156,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Ход выполнения программы',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 2
+            'page_id' => 2,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -139,10 +167,10 @@ class PagesTableSeeder extends Seeder
             'text' => 'Новости программы',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 2
+            'page_id' => 2,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
-
-
 
         DB::table('pages')->insert([
             'title' => 'Торги и закупки',
@@ -150,7 +178,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Торги и закупки',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 3
+            'page_id' => 3,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -159,7 +189,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Отчетность',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 3
+            'page_id' => 3,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -168,7 +200,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Результаты работы',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 3
+            'page_id' => 3,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
 
@@ -178,7 +212,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Новости фонда',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 4
+            'page_id' => 4,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -187,7 +223,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Информационные материалы',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 4
+            'page_id' => 4,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -196,7 +234,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'В помощь собственнику',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 4
+            'page_id' => 4,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -205,7 +245,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Образцы документов',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 4
+            'page_id' => 4,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -214,7 +256,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Часто задаваемые вопросы',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 4
+            'page_id' => 4,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -223,7 +267,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Юридическим лицам',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 4
+            'page_id' => 4,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
         DB::table('pages')->insert([
@@ -232,7 +278,9 @@ class PagesTableSeeder extends Seeder
             'text' => 'Форма обращения',
             'user_id' => 1,
             'updated_user_id' => 1,
-            'page_id' => 4
+            'page_id' => 4,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
         ]);
     }
 }
