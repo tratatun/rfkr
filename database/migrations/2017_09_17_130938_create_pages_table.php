@@ -19,7 +19,7 @@ class CreatePagesTable extends Migration
             $table->string('title');
             $table->string('url')->unique();
             $table->integer('user_id');
-            $table->integer('updated_user_id')->nullable();
+            $table->integer('updated_user_id');
             $table->text('text');
             $table->timestamps();
         });
