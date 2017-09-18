@@ -1,0 +1,20 @@
+.page-content
+	padding-top 210px
+	.headers-container
+		.header
+			height 110px
+		.header-wrapper
+			background-color $blueDark
+		.subheader-container
+			border-bottom 1px solid #5fb9ff
+		.header__nav
+			  display none
+		.company__name
+			@extend $smallFontSize
+		&.scrolled
+			.header-wrapper .header__logo
+				transform scale(.9)
+	.header__logo
+		sizeElement(40px, 32px)
+		margin-top 11px
+		left calc(-100vw * 50 / 1440)
