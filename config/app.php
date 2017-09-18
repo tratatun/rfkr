@@ -167,7 +167,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravelrus\LocalizedCarbon\LocalizedCarbonServiceProvider::class,
         /*
          * Application Service Providers...
          */

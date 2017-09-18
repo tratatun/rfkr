@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ef48859b474b6c7e34b681ed5cbfa91c",
-    "content-hash": "6d98247a362f6a6218788d883e292195",
+    "hash": "0c8d782e31713419712f8e0f4f4e5266",
+    "content-hash": "8f2120fa77d42a42b4210cdbe1c114e2",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -598,50 +598,6 @@
                 "psysh"
             ],
             "time": "2017-07-13 13:11:05"
-        },
-        {
-            "name": "laravelrus/localized-carbon",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LaravelRUS/localized-carbon.git",
-                "reference": "0a7b47b974668695479fa605fcfbff1cbf751650"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LaravelRUS/localized-carbon/zipball/0a7b47b974668695479fa605fcfbff1cbf751650",
-                "reference": "0a7b47b974668695479fa605fcfbff1cbf751650",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": ">=4.1.0",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Laravelrus\\LocalizedCarbon\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aleksandr Egorov",
-                    "email": "amego2006@gmail.com"
-                }
-            ],
-            "description": "A localizable version of Carbon",
-            "keywords": [
-                "carbon",
-                "date",
-                "datetime",
-                "laravel",
-                "time"
-            ],
-            "time": "2017-02-22 12:02:17"
         },
         {
             "name": "league/flysystem",
@@ -3873,9 +3829,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "laravelrus/localized-carbon": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

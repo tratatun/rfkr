@@ -2,14 +2,13 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use App\User;
-use Laravelrus\LocalizedCarbon\Traits\LocalizedEloquentTrait;
 
 class Page extends Model
 {
-    use LocalizedEloquentTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -19,6 +18,11 @@ class Page extends Model
     protected $fillable = [
         'type', 'title', 'url', 'text', 'user_id', 'page_id'
     ];
+
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+    }
 
     public function scopeSections(Builder $builder)
     {
