@@ -22,16 +22,6 @@ class AppServiceProvider extends ServiceProvider
             $sections = Page::sections()->get();
             $view->with('sections', $sections);
         });
-
-        View::composer('main.parts.news', function ($view) {
-            $news = News::query()->latest()->limit(8)->get();
-            $view->with('news', $news);
-        });
-
-        View::composer('main.parts.gov-resources', function ($view) {
-            $govResources = GovResource::all();
-            $view->with('govResources', $govResources);
-        });
     }
 
     /**
