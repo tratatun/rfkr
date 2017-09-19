@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cover;
 use App\News;
 use App\Page;
 
@@ -9,7 +10,9 @@ class MainController extends Controller
 {
     public function index()
     {
-        return view('main.home');
+        $covers = Cover::all();
+
+        return view('main.home', compact('covers'));
     }
 
     public function search()

@@ -7,32 +7,7 @@
         @include('main.parts.topmenu')
     </div>
     <section class="main-block" id="top">
-        <div class="main-block__carousel">
-            <div class="carousel__slide">
-                <div class="slide__image" style="background-image: url(/assets/images/main-carousel/slide-01.jpg);"></div>
-                <div class="slide__info-wrapper">
-                    <div class="slide__info">
-                        <h3 class="info__caption">Программа капитального ремонта</h3>
-                        <div class="info__description">Вы можете узнать, участвует ли Ваш дом в программе капитального
-                            ремонта<br>Проверить начисления<br>Узнать сроки и направления капитального ремонта
-                        </div>
-                        <a class="info__link" href="/">найти дом</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel__slide">
-                <div class="slide__image" style="background-image: url(/assets/images/main-carousel/slide-02.jpg);"></div>
-                <div class="slide__info-wrapper">
-                    <div class="slide__info">
-                        <h3 class="info__caption">Программа капитального ремонта</h3>
-                        <div class="info__description">Вы можете узнать, участвует ли Ваш дом в программе капитального
-                            ремонта<br>Проверить начисления<br>Узнать сроки и направления капитального ремонта
-                        </div>
-                        <a class="info__link" href="/">найти дом</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('main.parts.covers')
         <div class="main-block__carousel-arrows">
             <div class="carousel-arrow carousel-arrow_prev">
                 <svg class="carousel-arrow_default" role="img">

@@ -20,7 +20,7 @@
                     </div>
                     <div class="form-group col-2">
                         <label class="form-group__label">Изображение</label>
-                        <input class="form-group__input" type="text" name="img" value="{{ old('img') }}">
+                        <input class="form-group__input" type="text" name="img" value="{{ $cover->img }}">
                         @if ($errors->has('img'))
                             <span class="error-message">{{ $errors->first('img') }}</span>
                         @endif
