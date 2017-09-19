@@ -32,4 +32,9 @@ class News extends Model
         return $this->belongsTo(User::class, 'updated_user_id')->withDefault();
     }
 
+    public function url()
+    {
+        return '/n/' . $this->id . '-' .  $this->url;
+    }
+
 }

@@ -9,7 +9,7 @@
                 @foreach ($news as $newsOne)
                     <div class="last-new">
                         <div class="last-new__data">{{ $newsOne->created_at->diffForHumans() }}</div>
-                        <a class="last-new__description">{{ $newsOne->title }}</a>
+                        <a href="{{ url($newsOne->url()) }}" class="last-new__description">{{ $newsOne->title }}</a>
                     </div>
                 @endforeach
             </div>

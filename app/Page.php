@@ -62,4 +62,9 @@ class Page extends Model
     {
         return $this->subPages()->create($data);
     }
+
+    public function url()
+    {
+        return '/p/' . $this->id . '-' .  $this->url;
+    }
 }
