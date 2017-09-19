@@ -47,6 +47,12 @@ Route::get('/admin/gov-resources/{gov_resource}/edit', 'Admin\GovResourcesContro
 Route::post('/admin/gov-resources/{gov_resource}', 'Admin\GovResourcesController@update')
     ->name('admin.gov-resources.update');
 
+Route::get('/admin/covers', 'Admin\CoversController@index')->name('admin.covers');
+Route::get('/admin/covers/create', 'Admin\CoversController@create')->name('admin.covers.create');
+Route::post('/admin/covers', 'Admin\CoversController@store')->name('admin.covers.store');
+Route::get('/admin/covers/{cover}/edit', 'Admin\CoversController@edit')->name('admin.covers.edit');
+Route::post('/admin/covers/{cover}', 'Admin\CoversController@update')->name('admin.covers.update');
+
 Route::get('/admin/users', 'Admin\UsersController@index')->name('admin.users');
 Route::get('/admin/users/create', 'Admin\UsersController@create')->name('admin.users.create');
 Route::get('/admin/users/{user}/edit', 'Admin\UsersController@edit')->name('admin.users.edit');
