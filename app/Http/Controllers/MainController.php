@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
+use App\Page;
+
 class MainController extends Controller
 {
     public function index()
@@ -15,4 +18,13 @@ class MainController extends Controller
     }
 
 
+    public function showPage(Page $page)
+    {
+        return view('main.page', compact('page'));
+    }
+
+    public function showNews(News $news)
+    {
+        return view('main.newsOne', compact('news'));
+    }
 }

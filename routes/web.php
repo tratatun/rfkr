@@ -18,6 +18,9 @@ Route::get('/rules', 'TreatmentsController@rules')->name('treatments.rules');
 Route::get('/treatment', 'TreatmentsController@create')->name('treatments.create');
 Route::post('/treatment', 'TreatmentsController@store')->name('treatments.store');
 
+Route::get('/p/{page}-{pageTitle}', 'MainController@showPage')->name('page');
+Route::get('/n/{news}-{newsTitle}', 'MainController@showNews')->name('newsOne');
+
 Route::get('/search', 'MainController@search')->name('search');
 
 // Admin pages (private pages)
