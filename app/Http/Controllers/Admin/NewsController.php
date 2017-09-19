@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Page;
+use App\News;
 use Illuminate\Support\Facades\Validator;
 
-class PagesController extends BaseController
+class NewsController extends BaseController
 {
     public function index()
     {
@@ -16,19 +16,19 @@ class PagesController extends BaseController
 
     public function create()
     {
-        return view('admin.pages.create');
+        return view('admin.news.create');
     }
 
-    public function edit(Page $page)
+    public function edit(News $news)
     {
-        return view('admin.pages.edit', compact('page'));
+        return view('admin.news.edit', ['news' => $news]);
     }
 
     public function store(Request $request)
     {
         $this->validator($request->all())->validate();
 
-        Page::create([
+        News::create([
             'title' => request('title'),
             'url' => request('url'),
             'text' => request('text', ''),
@@ -36,36 +36,21 @@ class PagesController extends BaseController
             'updated_user_id' => Auth::id()
         ]);
 
-        return redirect()->route('admin.main');
+        return redirect()->route('admin.news');
     }
 
-    public function storeSubPage(Request $request, Page $page)
+    public function update(Request $request, News $news)
     {
         $this->validator($request->all())->validate();
 
-        $page->createSubPage([
-            'title' => request('title'),
-            'url' => request('url'),
-            'text' => request('text', ''),
-            'user_id' => Auth::id(),
-            'updated_user_id' => Auth::id()
-        ]);
+        $news->title = request('title');
+        $news->url = request('url');
+        $news->text = request('text', '');
+        $news->updated_user_id = Auth::id();
 
-        return redirect()->route('admin.main');
-    }
+        $news->save();
 
-    public function update(Request $request, Page $page)
-    {
-        $this->validator($request->all())->validate();
-
-        $page->title = request('title');
-        $page->url = request('url');
-        $page->text = request('text', '');
-        $page->updated_user_id = Auth::id();
-
-        $page->save();
-
-        return redirect()->route('admin.main');
+        return redirect()->route('admin.news');
 
     }
 

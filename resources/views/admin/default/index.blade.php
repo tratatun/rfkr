@@ -75,27 +75,7 @@
                         <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
                     </tr>
                 </table>
-                <div class="toogle__body__top-row">
-                    <div class="top-row__title">Новости</div>
-                    <div class="top-row__add-btn">Добавить</div>
-                </div>
-                <table class="news-table table">
-                    <tr>
-                        <td>Последняя новость</td>
-                        <td><a href="" class="link-change">Изменить</a></td>
-                        <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
-                    </tr>
-                    <tr>
-                        <td>Предпоследняя новость</td>
-                        <td><a href="" class="link-change">Изменить</a></td>
-                        <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
-                    </tr>
-                    <tr>
-                        <td>Пред-предпоследняя новость</td>
-                        <td><a href="" class="link-change">Изменить</a></td>
-                        <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
-                    </tr>
-                </table>
+                @include('admin.default.news-section')
                 <div class="toogle__body__top-row">
                     <div class="top-row__title">Ссылки на смежные ресурсы</div>
                     <div class="top-row__add-btn">Добавить</div>
@@ -123,7 +103,7 @@
             </div>
         </div>
         @foreach ($sections as $section)
-            @include('admin.pages.section', ['section' => $section, 'index' => $loop->index])
+            @include('admin.default.pages-section', ['section' => $section, 'index' => $loop->index])
         @endforeach
         <div class="divider"></div>
         <a href="{{ route('admin.pages.create') }}" class="btn-add-section">Добавить раздел</a>
