@@ -76,30 +76,7 @@
                     </tr>
                 </table>
                 @include('admin.default.news-section')
-                <div class="toogle__body__top-row">
-                    <div class="top-row__title">Ссылки на смежные ресурсы</div>
-                    <div class="top-row__add-btn">Добавить</div>
-                </div>
-                <table class="table">
-                    <tr>
-                        <td>Ссылка один</td>
-                        <td>1</td>
-                        <td><a href="" class="link-change">Изменить</a></td>
-                        <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
-                    </tr>
-                    <tr>
-                        <td>Ссылка два</td>
-                        <td>2</td>
-                        <td><a href="" class="link-change">Изменить</a></td>
-                        <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
-                    </tr>
-                    <tr>
-                        <td>Ссылка три</td>
-                        <td>3</td>
-                        <td><a href="" class="link-change">Изменить</a></td>
-                        <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
-                    </tr>
-                </table>
+                @include('admin.default.gov-resources-section')
             </div>
         </div>
         @foreach ($sections as $section)

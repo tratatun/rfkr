@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Page;
 use App\News;
+use App\GovResource;
 
 class DefaultController extends BaseController
 {
@@ -11,7 +12,8 @@ class DefaultController extends BaseController
     {
         $sections = Page::sections()->get();
         $news = News::all();
+        $govResources = GovResource::all();
 
-        return view('admin.default.index', compact('sections', 'news'));
+        return view('admin.default.index', compact('sections', 'news', 'govResources'));
     }
 }

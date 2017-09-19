@@ -151,46 +151,6 @@
             </div>
         </div>
     </section>
-    <div class="last-news-wrapper">
-        @include('main.parts.news')
-    </div>
-    <div class="adjacent-links-wrapper">
-        <section class="adjacent-links">
-            <h4 class="adjacent-links__caption">Смежные правительственные ресурсы</h4>
-            <div class="adjacent-links__content"><a class="link" href="/" target="_blank">
-                    <h3 class="link__caption">Минстрой Российской Федераци</h3>
-                    <div class="link__row">
-                        <p class="row__link-text">minstroyrf.ru</p>
-                        <svg class="row__icon" role="img">
-                            <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-link') }}"></use>
-                        </svg>
-                    </div>
-                </a><a class="link" href="/" target="_blank">
-                    <h3 class="link__caption">Правительство Республики Крым</h3>
-                    <div class="link__row">
-                        <p class="row__link-text">http://rk.gov.ru/</p>
-                        <svg class="row__icon" role="img">
-                            <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-link') }}"></use>
-                        </svg>
-                    </div>
-                </a><a class="link" href="/" target="_blank">
-                    <h3 class="link__caption">Министерство Жилищно-Коммунального Хозяйства Республики Крым</h3>
-                    <div class="link__row">
-                        <p class="row__link-text">minstroyrf.ru</p>
-                        <svg class="row__icon" role="img">
-                            <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-link') }}"></use>
-                        </svg>
-                    </div>
-                </a><a class="link" href="/" target="_blank">
-                    <h3 class="link__caption">Государственная корпорация – Фонд Содействия Реформированию ЖКХ</h3>
-                    <div class="link__row">
-                        <p class="row__link-text">minstroyrf.ru</p>
-                        <svg class="row__icon" role="img">
-                            <use xlink:href="{{ asset('assets/images/svg-sprite.svg#shape-link') }}"></use>
-                        </svg>
-                    </div>
-                </a>
-            </div>
-        </section>
-    </div>
+    @include('main.parts.news')
+    @include('main.parts.gov-resources')
 @endsection

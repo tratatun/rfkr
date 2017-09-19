@@ -36,6 +36,14 @@ Route::post('/admin/news', 'Admin\NewsController@store')->name('admin.news.store
 Route::get('/admin/news/{news}/edit', 'Admin\NewsController@edit')->name('admin.news.edit');
 Route::post('/admin/news/{news}', 'Admin\NewsController@update')->name('admin.news.update');
 
+Route::get('/admin/gov-resources', 'Admin\GovResourcesController@index')->name('admin.gov-resources');
+Route::get('/admin/gov-resources/create', 'Admin\GovResourcesController@create')->name('admin.gov-resources.create');
+Route::post('/admin/gov-resources', 'Admin\GovResourcesController@store')->name('admin.gov-resources.store');
+Route::get('/admin/gov-resources/{gov_resource}/edit', 'Admin\GovResourcesController@edit')
+    ->name('admin.gov-resources.edit');
+Route::post('/admin/gov-resources/{gov_resource}', 'Admin\GovResourcesController@update')
+    ->name('admin.gov-resources.update');
+
 Route::get('/admin/users', 'Admin\UsersController@index')->name('admin.users');
 Route::get('/admin/users/create', 'Admin\UsersController@create')->name('admin.users.create');
 Route::get('/admin/users/{user}/edit', 'Admin\UsersController@edit')->name('admin.users.edit');
