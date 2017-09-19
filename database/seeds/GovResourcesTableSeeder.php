@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class GovResourcesTable extends Seeder
+class GovResourcesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
