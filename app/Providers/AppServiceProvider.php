@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\News;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Page;
@@ -21,6 +22,10 @@ class AppServiceProvider extends ServiceProvider
             $view->with('sections', $sections);
         });
 
+        View::composer('main.parts.news', function ($view) {
+            $news = News::query()->latest()->limit(8)->get();
+            $view->with('news', $news);
+        });
     }
 
     /**

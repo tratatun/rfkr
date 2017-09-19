@@ -29,7 +29,7 @@
                     <div class="form-group col-2">
                         <label class="form-group__label">URL</label>
                         <input class="form-group__input" type="text" name="url" value="{{ old('url') }}"
-                               placeholder="/example-of-url">
+                               placeholder="example-of-url">
                         @if ($errors->has('url'))
                             <span class="error-message">{{ $errors->first('url') }}</span>
                         @endif

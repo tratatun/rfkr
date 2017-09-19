@@ -152,54 +152,7 @@
         </div>
     </section>
     <div class="last-news-wrapper">
-        <section class="last-news">
-            <header class="last-news__header">
-                <h4 class="header__caption">Последние новости</h4>
-                <button class="header__btn">Все Новости</button>
-            </header>
-            <div class="last-news__content">
-                <div class="content-block">
-                    <div class="last-new">
-                        <div class="last-new__data">31 марта 2017</div>
-                        <a class="last-new__description">«ЗВЕЗДА»: Вовремя платить за капремонт выгодно. На должников будут
-                            подавать в суд</a>
-                    </div>
-                    <div class="last-new">
-                        <div class="last-new__data">29 марта 2017</div>
-                        <a class="last-new__description">Застрахована ответственность подрядчиков в случае ущерба,
-                            нанесенного жизни, здоровью и имуществу жителей многоквартирных домов</a>
-                    </div>
-                    <div class="last-new">
-                        <div class="last-new__data">27 марта 2017</div>
-                        <a class="last-new__description">Разработано приложение «Помощник ЭКР» – для расчета прогнозируемого
-                            экономического эффекта при проведении капитального ремонта</a>
-                    </div>
-                    <div class="last-new">
-                        <div class="last-new__data">24 марта 2017</div>
-                        <a class="last-new__description">«Ольховатский вестник»: Капитальный вопрос. Ольховатцы расспросили
-                            о взносах по капремонту</a>
-                    </div>
-                    <div class="last-new">
-                        <div class="last-new__data">23 марта 2017</div>
-                        <a class="last-new__description">В Фонде капитального ремонта многоквартирных домов Воронежской
-                            области прошел «День открытых дверей»</a>
-                    </div>
-                    <div class="last-new">
-                        <div class="last-new__data">20 марта 2017</div>
-                        <a class="last-new__description">«Наш край»: Строители закончат ремонт досрочно</a>
-                    </div>
-                    <div class="last-new">
-                        <div class="last-new__data">20 марта 2017</div>
-                        <a class="last-new__description">«Борисоглебский вестник»: 19 многоэтажек «претендуют» на
-                            капремонт</a>
-                    </div>
-                    <div class="last-new">
-                        <div class="last-new__data">20 марта 2017</div>
-                        <a class="last-new__description">«Знамя труда»: В Грибановке отремонтируют 15 многоэтажек</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        @include('main.parts.news')
     </div>
     <div class="adjacent-links-wrapper">
         <section class="adjacent-links">
