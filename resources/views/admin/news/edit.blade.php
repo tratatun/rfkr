@@ -7,7 +7,7 @@
         <h6 class="admin-pages-control__subcaption">Изменение свойств и/или содержимого новости</h6>
         <div class="divider"></div>
         <h3 class="admin-pages-control__title">Редактирование новости</h3>
-        <form method="POST" action="{{ route('admin.news.update', ['page' => $news->id]) }}" >
+        <form method="POST" action="{{ route('admin.news.update', ['news' => $news->id]) }}" >
             {{ csrf_field() }}
             <div class="form-group-block ">
                 <div class="form-row">

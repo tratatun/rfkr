@@ -21,7 +21,7 @@ class NewsController extends BaseController
 
     public function edit(News $news)
     {
-        return view('admin.news.edit', ['news' => $news]);
+        return view('admin.news.edit', compact('news'));
     }
 
     public function store(Request $request)

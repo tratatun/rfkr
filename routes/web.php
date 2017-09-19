@@ -33,8 +33,8 @@ Route::post('/admin/pages/{page}', 'Admin\PagesController@update')->name('admin.
 Route::get('/admin/news', 'Admin\NewsController@index')->name('admin.news');
 Route::get('/admin/news/create', 'Admin\NewsController@create')->name('admin.news.create');
 Route::post('/admin/news', 'Admin\NewsController@store')->name('admin.news.store');
-Route::get('/admin/news/{page}/edit', 'Admin\NewsController@edit')->name('admin.news.edit');
-Route::post('/admin/news/{page}', 'Admin\NewsController@update')->name('admin.news.update');
+Route::get('/admin/news/{news}/edit', 'Admin\NewsController@edit')->name('admin.news.edit');
+Route::post('/admin/news/{news}', 'Admin\NewsController@update')->name('admin.news.update');
 
 Route::get('/admin/users', 'Admin\UsersController@index')->name('admin.users');
 Route::get('/admin/users/create', 'Admin\UsersController@create')->name('admin.users.create');
