@@ -30,6 +30,12 @@ Route::post('/admin/pages/{page}/pages', 'Admin\PagesController@storeSubPage')->
 Route::get('/admin/pages/{page}/edit', 'Admin\PagesController@edit')->name('admin.pages.edit');
 Route::post('/admin/pages/{page}', 'Admin\PagesController@update')->name('admin.pages.update');
 
+Route::get('/admin/news', 'Admin\NewsController@index')->name('admin.news');
+Route::get('/admin/news/create', 'Admin\NewsController@create')->name('admin.news.create');
+Route::post('/admin/news', 'Admin\NewsController@store')->name('admin.news.store');
+Route::get('/admin/news/{news}/edit', 'Admin\NewsController@edit')->name('admin.news.edit');
+Route::post('/admin/news/{news}', 'Admin\NewsController@update')->name('admin.news.update');
+
 Route::get('/admin/users', 'Admin\UsersController@index')->name('admin.users');
 Route::get('/admin/users/create', 'Admin\UsersController@create')->name('admin.users.create');
 Route::get('/admin/users/{user}/edit', 'Admin\UsersController@edit')->name('admin.users.edit');
@@ -37,10 +43,17 @@ Route::post('/admin/users', 'Admin\RegisterController@register');
 Route::post('/admin/users/{user}', 'Admin\UsersController@update')->name('admin.users.update');
 
 Route::get('/admin/treatments', 'Admin\TreatmentsController@index')->name('admin.treatments');
+Route::post('/admin/treatments/{treatment}/spam', 'Admin\TreatmentsController@spam')
+    ->name('admin.treatments.spam');
 
-Route::get('/admin/treatments/{treatment}/answer', 'Admin\TreatmentAnswersController@create')->name('admin.treatment-answers.create');
-Route::post('/admin/treatments/{treatment}/answers', 'Admin\TreatmentAnswersController@store')->name('admin.treatment-answers.store');
-Route::get('/admin/treatments/{treatment}/review', 'Admin\TreatmentAnswersController@index')->name('admin.treatment-answers.index');
+Route::get('/admin/treatments/{treatment}/answer', 'Admin\TreatmentAnswersController@create')
+    ->name('admin.treatment-answers.create');
+
+Route::post('/admin/treatments/{treatment}/answers', 'Admin\TreatmentAnswersController@store')
+    ->name('admin.treatment-answers.store');
+
+Route::get('/admin/treatments/{treatment}/review', 'Admin\TreatmentAnswersController@index')
+    ->name('admin.treatment-answers.index');
 
 
 Route::get('/admin/login', 'Admin\LoginController@showLoginForm')->name('admin.login');

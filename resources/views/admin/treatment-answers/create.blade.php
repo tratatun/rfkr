@@ -7,11 +7,6 @@
         <h6 class="treatments-reply__subcaption">Ответ на обращение</h6>
         @include('admin.treatment-answers.treatment', ['treatment' => $treatment])
         <div class="treatments-reply__title">Ответ на обращение</div>
-        <textarea name="editor" id="editor"></textarea>
-        <div class="divider"></div>
-        <div class="button-container">
-            <button class="btn-spam">Спам</button>
-            <button class="btn-reply">Ответить</button>
-        </div>
+        @include('admin.treatment-answers.form', ['treatment' => $treatment, 'spam' => true])
     </div>
 @endsection

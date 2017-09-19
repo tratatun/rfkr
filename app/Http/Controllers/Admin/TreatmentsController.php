@@ -24,4 +24,11 @@ class TreatmentsController extends BaseController
     {
         return view('admin.treatments.review');
     }
+
+    public function spam(Treatment $treatment)
+    {
+        $treatment->spam();
+
+        return redirect()->route('admin.treatments');
+    }
 }
