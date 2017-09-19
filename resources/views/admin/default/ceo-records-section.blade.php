@@ -1,17 +1,23 @@
 <div class="toogle__body__top-row">
-    <div class="top-row__title">Слайдер</div>
+    <div class="top-row__title">Рекламные записи (SEO)</div>
     <div class="top-row__add-btn">Добавить</div>
 </div>
 <table class="table">
     <tr>
-        <td>Слайд один</td>
+        <td>Рекламная запись один</td>
         <td>1</td>
         <td><a href="" class="link-change">Изменить</a></td>
         <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
     </tr>
     <tr>
-        <td>Слайд два</td>
+        <td>Рекламная запись два</td>
         <td>2</td>
+        <td><a href="" class="link-change">Изменить</a></td>
+        <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
+    </tr>
+    <tr>
+        <td>Рекламная запись три</td>
+        <td>3</td>
         <td><a href="" class="link-change">Изменить</a></td>
         <td><span class="last-visit-time">21:12</span><span> / </span><span class="last-visit-data">21 авг ’17</span><span class="specialist"> (petr)</span></td>
     </tr>

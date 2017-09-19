@@ -53,6 +53,12 @@ Route::post('/admin/covers', 'Admin\CoversController@store')->name('admin.covers
 Route::get('/admin/covers/{cover}/edit', 'Admin\CoversController@edit')->name('admin.covers.edit');
 Route::post('/admin/covers/{cover}', 'Admin\CoversController@update')->name('admin.covers.update');
 
+Route::get('/admin/sliders', 'Admin\SlidersController@index')->name('admin.sliders');
+Route::get('/admin/sliders/create', 'Admin\SlidersController@create')->name('admin.sliders.create');
+Route::post('/admin/sliders', 'Admin\SlidersController@store')->name('admin.sliders.store');
+Route::get('/admin/sliders/{slider}/edit', 'Admin\SlidersController@edit')->name('admin.sliders.edit');
+Route::post('/admin/sliders/{slider}', 'Admin\SlidersController@update')->name('admin.sliders.update');
+
 Route::get('/admin/users', 'Admin\UsersController@index')->name('admin.users');
 Route::get('/admin/users/create', 'Admin\UsersController@create')->name('admin.users.create');
 Route::get('/admin/users/{user}/edit', 'Admin\UsersController@edit')->name('admin.users.edit');

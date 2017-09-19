@@ -6,6 +6,7 @@ use App\Page;
 use App\News;
 use App\GovResource;
 use App\Cover;
+use App\Slider;
 
 class DefaultController extends BaseController
 {
@@ -15,8 +16,9 @@ class DefaultController extends BaseController
         $news = News::all();
         $govResources = GovResource::all();
         $covers = Cover::all();
+        $sliders = Slider::all();
 
-        $data = compact('sections', 'news', 'govResources', 'covers');
+        $data = compact('sections', 'news', 'govResources', 'covers', 'sliders');
 
         return view('admin.default.index', $data);
     }
