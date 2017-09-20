@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class Cover extends Model
 {
@@ -14,6 +15,11 @@ class Cover extends Model
     protected $fillable = [
         'title', 'text', 'img', 'user_id', 'updated_user_id'
     ];
+
+    public function scopeShown(Builder $builder)
+    {
+        return $builder->where('status', 'shown');
+    }
 
 
     /**

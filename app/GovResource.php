@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class GovResource extends Model
 {
@@ -14,6 +15,11 @@ class GovResource extends Model
     protected $fillable = [
         'title', 'url', 'user_id', 'updated_user_id'
     ];
+
+    public function scopeShown(Builder $builder)
+    {
+        return $builder->where('status', 'shown');
+    }
 
 
     /**
