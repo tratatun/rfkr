@@ -11,7 +11,7 @@
             <div class="toogle__body" id="admin-main-page">
                 @include('admin.default.covers-section')
                 @include('admin.default.sliders-section')
-                @include('admin.default.ceo-records-section')
+                @include('admin.default.seo-records-section')
                 @include('admin.default.news-section')
                 @include('admin.default.gov-resources-section')
             </div>

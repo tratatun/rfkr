@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CeoRecordsTableSeeder extends Seeder
+class SeoRecordsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

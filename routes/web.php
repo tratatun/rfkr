@@ -59,6 +59,12 @@ Route::post('/admin/sliders', 'Admin\SlidersController@store')->name('admin.slid
 Route::get('/admin/sliders/{slider}/edit', 'Admin\SlidersController@edit')->name('admin.sliders.edit');
 Route::post('/admin/sliders/{slider}', 'Admin\SlidersController@update')->name('admin.sliders.update');
 
+Route::get('/admin/seo-records', 'Admin\SeoRecordsController@index')->name('admin.seo-records');
+Route::get('/admin/seo-records/create', 'Admin\SeoRecordsController@create')->name('admin.seo-records.create');
+Route::post('/admin/seo-records', 'Admin\SeoRecordsController@store')->name('admin.seo-records.store');
+Route::get('/admin/seo-records/{seo_record}/edit', 'Admin\SeoRecordsController@edit')->name('admin.seo-records.edit');
+Route::post('/admin/seo-records/{seo_record}', 'Admin\SeoRecordsController@update')->name('admin.seo-records.update');
+
 Route::get('/admin/users', 'Admin\UsersController@index')->name('admin.users');
 Route::get('/admin/users/create', 'Admin\UsersController@create')->name('admin.users.create');
 Route::get('/admin/users/{user}/edit', 'Admin\UsersController@edit')->name('admin.users.edit');
