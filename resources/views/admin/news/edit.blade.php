@@ -31,6 +31,7 @@
                     <div class="form-group col-2">
                         <label class="form-group__label">Управление</label>
                         <select class="form-group__select" name="management" onchange="confirm('Пожалуйста подтвердите действие') && document.getElementById(this.value).submit();">
+                            <option value=""></option>
                             <option class="select__option" value="show">Отображать</option>
                             <option class="select__option" value="hide">Скрыть</option>
                             <option class="select__option" value="delete">&lt;span&gt;Удалить&lt;/span&gt;</option>
