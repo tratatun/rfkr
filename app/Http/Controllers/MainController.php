@@ -6,6 +6,7 @@ use App\Cover;
 use App\News;
 use App\Page;
 use App\GovResource;
+use App\SeoRecord;
 use App\Slider;
 
 class MainController extends Controller
@@ -16,8 +17,9 @@ class MainController extends Controller
         $news = News::query()->latest()->limit(8)->get();
         $govResources = GovResource::all();
         $sliders = Slider::all();
+        $seoRecords = SeoRecord::query()->latest()->limit(8)->get();
 
-        return view('main.home', compact('covers', 'news', 'govResources', 'sliders'));
+        return view('main.home', compact('covers', 'news', 'govResources', 'sliders', 'seoRecords'));
     }
 
     public function search()
