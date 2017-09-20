@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Cover;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class CoversController extends BaseController
 {
@@ -26,7 +27,7 @@ class CoversController extends BaseController
 
     public function store(Request $request)
     {
-        $this->validator($request->all())->validate();
+        $this->validator($request, true)->validate();
 
         Cover::create([
             'status' => 'shown',
@@ -34,7 +35,8 @@ class CoversController extends BaseController
             'img' => request('img'),
             'text' => request('text', ''),
             'user_id' => Auth::id(),
-            'updated_user_id' => Auth::id()
+            'updated_user_id' => Auth::id(),
+            'img' => $request->file('img')->store('covers'),
         ]);
 
         return redirect()->route('admin.covers');
@@ -42,12 +44,20 @@ class CoversController extends BaseController
 
     public function update(Request $request, Cover $cover)
     {
-        $this->validator($request->all())->validate();
+        $this->validator($request)->validate();
 
         $cover->title = request('title');
         $cover->text = request('text', '');
-        $cover->img = request('img');
         $cover->updated_user_id = Auth::id();
+
+        if ($request->has('img')) {
+            $img = $request->file('img')->store('covers');
+
+            if ($img) {
+                Storage::delete($cover->img);
+                $cover->img = $img;
+            }
+        }
 
         $cover->save();
 
@@ -65,20 +75,32 @@ class CoversController extends BaseController
 
     public function delete(Cover $cover)
     {
+
+        if ($img = $cover->img) {
+            Storage::delete($img);
+        }
+
         $cover->delete();
 
         return redirect()->route('admin.main');
     }
 
     /**
-     * @param  array  $data
+     * @param Request $request
+     * @param  bool $checkImage
      * @return \Illuminate\Contracts\Validation\Validator
+     * @internal param array $data
      */
-    protected function validator(array $data)
+    protected function validator(Request $request, $checkImage = false)
     {
-        return Validator::make($data, [
+        $rules = [
             'title' => 'required|string|max:255',
-            'img' => 'required|string|max:255',
-        ]);
+        ];
+
+        if ($checkImage || $request->has('img')) {
+            $rules['img'] = 'required|mimetypes:image/jpeg, image/jpg, image/png';
+        }
+
+        return Validator::make($request->all(), $rules);
     }
 }

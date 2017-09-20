@@ -13,7 +13,7 @@ class GovResource extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'url', 'user_id', 'updated_user_id'
+        'status', 'title', 'url', 'user_id', 'updated_user_id'
     ];
 
     public function scopeShown(Builder $builder)

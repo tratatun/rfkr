@@ -2,7 +2,7 @@
     <div class="carousel-news-image">
         @foreach($sliders as $slider)
             <div class="carousel__slide">
-                <div class="slide__img" style="background-image: url({{ $slider->img }});"></div>
+                <div class="slide__img" style="background-image: url({{ asset('storage/' . $slider->img) }});"></div>
             </div>
         @endforeach
     </div>

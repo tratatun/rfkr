@@ -15,7 +15,7 @@ class Page extends Model
      * @var array
      */
     protected $fillable = [
-        'type', 'title', 'url', 'text', 'user_id', 'updated_user_id', 'page_id'
+        'status', 'type', 'title', 'url', 'text', 'user_id', 'updated_user_id', 'page_id'
     ];
 
     public function __construct(array $attributes = [])

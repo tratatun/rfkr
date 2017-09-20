@@ -13,7 +13,7 @@ class Slider extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'text', 'img', 'user_id', 'updated_user_id'
+        'status', 'title', 'text', 'img', 'user_id', 'updated_user_id'
     ];
 
     public function scopeShown(Builder $builder)

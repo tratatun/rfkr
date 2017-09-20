@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Slider;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class SlidersController extends BaseController
 {
@@ -26,7 +27,7 @@ class SlidersController extends BaseController
 
     public function store(Request $request)
     {
-        $this->validator($request->all())->validate();
+        $this->validator($request, true)->validate();
 
         Slider::create([
             'status' => 'shown',
@@ -34,7 +35,8 @@ class SlidersController extends BaseController
             'img' => request('img'),
             'text' => request('text', ''),
             'user_id' => Auth::id(),
-            'updated_user_id' => Auth::id()
+            'updated_user_id' => Auth::id(),
+            'img' => $request->file('img')->store('covers'),
         ]);
 
         return redirect()->route('admin.sliders');
@@ -42,12 +44,21 @@ class SlidersController extends BaseController
 
     public function update(Request $request, Slider $slider)
     {
-        $this->validator($request->all())->validate();
+        $this->validator($request)->validate();
 
         $slider->title = request('title');
         $slider->text = request('text', '');
         $slider->img = request('img');
         $slider->updated_user_id = Auth::id();
+
+        if ($request->has('img')) {
+            $img = $request->file('img')->store('covers');
+
+            if ($img) {
+                Storage::delete($slider->img);
+                $slider->img = $img;
+            }
+        }
 
         $slider->save();
 
@@ -65,21 +76,32 @@ class SlidersController extends BaseController
 
     public function delete(Slider $slider)
     {
+        if ($img = $slider->img) {
+            Storage::delete($img);
+        }
+
         $slider->delete();
 
         return redirect()->route('admin.main');
     }
 
     /**
-     * @param  array  $data
+     * @param Request $request
+     * @param  bool $checkImage
      * @return \Illuminate\Contracts\Validation\Validator
+     * @internal param array $data
      */
-    protected function validator(array $data)
+    protected function validator(Request $request, $checkImage = false)
     {
-        return Validator::make($data, [
+        $rules = [
             'title' => 'required|string|max:255',
-            'img' => 'required|string|max:255',
             'text' => 'required|string',
-        ]);
+        ];
+
+        if ($checkImage || $request->has('img')) {
+            $rules['img'] = 'required|mimetypes:image/jpeg, image/jpg, image/png';
+        }
+
+        return Validator::make($request->all(), $rules);
     }
 }
