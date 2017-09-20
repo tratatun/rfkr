@@ -30,7 +30,7 @@
                 <div class="form-row">
                     <div class="form-group col-2">
                         <label class="form-group__label">Управление</label>
-                        <select class="form-group__select" name="management">
+                        <select class="form-group__select" name="management" onchange="confirm('Пожалуйста подтвердите действие') && document.getElementById(this.value).submit();">
                             <option class="select__option" value="show">Отображать</option>
                             <option class="select__option" value="hide">Скрыть</option>
                             <option class="select__option" value="delete">&lt;span&gt;Удалить&lt;/span&gt;</option>
@@ -56,4 +56,19 @@
         </form>
 
     </div>
+    <form id="delete" action="{{ route('admin.news.delete', ['page' => $news->id]) }}" method="POST"
+          style="display: none">
+        {{ csrf_field() }}
+        <input type="hidden" name="_method" value="DELETE">
+    </form>
+    <form id="show" action="{{ route('admin.news.change-status', ['page' => $news->id]) }}" method="POST"
+          style="display: none">
+        {{ csrf_field() }}
+        <input type="hidden" name="status" value="shown">
+    </form>
+    <form id="hide" action="{{ route('admin.news.change-status', ['page' => $news->id]) }}" method="POST"
+          style="display: none">
+        {{ csrf_field() }}
+        <input type="hidden" name="status" value="hidden">
+    </form>
 @endsection

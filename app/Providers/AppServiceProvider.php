@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\GovResource;
 use App\News;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
@@ -18,13 +19,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer(['main.parts.topmenu', 'main.parts.footer'], function ($view) {
-            $sections = Page::sections()->get();
+            $sections = Page::sections()->shown()->get();
             $view->with('sections', $sections);
-        });
-
-        View::composer('main.parts.news', function ($view) {
-            $news = News::query()->latest()->limit(8)->get();
-            $view->with('news', $news);
         });
     }
 

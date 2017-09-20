@@ -29,6 +29,7 @@ class NewsController extends BaseController
         $this->validator($request->all())->validate();
 
         News::create([
+            'status' => 'shown',
             'title' => request('title'),
             'url' => request('url'),
             'text' => request('text', ''),
@@ -52,6 +53,21 @@ class NewsController extends BaseController
 
         return redirect()->route('admin.news');
 
+    }
+
+    public function changeStatus(News $news)
+    {
+        $news->status = request('status');
+        $news->save();
+
+        return redirect()->route('admin.main');
+    }
+
+    public function delete(News $news)
+    {
+        $news->delete();
+
+        return redirect()->route('admin.main');
     }
 
     /**

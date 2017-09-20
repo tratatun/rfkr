@@ -29,6 +29,7 @@ class PagesController extends BaseController
         $this->validator($request->all())->validate();
 
         Page::create([
+            'status' => 'shown',
             'title' => request('title'),
             'url' => request('url'),
             'text' => request('text', ''),
@@ -44,12 +45,28 @@ class PagesController extends BaseController
         $this->validator($request->all())->validate();
 
         $page->createSubPage([
+            'status' => 'shown',
             'title' => request('title'),
             'url' => request('url'),
             'text' => request('text', ''),
             'user_id' => Auth::id(),
             'updated_user_id' => Auth::id()
         ]);
+
+        return redirect()->route('admin.main');
+    }
+
+    public function changeStatus(Page $page)
+    {
+        $page->status = request('status');
+        $page->save();
+
+        return redirect()->route('admin.main');
+    }
+
+    public function delete(Page $page)
+    {
+        $page->delete();
 
         return redirect()->route('admin.main');
     }

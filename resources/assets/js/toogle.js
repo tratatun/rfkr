@@ -6,7 +6,7 @@ $(function(){
 			$currentToogleBody = $(thisHref),
 			$currentToogle = $this.closest('.toogle');
 		if($currentToogle.hasClass('open')){
-			$currentToogle.removeClass('open')
+			$currentToogle.removeClass('open');
 			$currentToogleBody.slideUp(400);
 		} else {
 			$currentToogle.addClass('open');

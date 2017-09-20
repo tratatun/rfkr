@@ -4,10 +4,12 @@
         <div class="footer__content">
             @foreach ($sections as $section)
                 <ul class="content__col">
-                    <li class="content__col__item"><a class="footer-link item__link" href="{{$section->url}}">{{ $section->title }}</a></li>
+                    <li class="content__col__item"><a class="footer-link item__link" href="{{$section->url()}}">{{ $section->title }}</a></li>
                     <ul class="content-col__sublist">
                         @foreach ($section->subPages as $page)
-                            <li class="sublist-item"><a class="footer-link sublist-item__link" href="{{ url($page->url) }}">{{ $page->title }}</a></li>
+                            @if ($page->shown())
+                                <li class="sublist-item"><a class="footer-link sublist-item__link" href="{{ url($page->url()) }}">{{ $page->title }}</a></li>
+                            @endif
                         @endforeach
                     </ul>
             </ul>

@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Page;
 use App\News;
+use App\GovResource;
+use App\Cover;
+use App\SeoRecord;
+use App\Slider;
 
 class DefaultController extends BaseController
 {
@@ -11,7 +15,15 @@ class DefaultController extends BaseController
     {
         $sections = Page::sections()->get();
         $news = News::all();
+        $govResources = GovResource::all();
+        $covers = Cover::all();
+//        var_dump($covers);die;
 
-        return view('admin.default.index', compact('sections', 'news'));
+        $sliders = Slider::all();
+        $seoRecords = SeoRecord::all();
+
+        $data = compact('sections', 'news', 'govResources', 'covers', 'sliders', 'seoRecords');
+
+        return view('admin.default.index', $data);
     }
 }

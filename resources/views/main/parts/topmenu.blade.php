@@ -15,7 +15,7 @@
         </div>
         <nav class="header__nav">
             @foreach ($sections as $section)
-                <a class="nav__link" href="{{ url($section->url) }}">{{ $section->title }}</a>
+                <a class="nav__link" href="{{ url($section->url()) }}">{{ $section->title }}</a>
             @endforeach
         </nav>
     </header>

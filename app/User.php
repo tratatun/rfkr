@@ -36,4 +36,9 @@ class User extends Authenticatable
     {
         return explode(' ', $this->name)[1];
     }
+
+    public function active()
+    {
+        return $this->status === 'active';
+    }
 }
