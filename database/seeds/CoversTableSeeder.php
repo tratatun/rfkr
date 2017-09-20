@@ -12,6 +12,7 @@ class CoversTableSeeder extends Seeder
     public function run()
     {
         DB::table('covers')->insert([
+            'status' => 'shown',
             'title' => 'Программа капитального ремонта',
             'text' => 'Вы можете узнать, участвует ли Ваш дом в программе капитального ремонта<br>Проверить начисления<br>Узнать сроки и направления капитального ремонта',
             'img' => '/assets/images/main-carousel/slide-01.jpg',
@@ -22,6 +23,7 @@ class CoversTableSeeder extends Seeder
         ]);
 
         DB::table('covers')->insert([
+            'status' => 'shown',
             'title' => 'Программа капитального ремонта',
             'text' => 'Вы можете узнать, участвует ли Ваш дом в программе капитального ремонта<br>Проверить начисления<br>Узнать сроки и направления капитального ремонта',
             'img' => '/assets/images/main-carousel/slide-02.jpg',

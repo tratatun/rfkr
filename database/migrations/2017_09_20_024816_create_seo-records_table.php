@@ -14,6 +14,7 @@ class CreateSeoRecordsTable extends Migration
     public function up()
     {
         Schema::create('seo_records', function (Blueprint $table) {
+            $table->string('status');
             $table->increments('id');
             $table->string('title');
             $table->text('text');

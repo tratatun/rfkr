@@ -13,6 +13,7 @@ class SeoRecordsTableSeeder extends Seeder
     {
         for ($i = 0; $i < 10; $i++) {
             DB::table('seo_records')->insert([
+                'status' => 'shown',
                 'title' => 'Присоединение к ЕИРЦ',
                 'text' => 'НО РФ КРМД РК присоединился к системе <a href="/">ЕИРЦ</a>. Появиласьвозможность контроля платежей с помощью <a href="/">Личного Кабинета</a>',
                 'user_id' => 1,

@@ -29,6 +29,7 @@ class SlidersController extends BaseController
         $this->validator($request->all())->validate();
 
         Slider::create([
+            'status' => 'shown',
             'title' => request('title'),
             'img' => request('img'),
             'text' => request('text', ''),
@@ -52,6 +53,21 @@ class SlidersController extends BaseController
 
         return redirect()->route('admin.sliders');
 
+    }
+
+    public function changeStatus(Slider $slider)
+    {
+        $slider->status = request('status');
+        $slider->save();
+
+        return redirect()->route('admin.main');
+    }
+
+    public function delete(Slider $slider)
+    {
+        $slider->delete();
+
+        return redirect()->route('admin.main');
     }
 
     /**

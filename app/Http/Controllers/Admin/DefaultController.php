@@ -17,6 +17,8 @@ class DefaultController extends BaseController
         $news = News::all();
         $govResources = GovResource::all();
         $covers = Cover::all();
+//        var_dump($covers);die;
+
         $sliders = Slider::all();
         $seoRecords = SeoRecord::all();
 

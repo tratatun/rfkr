@@ -15,6 +15,7 @@ class CreateGovResourcesTable extends Migration
     {
         Schema::create('gov_resources', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('status');
             $table->string('title');
             $table->string('url');
             $table->integer('user_id');

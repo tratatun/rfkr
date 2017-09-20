@@ -29,6 +29,7 @@ class GovResourcesController extends BaseController
         $this->validator($request->all())->validate();
 
         GovResource::create([
+            'status' => 'shown',
             'title' => request('title'),
             'url' => request('url'),
             'user_id' => Auth::id(),
@@ -50,6 +51,21 @@ class GovResourcesController extends BaseController
 
         return redirect()->route('admin.gov-resources');
 
+    }
+
+    public function changeStatus(GovResource $govResource)
+    {
+        $govResource->status = request('status');
+        $govResource->save();
+
+        return redirect()->route('admin.main');
+    }
+
+    public function delete(GovResource $govResource)
+    {
+        $govResource->delete();
+
+        return redirect()->route('admin.main');
     }
 
     /**

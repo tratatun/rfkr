@@ -14,6 +14,7 @@ class NewsTableSeeder extends Seeder
     {
         function create() {
             DB::table('news')->insert([
+                'status' => 'shown',
                 'title' => '«ЗВЕЗДА»: Вовремя платить за капремонт выгодно. На должников будут подавать в суд',
                 'url' => 'vovremya-platit-za-kapremont-vygodno-' . microtime(),
                 'text' => '«ЗВЕЗДА»: Вовремя платить за капремонт выгодно. На должников будут подавать в суд',
@@ -24,6 +25,7 @@ class NewsTableSeeder extends Seeder
             ]);
 
             DB::table('news')->insert([
+                'status' => 'shown',
                 'title' => 'Застрахована ответственность подрядчиков в случае ущерба, нанесенного жизни, здоровью и имуществу жителей многоквартирных домов',
                 'url' => 'zastrahovana-otvetstvennost-podryadchikov-' . microtime(),
                 'text' => 'Застрахована ответственность подрядчиков в случае ущерба,
@@ -35,6 +37,7 @@ class NewsTableSeeder extends Seeder
             ]);
 
             DB::table('news')->insert([
+                'status' => 'shown',
                 'title' => 'Разработано приложение «Помощник ЭКР» – для расчета прогнозируемого
                             экономического эффекта при проведении капитального ремонта',
                 'url' => 'razrabotano-prilozhenie-pomoschnik-ekr-' . microtime(),

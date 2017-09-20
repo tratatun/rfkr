@@ -32,12 +32,16 @@ Route::post('/admin/pages', 'Admin\PagesController@store')->name('admin.pages.st
 Route::post('/admin/pages/{page}/pages', 'Admin\PagesController@storeSubPage')->name('admin.pages.store.subpage');
 Route::get('/admin/pages/{page}/edit', 'Admin\PagesController@edit')->name('admin.pages.edit');
 Route::post('/admin/pages/{page}', 'Admin\PagesController@update')->name('admin.pages.update');
+Route::post('/admin/pages/{page}/change-status', 'Admin\PagesController@changeStatus')->name('admin.pages.change-status');
+Route::delete('/admin/pages/{page}', 'Admin\PagesController@delete')->name('admin.pages.delete');
 
 Route::get('/admin/news', 'Admin\NewsController@index')->name('admin.news');
 Route::get('/admin/news/create', 'Admin\NewsController@create')->name('admin.news.create');
 Route::post('/admin/news', 'Admin\NewsController@store')->name('admin.news.store');
 Route::get('/admin/news/{news}/edit', 'Admin\NewsController@edit')->name('admin.news.edit');
 Route::post('/admin/news/{news}', 'Admin\NewsController@update')->name('admin.news.update');
+Route::post('/admin/news/{news}/change-status', 'Admin\NewsController@changeStatus')->name('admin.news.change-status');
+Route::delete('/admin/news/{news}', 'Admin\NewsController@delete')->name('admin.news.delete');
 
 Route::get('/admin/gov-resources', 'Admin\GovResourcesController@index')->name('admin.gov-resources');
 Route::get('/admin/gov-resources/create', 'Admin\GovResourcesController@create')->name('admin.gov-resources.create');
@@ -46,24 +50,32 @@ Route::get('/admin/gov-resources/{gov_resource}/edit', 'Admin\GovResourcesContro
     ->name('admin.gov-resources.edit');
 Route::post('/admin/gov-resources/{gov_resource}', 'Admin\GovResourcesController@update')
     ->name('admin.gov-resources.update');
+Route::post('/admin/gov-resources/{gov_resource}/change-status', 'Admin\GovResourcesController@changeStatus')->name('admin.gov-resources.change-status');
+Route::delete('/admin/gov-resources/{gov_resource}', 'Admin\GovResourcesController@delete')->name('admin.gov-resources.delete');
 
 Route::get('/admin/covers', 'Admin\CoversController@index')->name('admin.covers');
 Route::get('/admin/covers/create', 'Admin\CoversController@create')->name('admin.covers.create');
 Route::post('/admin/covers', 'Admin\CoversController@store')->name('admin.covers.store');
 Route::get('/admin/covers/{cover}/edit', 'Admin\CoversController@edit')->name('admin.covers.edit');
 Route::post('/admin/covers/{cover}', 'Admin\CoversController@update')->name('admin.covers.update');
+Route::post('/admin/covers/{cover}/change-status', 'Admin\CoversController@changeStatus')->name('admin.covers.change-status');
+Route::delete('/admin/covers/{cover}', 'Admin\CoversController@delete')->name('admin.covers.delete');
 
 Route::get('/admin/sliders', 'Admin\SlidersController@index')->name('admin.sliders');
 Route::get('/admin/sliders/create', 'Admin\SlidersController@create')->name('admin.sliders.create');
 Route::post('/admin/sliders', 'Admin\SlidersController@store')->name('admin.sliders.store');
 Route::get('/admin/sliders/{slider}/edit', 'Admin\SlidersController@edit')->name('admin.sliders.edit');
 Route::post('/admin/sliders/{slider}', 'Admin\SlidersController@update')->name('admin.sliders.update');
+Route::post('/admin/sliders/{slider}/change-status', 'Admin\SlidersController@changeStatus')->name('admin.sliders.change-status');
+Route::delete('/admin/sliders/{slider}', 'Admin\SlidersController@delete')->name('admin.sliders.delete');
 
 Route::get('/admin/seo-records', 'Admin\SeoRecordsController@index')->name('admin.seo-records');
 Route::get('/admin/seo-records/create', 'Admin\SeoRecordsController@create')->name('admin.seo-records.create');
 Route::post('/admin/seo-records', 'Admin\SeoRecordsController@store')->name('admin.seo-records.store');
 Route::get('/admin/seo-records/{seo_record}/edit', 'Admin\SeoRecordsController@edit')->name('admin.seo-records.edit');
 Route::post('/admin/seo-records/{seo_record}', 'Admin\SeoRecordsController@update')->name('admin.seo-records.update');
+Route::post('/admin/seo-records/{seo_record}/change-status', 'Admin\SeoRecordsController@changeStatus')->name('admin.seo-records.change-status');
+Route::delete('/admin/seo-records/{seo_record}', 'Admin\SeoRecordsController@delete')->name('admin.seo-records.delete');
 
 Route::get('/admin/users', 'Admin\UsersController@index')->name('admin.users');
 Route::get('/admin/users/create', 'Admin\UsersController@create')->name('admin.users.create');

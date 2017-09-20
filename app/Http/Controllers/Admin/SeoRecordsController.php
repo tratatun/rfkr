@@ -29,6 +29,7 @@ class SeoRecordsController extends BaseController
         $this->validator($request->all())->validate();
 
         SeoRecord::create([
+            'status' => 'shown',
             'title' => request('title'),
             'text' => request('text'),
             'user_id' => Auth::id(),
@@ -49,7 +50,21 @@ class SeoRecordsController extends BaseController
         $seoRecord->save();
 
         return redirect()->route('admin.seo-records');
+    }
 
+    public function changeStatus(SeoRecord $seoRecord)
+    {
+        $seoRecord->status = request('status');
+        $seoRecord->save();
+
+        return redirect()->route('admin.main');
+    }
+
+    public function delete(SeoRecord $seoRecord)
+    {
+        $seoRecord->delete();
+
+        return redirect()->route('admin.main');
     }
 
     /**

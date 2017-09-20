@@ -29,6 +29,7 @@ class CoversController extends BaseController
         $this->validator($request->all())->validate();
 
         Cover::create([
+            'status' => 'shown',
             'title' => request('title'),
             'img' => request('img'),
             'text' => request('text', ''),
@@ -52,6 +53,21 @@ class CoversController extends BaseController
 
         return redirect()->route('admin.covers');
 
+    }
+
+    public function changeStatus(Cover $cover)
+    {
+        $cover->status = request('status');
+        $cover->save();
+
+        return redirect()->route('admin.main');
+    }
+
+    public function delete(Cover $cover)
+    {
+        $cover->delete();
+
+        return redirect()->route('admin.main');
     }
 
     /**
