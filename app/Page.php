@@ -28,6 +28,11 @@ class Page extends Model
         return $builder->whereNull('page_id');
     }
 
+    public function scopeShown(Builder $builder)
+    {
+        return $builder->where('status', 'shown');
+    }
+
     /**
      * Get the sub pages for the page.
      */
