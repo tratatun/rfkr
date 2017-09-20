@@ -67,6 +67,6 @@
         <th>Приложенный файл</th>
     </tr>
     <tr>
-        <td><a href="/" class="table__attach-link">filename.doc</a></td>
+        <td><a href="{{ asset('storage/' . $treatment->file) }}" class="table__attach-link" target="_blank">{{ $treatment->fileName }}</a></td>
     </tr>
 </table>

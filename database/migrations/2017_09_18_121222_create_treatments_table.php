@@ -27,6 +27,8 @@ class CreateTreatmentsTable extends Migration
             $table->string('phone')->nullable();
             $table->string('thematic');
             $table->text('message');
+            $table->string('file')->nullable();
+            $table->string('fileName')->nullable();
             $table->string('file_url')->nullable();
             $table->timestamps();
         });

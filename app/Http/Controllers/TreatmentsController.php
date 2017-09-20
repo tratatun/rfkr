@@ -24,8 +24,6 @@ class TreatmentsController extends Controller
 
     public function store(Request $request)
     {
-//        return request();
-
         $validator = Validator::make($request->all(), [
             'type' => 'required|string',
             'lastname' => 'required|string',
@@ -38,10 +36,8 @@ class TreatmentsController extends Controller
             'phone' => 'nullable|string',
             'thematic' => 'required|string',
             'message' => 'required|string|min:3|max:440',
-            'file' => 'nullable|mimetypes:image/jpeg,image/png,text/plain,.doc,.docx,.p|size:10240',
+            'file' => 'nullable|mimetypes:image/jpeg,image/png,text/plain,.doc,.docx,.p',
             'file_url' => 'nullable|string'
-
-
         ]);
 
         if ($validator->fails()) {
@@ -51,7 +47,14 @@ class TreatmentsController extends Controller
         }
 
         $data = request()->all();
-        $data['status'] = Treatment::$STATUS_OPENED;
+        $data['status'] = Treatment::STATUS_OPENED;
+
+        if ($request->has('file')) {
+            $file = $request->file('file');
+
+            $data['file'] = $file->store('treatments');
+            $data['fileName'] = $file->getClientOriginalName();
+        }
 
         Treatment::create($data);
 
