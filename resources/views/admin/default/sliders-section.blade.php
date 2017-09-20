@@ -5,6 +5,7 @@
 <table class="table">
     <tr>
         <th>Название</th>
+        <th>Доступ</th>
         <th>Управление</th>
         <th>Добавлена</th>
         <th>Последнее изменение</th>
@@ -12,13 +13,14 @@
     @forelse($sliders as $slider)
         <tr>
             <td>{{ $slider->title }}</td>
+            <td>@lang('admin.' . $slider->status)</td>
             <td><a href="{{ route('admin.sliders.edit', ['page' => $slider->id]) }}" class="link-change">Изменить</a></td>
             <td>{{ $slider->created_at->diffForHumans() }} ({{ $slider->user->getFirstName() }})</td>
             <td>{{ $slider->updated_at->diffForHumans() }} ({{ $slider->userUpdated->getFirstName() }})</td>
         </tr>
     @empty
         <tr>
-            <td colspan="4" style="text-align: center">Обложек не найдено</td>
+            <td colspan="5" style="text-align: center">Обложек не найдено</td>
         </tr>
     @endforelse
 </table>

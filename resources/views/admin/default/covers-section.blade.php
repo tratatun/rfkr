@@ -5,6 +5,7 @@
 <table class="table">
     <tr>
         <th>Название</th>
+        <th>Доступ</th>
         <th>Управление</th>
         <th>Добавлена</th>
         <th>Последнее изменение</th>
@@ -12,13 +13,14 @@
     @forelse($covers as $cover)
         <tr>
             <td>{{ $cover->title }}</td>
+            <td>@lang('admin.' . $cover->status)</td>
             <td><a href="{{ route('admin.covers.edit', ['page' => $cover->id]) }}" class="link-change">Изменить</a></td>
             <td>{{ $cover->created_at->diffForHumans() }} ({{ $cover->user->getFirstName() }})</td>
             <td>{{ $cover->updated_at->diffForHumans() }} ({{ $cover->userUpdated->getFirstName() }})</td>
         </tr>
     @empty
         <tr>
-            <td colspan="4" style="text-align: center">Обложек не найдено</td>
+            <td colspan="5" style="text-align: center">Обложек не найдено</td>
         </tr>
     @endforelse
 </table>

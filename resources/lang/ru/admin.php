@@ -22,4 +22,6 @@ return [
     'complaint' => 'Жалоба',
     'payment-contributions' => 'Уплата взносов на капитальный ремонт',
     'capital-repair' => 'Проведение капитального ремонта',
+    'hidden' => 'Закрыт',
+    'shown' => 'Открыт',
 ];

@@ -5,6 +5,7 @@
 <table class="news-table table">
     <tr>
         <th>Название</th>
+        <th>Доступ</th>
         <th>Управление</th>
         <th>Добавлена</th>
         <th>Последнее изменение</th>
@@ -12,13 +13,14 @@
     @forelse($news as $newsOne)
         <tr>
             <td>{{ $newsOne->title }}</td>
+            <td>@lang('admin.' . $newsOne->status)</td>
             <td><a href="{{ route('admin.news.edit', ['page' => $newsOne->id]) }}" class="link-change">Изменить</a></td>
             <td>{{ $newsOne->created_at->diffForHumans() }} ({{ $newsOne->user->getFirstName() }})</td>
             <td>{{ $newsOne->updated_at->diffForHumans() }} ({{ $newsOne->userUpdated->getFirstName() }})</td>
         </tr>
     @empty
         <tr>
-            <td colspan="4" style="text-align: center">Новостей не найдено</td>
+            <td colspan="5" style="text-align: center">Новостей не найдено</td>
         </tr>
     @endforelse
 </table>

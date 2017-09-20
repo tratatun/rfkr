@@ -4,12 +4,14 @@
         <table class="table">
             <tr>
                 <th>Название раздела</th>
+                <th>Доступ</th>
                 <th>Управление разделом</th>
                 <th>Добавлен раздел</th>
                 <th>Последнее изменение раздела</th>
             </tr>
             <tr>
                 <td>{{ $section->title }}</td>
+                <td>@lang('admin.' . $section->status)</td>
                 <td><a href="{{ route('admin.pages.edit', ['page' => $section->id]) }}" class="link-change">Изменить</a></td>
                 <td>{{ $section->created_at->diffForHumans() }} ({{ $section->user->getFirstName() }})</td>
                 <td>{{ $section->updated_at->diffForHumans() }} ({{ $section->userUpdated->getFirstName() }})</td>
@@ -19,6 +21,7 @@
         <table class="table">
             <tr>
                 <th>Название</th>
+                <th>Доступ</th>
                 <th>Управление</th>
                 <th>Добавлена</th>
                 <th>Последнее изменение</th>
@@ -26,13 +29,14 @@
             @forelse($section->subPages as $page)
                 <tr>
                     <td>{{ $page->title }}</td>
+                    <td>@lang('admin.' . $page->status)</td>
                     <td><a href="{{ route('admin.pages.edit', ['page' => $page->id]) }}" class="link-change">Изменить</a></td>
                     <td>{{ $page->created_at->diffForHumans() }} ({{ $page->user->getFirstName() }})</td>
                     <td>{{ $page->updated_at->diffForHumans() }} ({{ $page->userUpdated->getFirstName() }})</td>
                 </tr>
             @empty
                 <tr>
-                    <td colspan="4" style="text-align: center">Страниц не найдено</td>
+                    <td colspan="5" style="text-align: center">Страниц не найдено</td>
                 </tr>
             @endforelse
         </table>
