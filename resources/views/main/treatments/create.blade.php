@@ -75,7 +75,7 @@
             <div class="form-group-block form-group-block_email">
                 <div class="form-group">
                     <label class="form-group__label required">Электронная почта</label>
-                    <input class="form-group__input" type="text" name="email" {{ old('email') }}>
+                    <input class="form-group__input" type="text" name="email" value="{{ old('email') }}">
                     <span class="form-group__tip">Срок ответа составляет до 3-х рабочих дней</span>
                     @if ($errors->has('email'))
                         <span class="error-message">{{ $errors->first('email') }}</span>
@@ -154,12 +154,16 @@
                     </div>
                 </div>
             </div>
-            {{--<div class="form-group-block form-group-block_captcha">--}}
-                {{--<div class="form-group">--}}
-                    {{--<label class="form-group__label required">Защита от спама</label>--}}
-                    {{--<div class="form-group__captcha"></div><span class="form-group__tip">Поставьте флажок</span>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+            <div class="form-group-block form-group-block_captcha">
+                <div class="form-group">
+                    <label class="form-group__label required">Защита от спама</label>
+                    {!! app('captcha')->display(); !!}
+                    <span class="form-group__tip">Поставьте флажок</span>
+                    @if ($errors->has('g-recaptcha-response'))
+                        <span class="error-message">{{ $errors->first('g-recaptcha-response') }}</span>
+                    @endif
+                </div>
+            </div>
             <div class="divider"></div>
             <div class="form__footer">
                 <a href="{{ url('/') }}" class="message-send__reset" type="reset">Отменить</a>

@@ -37,7 +37,8 @@ class TreatmentsController extends Controller
             'thematic' => 'required|string',
             'message' => 'required|string|min:3|max:440',
             'file' => 'nullable|mimetypes:image/jpeg,image/png,text/plain,.doc,.docx,.p',
-            'file_url' => 'nullable|string'
+            'file_url' => 'nullable|string',
+            'g-recaptcha-response' => 'required|captcha',
         ]);
 
         if ($validator->fails()) {
