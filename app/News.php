@@ -43,4 +43,8 @@ class News extends Model
         return '/n/' . $this->id . '-' .  $this->url;
     }
 
+    public function searchText($searchStr = '')
+    {
+        return substr(strip_tags($this->text), 0 , 150);
+    }
 }

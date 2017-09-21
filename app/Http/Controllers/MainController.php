@@ -24,7 +24,12 @@ class MainController extends Controller
 
     public function search()
     {
-        return view('main.search');
+        $query = request()->query('query');
+
+        $news = News::query()->shown()->get();
+        $pages = Page::query()->shown()->get();
+
+        return view('main.search',compact('news', 'pages'));
     }
 
 

@@ -72,4 +72,9 @@ class Page extends Model
     {
         return '/p/' . $this->id . '-' .  $this->url;
     }
+
+    public function searchText($searchStr = '')
+    {
+        return substr(strip_tags($this->text), 0 , 150);
+    }
 }
