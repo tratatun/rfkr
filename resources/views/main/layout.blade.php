@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge') }}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="viewport" content="width=1024, user-scalable=yes, initial-scale=1, maximum-scale=2.0, minimum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styles.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/slick-carousel/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/minimalect/jquery.minimalect.min.css') }}">
