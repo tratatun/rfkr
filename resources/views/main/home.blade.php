@@ -6,9 +6,9 @@
         @include('main.parts.topbar')
         @include('main.parts.topmenu')
     </div>
-    <section class="main-block" id="top">
-        @include('main.parts.covers')
-    </section>
+    {{--<section class="main-block" id="top">--}}
+        {{--@include('main.parts.covers')--}}
+    {{--</section>--}}
     <section class="news-block">
         @include('main.parts.sliders')
         @include('main.parts.seo-records')
