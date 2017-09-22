@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styles.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/slick-carousel/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/minimalect/jquery.minimalect.min.css') }}">
-    <title>RFKR</title>
+    <title>@yield('title', 'Региональный Фонд Капитального Ремонта Многоквартирных Домов Республики Крым')</title>
 </head>
 <body>
     @yield('content')

@@ -13,6 +13,7 @@
 
 // Public pages
 Route::get('/', 'MainController@index')->name('home');
+Route::get('/house', 'MainController@house')->name('house');
 
 Route::get('/rules', 'TreatmentsController@rules')->name('treatments.rules');
 Route::get('/treatment', 'TreatmentsController@create')->name('treatments.create');

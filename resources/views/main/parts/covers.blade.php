@@ -6,7 +6,7 @@
                 <div class="slide__info">
                     <h3 class="info__caption">{{ $cover->title }}</h3>
                     <div class="info__description">{!! $cover->text !!}</div>
-                    <a class="info__link" href="/">найти дом</a>
+                    <a class="info__link" href="{{ url('/house') }}">найти дом</a>
                 </div>
             </div>
         </div>

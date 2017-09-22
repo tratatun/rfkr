@@ -19,14 +19,14 @@
                 </div>
                 <a href="{{ route('treatments.rules') }}" class="treatment__text">Оставить обращение</a>
             </div>
-            <div class="subheader__account">
+            <a href="https://lk082.bstec.ru" target="_blank" class="subheader__account">
                 <div class="account__icon">
                     <svg role="img">
                         <use xlink:href="/assets/images/svg-sprite.svg#shape-user"></use>
                     </svg>
                 </div>
                 <span class="account__text">Личный кабинет</span>
-            </div>
+            </a>
         </div>
     </div>
 </div>
