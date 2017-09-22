@@ -6,12 +6,14 @@
 	border none
 	list-style-type none
 
+html, body
+	min-width 1024px
+
 body
 	font-family "Roboto-Regular", Arial, sans-serif
 	@extend $defaultFontSize
 	background-color $white
 	line-height 1.5
-	min-width 1024px
 	color $defaultBlack
 		@media screen and (max-height: 850px)
 			.slide__info-wrapper
