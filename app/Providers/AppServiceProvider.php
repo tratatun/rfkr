@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\GovResource;
 use App\News;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Page;
@@ -18,6 +19,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
+
         View::composer(['main.parts.topmenu', 'main.parts.footer'], function ($view) {
             $sections = Page::sections()->shown()->get();
             $view->with('sections', $sections);
