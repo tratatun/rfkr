@@ -22,6 +22,11 @@ class MainController extends Controller
         return view('main.home', compact('covers', 'news', 'govResources', 'sliders', 'seoRecords'));
     }
 
+    public function house()
+    {
+        return view('main.house');
+    }
+
     public function search()
     {
         $query = request()->query('query');
