@@ -2,7 +2,7 @@
 /public/hot
 /public/storage
 /storage/*.key
-/vendor
+#/vendor
 /.idea
 /.vagrant
 Homestead.json
@@ -21,4 +21,5 @@ yarn-error.log
 /public/assets/js/main.js
 /public/assets/css/styles.min.css
 /public/assets/css/styles.css
+#/public/assets/vendor/
 /public/slice/
