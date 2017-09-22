@@ -1,5 +1,9 @@
 @extends('main.layout')
 
+@section('title')
+    Найти дом
+@endsection
+
 @section('content')
     <div class="page-content">
         <div class="headers-container">
