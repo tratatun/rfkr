@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use App\User;
 
+use Laravel\Scout\Searchable;
+
 class Page extends Model
 {
+    use Searchable;
 
     /**
      * The attributes that are mass assignable.
@@ -75,6 +78,13 @@ class Page extends Model
 
     public function searchText($searchStr = '')
     {
-        return substr(strip_tags($this->text), 0 , 150);
+        $length = 150;
+        $str = mb_substr(strip_tags($this->text), 0 , $length);
+
+        if (strlen($str) > $length) {
+            return $str . '...';
+        }
+
+        return $str;
     }
 }
