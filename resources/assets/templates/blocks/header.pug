@@ -23,14 +23,15 @@ include data
 					span.account__text Личный кабинет
 	.header-wrapper
 		header.header
-			a(href="/").header__logo
-				svg.logo.logo-default(role="img")
-					use(xlink:href="../assets/images/svg-sprite.svg#shape-logo")
-				svg.logo.logo-hover(role="img")
-					use(xlink:href="../assets/images/svg-sprite.svg#shape-logo-hover")
-			.header__company
-				.company__type Некоммерческая организация
-				.company__name «Региональный Фонд Капитального Ремонта Многоквартирных Домов Республики Крым»
+			a(href="/")
+				.header__logo
+					svg.logo.logo-default(role="img")
+						use(xlink:href="../assets/images/svg-sprite.svg#shape-logo")
+					svg.logo.logo-hover(role="img")
+						use(xlink:href="../assets/images/svg-sprite.svg#shape-logo-hover")
+				.header__company
+					.company__type Некоммерческая организация
+					.company__name «Региональный Фонд Капитального Ремонта Многоквартирных Домов Республики Крым»
 			nav.header__nav
 				each link in navLinks
 					a.nav__link(href=link.href) #{link.text}
