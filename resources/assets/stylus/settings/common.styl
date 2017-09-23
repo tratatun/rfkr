@@ -10,12 +10,20 @@ html, body
 	min-width $minWidth
 	overflow-x hidden
 
+html
+	-webkit-text-size-adjust 100%
+
 body
 	font-family "Roboto-Regular", Arial, sans-serif
 	@extend $defaultFontSize
 	background-color $white
 	line-height 1.5
 	color $defaultBlack
+	-moz-osx-font-smoothing grayscale
+	-webkit-font-smoothing antialiased
+	font-weight normal
+	font-style normal
+	font-stretch normal
 		@media screen and (max-height: 850px)
 			.slide__info-wrapper
 				top calc(100vh * 380/600)
