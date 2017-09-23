@@ -168,6 +168,7 @@ return [
          * Package Service Providers...
          */
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+        Yab\MySQLScout\Providers\MySQLScoutServiceProvider::class,
         /*
          * Application Service Providers...
          */

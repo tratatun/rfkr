@@ -31,8 +31,8 @@ class MainController extends Controller
     {
         $query = request()->query('query');
 
-        $news = News::query()->shown()->get();
-        $pages = Page::query()->shown()->get();
+        $news = News::search($query)->where('status', 'shown')->get();
+        $pages = Page::search($query)->where('status', 'shown')->get();
 
         return view('main.search',compact('news', 'pages'));
     }
