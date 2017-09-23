@@ -1,7 +1,6 @@
 .last-news-wrapper
 	background-color rgba(28, 33, 47, 0.05)
 	padding-top 32px
-	overflow-x hidden
 
 	.last-news
 		@extend $mainContainer
@@ -35,8 +34,10 @@
 
 	.content-block
 		position relative
-		width 100%
+		width calc(100% + 20px)
 		max-height 624px
+		padding-right 20px
+		overflow-y scroll
 		&:after
 			@extend $clearBoth
 
