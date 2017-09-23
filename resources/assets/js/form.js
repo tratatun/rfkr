@@ -55,7 +55,7 @@ $(function(){
 		} else {
 			$errorTip.removeClass('error');
 		}
-	})
+	});
 
 	// $.validator.addMethod("checkSelect", function(value, element) {
 	// 	var $selectedOption = $(element).closest('.form-group').find('.minict_wrapper').find('li.selected');
