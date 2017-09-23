@@ -13,6 +13,6 @@
         {{--@include('main.parts.sliders')--}}
         {{--@include('main.parts.seo-records')--}}
     {{--</section>--}}
-    {{--@include('main.parts.news')--}}
+    @include('main.parts.news')
     @include('main.parts.gov-resources')
 @endsection
