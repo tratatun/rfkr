@@ -3,7 +3,7 @@
 @section('content')
     @include('admin.parts.menu', ['back' => route('admin.seo-records')])
     <div class="admin-pages-control">
-        <h1 class="admin-pages-control__caption">SEO записью</h1>
+        <h1 class="admin-pages-control__caption">SEO запись</h1>
         <h6 class="admin-pages-control__subcaption">Изменение свойств и/или содержимого SEO записи</h6>
         <div class="divider"></div>
         <h3 class="admin-pages-control__title">Редактирование SEO записи</h3>
@@ -21,13 +21,7 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-2">
-                        <label class="form-group__label">Управление</label>
-                        <select class="form-group__select" name="management" onchange="confirm('Пожалуйста подтвердите действие') && document.getElementById(this.value).submit();">
-                            <option value=""></option>
-                            <option class="select__option" value="show">Отображать</option>
-                            <option class="select__option" value="hide">Скрыть</option>
-                            <option class="select__option" value="delete">&lt;span&gt;Удалить&lt;/span&gt;</option>
-                        </select>
+                        @include('admin.parts.manage-input', ['entity' => $seoRecord])
                     </div>
                 </div>
             </div>

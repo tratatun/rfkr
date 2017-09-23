@@ -11,7 +11,7 @@
                     <input class="left-col__search-field" type="text" id="search" name="query">
                 </div>
                 <div class="bottom-row__right-col">
-                    <button type="submit" class="right-col__search-btn">найти</button>
+                    <button type="submit" class="right-col__search-btn" disabled>найти</button>
                 </div>
             </form>
         </div>

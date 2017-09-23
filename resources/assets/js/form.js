@@ -43,7 +43,7 @@ $(function(){
 		$attachBtn.attr('disabled', false);
 	});
 
-	$('.form-group__input[name="cloud-links"]').on('change', function(){
+	$('.form-group__input[name="file_url"]').on('change', function(){
 		var $this = $(this),
 			value = $this.val(),
 			regex = new RegExp('https?:\/\/(drive\.google\.com)|(yadi\.sk)|(www\.dropbox\.com)|(cloud\.mail\.ru)|(www\.icloud\.com)|(onedrive\.live\.com)', 'i'),
