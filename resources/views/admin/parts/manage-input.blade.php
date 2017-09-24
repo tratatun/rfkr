@@ -1,6 +1,6 @@
 <label class="form-group__label">Управление</label>
 <select class="form-group__select" name="management"
-        onchange="confirm('Пожалуйста подтвердите действие') && document.getElementById(this.value).submit();">
+        onchange="confirm('Вы уверены?') && document.getElementById(this.value).submit();">
     <option value=""></option>
     @if ($entity->status === 'hidden')
         <option class="select__option" value="show">Отображать</option>

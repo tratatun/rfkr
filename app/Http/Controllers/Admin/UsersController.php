@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends BaseController
 {
@@ -54,6 +55,22 @@ class UsersController extends BaseController
 
         return redirect()->route('admin.users');
 
+    }
+
+    public function changeStatus(User $user)
+    {
+        $user->status = request('status');
+        $user->save();
+
+        return redirect()->route('admin.users');
+    }
+
+    public function loginAs(User $user)
+    {
+        Auth::logout();
+        Auth::login($user);
+
+        return redirect()->route('admin.main');
     }
 
     public function user()

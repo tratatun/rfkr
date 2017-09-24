@@ -48,13 +48,6 @@
                                 <span class="error-message">{{ $errors->first('role') }}</span>
                             @endif
                         </div>
-                        <div class="form-group col-2">
-                            <label class="form-group__label">Управление</label>
-                            <select class="form-group__select" name="managment">
-                                <option class="select__option" value=""></option>
-                                <option class="select__option" value="logindata">Войти с данными</option>
-                            </select>
-                        </div>
                     </div>
             </form>
             </div>

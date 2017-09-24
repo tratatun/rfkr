@@ -49,15 +49,33 @@
                         </div>
                         <div class="form-group col-2">
                             <label class="form-group__label">Управление</label>
-                            <select class="form-group__select" name="managment">
+                            <select class="form-group__select" name="managment"
+                                    onchange="confirm('Вы уверены?') && document.getElementById(this.value).submit();">
                                 <option class="select__option" value=""></option>
-                                <option class="select__option" value="logindata">Войти с данными</option>
-                                <option class="select__option" value="block" disabled>Заблокировать</option>
-                                <option class="select__option" value="banish" disabled><span>Изгнать</span></option>
+                                <option class="select__option" value="login">Войти с данными</option>
+                                @if ($user->status === 'active')
+                                    <option class="select__option" value="blocked">Заблокировать</option>
+                                @else
+                                    <option class="select__option" value="unblock">Разблокировать</option>
+                                @endif
                             </select>
                         </div>
                     </div>
                     
+            </form>
+            <form id="login" action="{{ route('admin.users.login-as', ['user' => $user->id]) }}" method="POST"
+                  style="display: none">
+                {{ csrf_field() }}
+            </form>
+            <form id="blocked" action="{{ route('admin.users.change-status', ['user' => $user->id]) }}" method="POST"
+                  style="display: none">
+                {{ csrf_field() }}
+                <input type="hidden" name="status" value="blocked">
+            </form>
+            <form id="unblock" action="{{ route('admin.users.change-status', ['user' => $user->id]) }}" method="POST"
+                  style="display: none">
+                {{ csrf_field() }}
+                <input type="hidden" name="status" value="active">
             </form>
             </div>
         </div>

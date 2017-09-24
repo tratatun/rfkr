@@ -83,6 +83,8 @@ Route::get('/admin/users/create', 'Admin\UsersController@create')->name('admin.u
 Route::get('/admin/users/{user}/edit', 'Admin\UsersController@edit')->name('admin.users.edit');
 Route::post('/admin/users', 'Admin\RegisterController@register');
 Route::post('/admin/users/{user}', 'Admin\UsersController@update')->name('admin.users.update');
+Route::post('/admin/users/{user}/change-status', 'Admin\UsersController@changeStatus')->name('admin.users.change-status');
+Route::post('/admin/users/{user}/login-as', 'Admin\UsersController@loginAs')->name('admin.users.login-as');
 
 Route::get('/admin/treatments', 'Admin\TreatmentsController@index')->name('admin.treatments');
 Route::post('/admin/treatments/{treatment}/spam', 'Admin\TreatmentsController@spam')
