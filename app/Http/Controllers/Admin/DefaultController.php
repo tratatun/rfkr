@@ -13,12 +13,14 @@ class DefaultController extends BaseController
 {
     public function index()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $sections = Page::sections()->get();
         $news = News::all();
         $govResources = GovResource::all();
         $covers = Cover::all();
-//        var_dump($covers);die;
-
         $sliders = Slider::all();
         $seoRecords = SeoRecord::all();
 

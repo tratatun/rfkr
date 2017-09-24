@@ -11,21 +11,37 @@ class PagesController extends BaseController
 {
     public function index()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return redirect()->route('admin.main');
     }
 
     public function create()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.pages.create');
     }
 
     public function edit(Page $page)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.pages.edit', compact('page'));
     }
 
     public function store(Request $request)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request->all())->validate();
 
         Page::create([
@@ -42,6 +58,10 @@ class PagesController extends BaseController
 
     public function storeSubPage(Request $request, Page $page)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request->all())->validate();
 
         $page->createSubPage([
@@ -58,6 +78,10 @@ class PagesController extends BaseController
 
     public function changeStatus(Page $page)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $page->status = request('status');
         $page->save();
 
@@ -66,13 +90,23 @@ class PagesController extends BaseController
 
     public function delete(Page $page)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $page->delete();
+
+        #todo: add check for children
 
         return redirect()->route('admin.main');
     }
 
     public function update(Request $request, Page $page)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request->all())->validate();
 
         $page->title = request('title');

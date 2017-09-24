@@ -12,21 +12,37 @@ class SlidersController extends BaseController
 {
     public function index()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return redirect()->route('admin.main');
     }
 
     public function create()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.sliders.create');
     }
 
     public function edit(Slider $slider)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.sliders.edit', compact('slider'));
     }
 
     public function store(Request $request)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request, true)->validate();
 
         Slider::create([
@@ -44,6 +60,10 @@ class SlidersController extends BaseController
 
     public function update(Request $request, Slider $slider)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request)->validate();
 
         $slider->title = request('title');
@@ -68,6 +88,10 @@ class SlidersController extends BaseController
 
     public function changeStatus(Slider $slider)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $slider->status = request('status');
         $slider->save();
 
@@ -76,6 +100,10 @@ class SlidersController extends BaseController
 
     public function delete(Slider $slider)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         if ($img = $slider->img) {
             Storage::delete($img);
         }

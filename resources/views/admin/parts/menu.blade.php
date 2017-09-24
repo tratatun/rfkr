@@ -8,16 +8,29 @@
                 <span>Назад к списку</span></a>
             </div>
         @else
+            <?php $userRole = Auth::user()->role; ?>
             <ul class="navigation">
-                <li class="navigation__item ">
-                    <a class="item__link {{ request()->is('admin/pages*') || request()->is('admin') ? 'active' : '' }}" href="{{ route('admin.pages') }}">Страницы</a>
-                </li>
-                <li class="navigation__item">
-                    <a class="item__link {{ request()->is('admin/users*') ? 'active' : '' }}" href="{{ route('admin.users') }}">Команда</a>
-                </li>
-                <li class="navigation__item">
-                    <a class="item__link {{ request()->is('admin/treatments*') ? 'active' : '' }}" href="{{ route('admin.treatments') }}">Обращения</a>
-                </li>
+                @if ($userRole === 'superadmin' || $userRole === 'author')
+                    <li class="navigation__item ">
+                        <a class="item__link {{ request()->is('admin/pages*') || request()->is('admin') ? 'active' : '' }}"
+                           href="{{ route('admin.pages') }}">Страницы</a>
+                    </li>
+                @endif
+
+                @if ($userRole === 'superadmin')
+                    <li class="navigation__item">
+                        <a class="item__link {{ request()->is('admin/users*') ? 'active' : '' }}"
+                           href="{{ route('admin.users') }}">Команда</a>
+                    </li>
+                @endif
+
+                @if ($userRole === 'superadmin' || $userRole === 'support')
+                    <li class="navigation__item">
+                        <a class="item__link {{ request()->is('admin/treatments*') ? 'active' : '' }}"
+                           href="{{ route('admin.treatments') }}">Обращения</a>
+                    </li>
+                @endif
+
                 <li class="navigation__item">
                     <a class="item__link" href="{{ route('home') }}">Перейти на сайт</a>
                 </li>

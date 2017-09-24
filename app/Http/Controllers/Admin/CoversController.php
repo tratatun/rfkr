@@ -12,21 +12,37 @@ class CoversController extends BaseController
 {
     public function index()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return redirect()->route('admin.main');
     }
 
     public function create()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.covers.create');
     }
 
     public function edit(Cover $cover)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.covers.edit', compact('cover'));
     }
 
     public function store(Request $request)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request, true)->validate();
 
         Cover::create([
@@ -44,6 +60,10 @@ class CoversController extends BaseController
 
     public function update(Request $request, Cover $cover)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request)->validate();
 
         $cover->title = request('title');
@@ -67,6 +87,10 @@ class CoversController extends BaseController
 
     public function changeStatus(Cover $cover)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $cover->status = request('status');
         $cover->save();
 
@@ -75,6 +99,9 @@ class CoversController extends BaseController
 
     public function delete(Cover $cover)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
 
         if ($img = $cover->img) {
             Storage::delete($img);

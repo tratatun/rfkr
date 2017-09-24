@@ -11,21 +11,37 @@ class NewsController extends BaseController
 {
     public function index()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return redirect()->route('admin.main');
     }
 
     public function create()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.news.create');
     }
 
     public function edit(News $news)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.news.edit', compact('news'));
     }
 
     public function store(Request $request)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request->all())->validate();
 
         News::create([
@@ -42,6 +58,10 @@ class NewsController extends BaseController
 
     public function update(Request $request, News $news)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request->all())->validate();
 
         $news->title = request('title');
@@ -57,6 +77,10 @@ class NewsController extends BaseController
 
     public function changeStatus(News $news)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $news->status = request('status');
         $news->save();
 
@@ -65,6 +89,10 @@ class NewsController extends BaseController
 
     public function delete(News $news)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $news->delete();
 
         return redirect()->route('admin.main');

@@ -11,21 +11,36 @@ class GovResourcesController extends BaseController
 {
     public function index()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return redirect()->route('admin.main');
     }
 
     public function create()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.gov-resources.create');
     }
 
     public function edit(GovResource $govResource)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
         return view('admin.gov-resources.edit', compact('govResource'));
     }
 
     public function store(Request $request)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request->all())->validate();
 
         GovResource::create([
@@ -41,6 +56,10 @@ class GovResourcesController extends BaseController
 
     public function update(Request $request, GovResource $govResource)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request->all())->validate();
 
         $govResource->title = request('title');
@@ -55,6 +74,10 @@ class GovResourcesController extends BaseController
 
     public function changeStatus(GovResource $govResource)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $govResource->status = request('status');
         $govResource->save();
 
@@ -63,6 +86,10 @@ class GovResourcesController extends BaseController
 
     public function delete(GovResource $govResource)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $govResource->delete();
 
         return redirect()->route('admin.main');

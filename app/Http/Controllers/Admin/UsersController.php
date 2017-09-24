@@ -11,6 +11,10 @@ class UsersController extends BaseController
 
     public function index()
     {
+        if (!$this->isUserSuperAdmin()) {
+            return $this->getRedirectByRole();
+        }
+
         $users = User::all();
 
         return view('admin.users.index', compact('users'));
@@ -18,11 +22,19 @@ class UsersController extends BaseController
 
     public function create()
     {
+        if (!$this->isUserSuperAdmin()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.users.create', ['roles' => User::$roles]);
     }
 
     public function edit(User $user)
     {
+        if (!$this->isUserSuperAdmin()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.users.edit', [
             'user' => $user,
             'roles' => User::$roles
@@ -31,6 +43,10 @@ class UsersController extends BaseController
 
     public function update(Request $request, User $user)
     {
+        if (!$this->isUserSuperAdmin()) {
+            return $this->getRedirectByRole();
+        }
+
         $data = request()->all();
 
         $rules = [
@@ -62,6 +78,10 @@ class UsersController extends BaseController
 
     public function changeStatus(User $user)
     {
+        if (!$this->isUserSuperAdmin()) {
+            return $this->getRedirectByRole();
+        }
+
         $user->status = request('status');
         $user->save();
 
@@ -70,6 +90,10 @@ class UsersController extends BaseController
 
     public function loginAs(User $user)
     {
+        if (!$this->isUserSuperAdmin()) {
+            return $this->getRedirectByRole();
+        }
+
         Auth::login($user);
 
         return redirect()->route('admin.main');
@@ -77,21 +101,10 @@ class UsersController extends BaseController
 
     public function user()
     {
-        return view('admin.user');
-    }
+        if (!$this->isUserSuperAdmin()) {
+            return $this->getRedirectByRole();
+        }
 
-    /**
-     * Get the needed authorization credentials from the request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
-    protected function credentials(Request $request)
-    {
-        return [
-            $this->username() => $request->get($this->username()),
-            'password' => $request->get('password'),
-//            'status' => 'active'
-        ];
+        return view('admin.user');
     }
 }

@@ -11,21 +11,37 @@ class SeoRecordsController extends BaseController
 {
     public function index()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return redirect()->route('admin.main');
     }
 
     public function create()
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.seo-records.create');
     }
 
     public function edit(SeoRecord $seoRecord)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         return view('admin.seo-records.edit', compact('seoRecord'));
     }
 
     public function store(Request $request)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request->all())->validate();
 
         SeoRecord::create([
@@ -41,6 +57,10 @@ class SeoRecordsController extends BaseController
 
     public function update(Request $request, SeoRecord $seoRecord)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $this->validator($request->all())->validate();
 
         $seoRecord->title = request('title');
@@ -54,6 +74,10 @@ class SeoRecordsController extends BaseController
 
     public function changeStatus(SeoRecord $seoRecord)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $seoRecord->status = request('status');
         $seoRecord->save();
 
@@ -62,6 +86,10 @@ class SeoRecordsController extends BaseController
 
     public function delete(SeoRecord $seoRecord)
     {
+        if (!$this->isUserAuthor()) {
+            return $this->getRedirectByRole();
+        }
+
         $seoRecord->delete();
 
         return redirect()->route('admin.main');

@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class RegisterController extends Controller
+class RegisterController extends BaseController
 {
     /*
     |--------------------------------------------------------------------------
@@ -23,16 +22,6 @@ class RegisterController extends Controller
     use RegistersUsers;
 
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
      * Handle a registration request for the application.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -40,6 +29,9 @@ class RegisterController extends Controller
      */
     public function register(Request $request)
     {
+        if (!$this->isUserSuperAdmin()) {
+            return $this->getRedirectByRole();
+        }
 
         $this->validator($request->all())->validate();
 
