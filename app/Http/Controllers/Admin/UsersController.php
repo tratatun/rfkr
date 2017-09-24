@@ -67,7 +67,6 @@ class UsersController extends BaseController
 
     public function loginAs(User $user)
     {
-        Auth::logout();
         Auth::login($user);
 
         return redirect()->route('admin.main');
@@ -76,5 +75,20 @@ class UsersController extends BaseController
     public function user()
     {
         return view('admin.user');
+    }
+
+    /**
+     * Get the needed authorization credentials from the request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    protected function credentials(Request $request)
+    {
+        return [
+            $this->username() => $request->get($this->username()),
+            'password' => $request->get('password'),
+//            'status' => 'active'
+        ];
     }
 }
