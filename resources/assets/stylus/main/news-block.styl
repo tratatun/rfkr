@@ -2,7 +2,6 @@
 	@extend $mainContainer
 	padding 40px 15px 43px 15px
 	display flex
-	overflow-x hidden
 
 	.news-block__carousel
 		width 74%
@@ -22,11 +21,10 @@
 			pointer-events none
 
 	.news-container
-		sizeElement(100%, 100%)
-		overflow-y auto
-		overflow-x hidden
+		sizeElement(calc(100% + 30px), 100%)
 		padding-bottom $newsBlockShadowHeight
-		padding-right 5px
+		padding-right 35px
+		overflow-y scroll
 
 	.news
 		margin-bottom 26px

@@ -5,8 +5,8 @@ $(function(){
 		addedBgHeader();
 	});
 
-	$('.news-container').niceScroll({cursorcolor:"#8ecdff", grabcursorenabled: false});
-	$('.content-block').niceScroll({cursorcolor:"#8ecdff", grabcursorenabled: false});
+	// $('.news-container').niceScroll({cursorcolor:"#8ecdff", grabcursorenabled: false});
+	// $('.content-block').niceScroll({cursorcolor:"#8ecdff", grabcursorenabled: false});
 
 	$('.animate-anchor').click(function(){
 		var $this = $(this),
