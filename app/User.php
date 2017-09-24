@@ -12,6 +12,16 @@ class User extends Authenticatable
     const STATUS_ACTIVE = 'active';
     const STATUS_BLOCKED = 'blocked';
 
+    const ROLE_SUPER_ADMIN = 'superadmin';
+    const ROLE_AUTHOR = 'author';
+    const ROLE_SUPPORT = 'support';
+
+    public static $roles = [
+      self::ROLE_SUPER_ADMIN,
+      self::ROLE_AUTHOR,
+      self::ROLE_SUPPORT,
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -40,8 +50,25 @@ class User extends Authenticatable
         return explode(' ', $this->name)[1];
     }
 
-    public function active()
+    public function isActive()
     {
         return $this->status === 'active';
     }
+
+    public function isSuperAdmin()
+    {
+        return $this->role === self::ROLE_SUPER_ADMIN;
+    }
+
+    public function isSupport()
+    {
+        return $this->role === self::ROLE_SUPPORT;
+    }
+
+    public function isAuthor()
+    {
+        return $this->role === self::ROLE_AUTHOR;
+    }
+
+
 }

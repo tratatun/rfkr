@@ -18,12 +18,15 @@ class UsersController extends BaseController
 
     public function create()
     {
-        return view('admin.users.create');
+        return view('admin.users.create', ['roles' => User::$roles]);
     }
 
     public function edit(User $user)
     {
-        return view('admin.users.edit', compact('user'));
+        return view('admin.users.edit', [
+            'user' => $user,
+            'roles' => User::$roles
+        ]);
     }
 
     public function update(Request $request, User $user)

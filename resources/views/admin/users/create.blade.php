@@ -40,9 +40,9 @@
                             <label class="form-group__label">Роль</label>
                             <select class="form-group__select" name="role">
                                 <option class="select__option" value=""></option>
-                                <option class="select__option" value="support">Поддержка</option>
-                                <option class="select__option" value="author">Автор записей</option>
-                                <option class="select__option" value="superadmin"><span>Супер администратор</span></option>
+                                @foreach ($roles as $role)
+                                    <option class="select__option" value="{{ $role }}">@lang('admin.' . $role)</option>
+                                @endforeach
                             </select>
                             @if ($errors->has('role'))
                                 <span class="error-message">{{ $errors->first('role') }}</span>

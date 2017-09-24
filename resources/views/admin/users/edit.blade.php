@@ -37,11 +37,14 @@
                     <div class="form-row">
                         <div class="form-group col-2">
                             <label class="form-group__label">Роль</label>
-                            <select class="form-group__select" name="role" value="{{ $user->role }}">
+                            <select class="form-group__select" name="role">
                                 <option class="select__option" value=""></option>
-                                <option class="select__option" value="support" {{$user->role === 'support' ? 'selected' : ''}}>Поддержка</option>
-                                <option class="select__option" value="author" {{$user->role === 'author' ? 'selected' : ''}}>Автор записей</option>
-                                <option class="select__option" value="superadmin" {{$user->role === 'superadmin' ? 'selected' : ''}}><span>Супер администратор</span></option>
+                                @foreach ($roles as $role)
+                                    <option class="select__option"
+                                            value="{{ $role }}" {{$user->role === $role ? 'selected' : ''}}>
+                                        @lang('admin.' . $role)
+                                    </option>
+                                @endforeach
                             </select>
                             @if ($errors->has('role'))
                                 <span class="error-message">{{ $errors->first('role') }}</span>

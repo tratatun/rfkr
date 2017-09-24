@@ -31,33 +31,6 @@
                 </tr>
             @endforeach
         </table>
-        <div class="change-admin">
-            <h3 class="change-admin__caption">Изменить запись об администраторе</h3>
-            <div class="form-group-block">
-                <div class="form-group">
-                    <label class="form-group__label">Электронная почта</label>
-                    <input class="form-group__input" type="text" name="email">
-                </div>
-                <div class="form-group">
-                    <label class="form-group__label">Пароль</label>
-                    <input class="form-group__input" type="text" name="password" >
-                </div>
-                <div class="form-group">
-                    <label class="form-group__label">Роль</label>
-                    <select class="form-group__select" name="role" alue="{{ old('role') }}">
-                        <option class="select__option" value="support">Поддержка</option>
-                        <option class="select__option" value="author">Автор записей</option>
-                        <option class="select__option" value="superadmin"><span>Супер администратор</span></option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="form-group__label">Управление</label>
-                    <select class="form-group__select" name="managment">
-                        <option class="select__option" value="logindata">Войти с данными</option>
-                    </select>
-                </div>
-            </div>
-        </div>
         <div class="divider"></div>
         <div class="button-container">
             <a href="{{ route('admin.users.create') }}" class="btn-add btn-add-admin">Добавить администратора</a>
