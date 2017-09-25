@@ -9,18 +9,22 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styles.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/slick-carousel/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/minimalect/jquery.minimalect.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/air-datepicker/dist/css/datepicker.min.css') }}">
+    <script src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/slick-carousel/slick/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/animatescroll/animatescroll.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery.nicescroll/jquery.nicescroll.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/minimalect/jquery.minimalect.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery-mask-plugin/dist/jquery.mask.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/svgpolyfill/js/svg-icon-polyfill.js') }}"></script>
+    <script src="{{ asset('assets/vendor/air-datepicker/dist/js/datepicker.min.js') }}"></script>
+
     <title>RFKR</title>
 </head>
 <body>
 @yield('content')
-<script src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/slick-carousel/slick/slick.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/animatescroll/animatescroll.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/jquery.nicescroll/jquery.nicescroll.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/minimalect/jquery.minimalect.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/jquery-validation/dist/jquery.validate.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/jquery-mask-plugin/dist/jquery.mask.min.js') }}"></script>
-<script src="{{ asset('assets/libs/svgpolyfill/js/svg-icon-polyfill.js') }}"></script>
+
 <script src="{{ asset('assets/libs/ckeditor/ckeditor.js') }}"></script>
 <script src="{{ asset('assets/libs/ckeditor/adapters/jquery.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>

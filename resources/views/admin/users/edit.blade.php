@@ -27,8 +27,8 @@
                             @endif
                         </div>
                         <div class="form-group col-3">
-                            <label class="form-group__label">Пароль</label>
-                            <input title="@lang('admin.change_pswd_if_exists')" class="form-group__input" type="password" name="password" value="">
+                            <label class="form-group__label">Пароль (если указан - изменит текущий)</label>
+                            <input class="form-group__input" type="password" name="password" value="">
                             @if ($errors->has('password'))
                                 <span class="error-message">{{ $errors->first('password') }}</span>
                             @endif

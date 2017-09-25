@@ -22,7 +22,8 @@ class Treatment extends Model
 
     public function scopeOldOnes(Builder $builder)
     {
-        return $builder->where('status', self::STATUS_CLOSED);
+        return $builder->where('status', self::STATUS_CLOSED)
+            ->orWhere('status', self::STATUS_SPAMED);
     }
 
     public function answers()
