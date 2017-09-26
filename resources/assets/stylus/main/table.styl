@@ -21,8 +21,6 @@ table
 		background-color $whiteGray
 		height $inputHeight
 		line-height 1.2
-		&:last-child span
-			@extend $semiOpacity
 		a
 			@extend $transitionDefault
 			@extend $cursorPointer
@@ -41,3 +39,9 @@ table
 		color $red
 		&:hover
 			color $red
+
+	&.opacity-table
+		td
+			&:last-child *
+				@extend $semiOpacity
+

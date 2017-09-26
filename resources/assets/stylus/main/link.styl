@@ -1,10 +1,13 @@
 .link
 	@extend $transitionDefault
 	display inline-block
+	position relative
 	width 48%
+	height 164px
 	background-color $whiteGray
 	padding 24px
 	margin-bottom 42px
+	overflow hidden
 	&:nth-child(odd)
 		margin-right 3.4%
 	&:hover
@@ -18,7 +21,9 @@
 		margin-bottom 48px
 
 	.link__row
-		position relative
+		position absolute
+		width calc(100% - 50px)
+		bottom 10px
 		&:after
 			@extend $clearBoth
 
@@ -30,3 +35,4 @@
 	.row__icon
 		float right
 		sizeElement(24px, 24px)
+		margin-top 8px
