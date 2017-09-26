@@ -2,7 +2,7 @@
     <section class="last-news">
         <header class="last-news__header">
             <h4 class="header__caption">Последние новости</h4>
-            <button class="header__btn">Все Новости</button>
+            <a href="/news" class="header__btn">Все Новости</a>
         </header>
         <div class="last-news__content">
             <div class="content-block">
