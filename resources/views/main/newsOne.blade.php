@@ -1,7 +1,7 @@
 @extends('main.layout')
 
 @section('content')
-    <div class="page-content">
+    <div class="page-content" id="top">
         <div class="headers-container">
             @include('main.parts.search')
             @include('main.parts.topbar')

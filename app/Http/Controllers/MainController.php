@@ -47,4 +47,11 @@ class MainController extends Controller
     {
         return view('main.newsOne', compact('news'));
     }
+
+    public function news()
+    {
+        $news = News::query()->shown()->latest()->get();
+
+        return view('main.news', compact('news'));
+    }
 }
