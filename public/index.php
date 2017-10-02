@@ -1,7 +1,5 @@
 <?php
 
-//var_dump(ini_get('post_max_size'));die;
-
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
