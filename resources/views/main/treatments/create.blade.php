@@ -76,7 +76,7 @@
                 <div class="form-group {{ $errors->has('email') ? 'error' : '' }}">
                     <label class="form-group__label required">Электронная почта</label>
                     <input class="form-group__input" type="text" name="email" value="{{ old('email') }}">
-                    <span class="form-group__tip">Срок ответа составляет до 3-х рабочих дней</span>
+                    <span class="form-group__tip">Ответ предоставляется в установленные Законом сроки</span>
                     @if ($errors->has('email'))
                         <span class="error-message">{{ $errors->first('email') }}</span>
                     @endif
