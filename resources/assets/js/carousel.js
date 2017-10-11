@@ -41,7 +41,8 @@ $(function(){
 		arrows: false,
 		infinite: false,
 		dots: true,
-		asNavFor: '.carousel-news-image'
+		asNavFor: '.carousel-news-image',
+		adaptiveHeight: true
 	});
 
 
