@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-    <meta charset="UTF-8') }}">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge') }}">
+    <meta charset="UTF-8'">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge'">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styles.min.css') }}">

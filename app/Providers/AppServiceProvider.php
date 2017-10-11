@@ -19,8 +19,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::defaultStringLength(191);
-
         View::composer(['main.parts.topmenu', 'main.parts.footer'], function ($view) {
             $sections = Page::sections()->shown()->get();
             $view->with('sections', $sections);
