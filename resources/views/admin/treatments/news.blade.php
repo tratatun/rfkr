@@ -1,7 +1,7 @@
 <div class="content__pane visible" id="new-treatments">
     <table class="table">
         <tr>
-            <th>Обратился</th>
+            <th>Обратил(ся/ась)</th>
             <th>Тип</th>
             <th>Тематика</th>
             <th>Управление</th>
