@@ -16,7 +16,7 @@ class MainController extends Controller
         $covers = Cover::shown()->get();
         $news = News::query()->shown()->latest()->limit(8)->get();
         $govResources = GovResource::shown()->get();
-        $sliders = Slider::shown()->latest()->get();
+        $sliders = Slider::shown()->latest()->limit(10)->get();
         $seoRecords = SeoRecord::query()->shown()->latest()->limit(8)->get();
 
         return view('main.home', compact('covers', 'news', 'govResources', 'sliders', 'seoRecords'));

@@ -8,6 +8,7 @@
     <div class="divider"></div>
     <table class="table">
         <tr>
+            <th>Обратился</th>
             <th>Тип</th>
             <th>Тематика</th>
             <th>Управление</th>
@@ -15,6 +16,7 @@
         </tr>
         @forelse ($treatments as $treatment)
             <tr>
+                <td>{{$treatment->firstname}} {{$treatment->lastname}}</td>
                 <td>@lang('admin.' . $treatment->type )</td>
                 <td>@lang('admin.' . $treatment->thematic )</td>
                 <td><a href="{{ route('admin.treatment-answers.index', ['treatment' => $treatment->id]) }}">Ответить повторно</a></td>
