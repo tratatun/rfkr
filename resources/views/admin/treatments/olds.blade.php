@@ -8,7 +8,7 @@
     <div class="divider"></div>
     <table class="table">
         <tr>
-            <th>Обратил(ся/ась)</th>
+            <th>Обращение от</th>
             <th>Тип</th>
             <th>Тематика</th>
             <th>Управление</th>
