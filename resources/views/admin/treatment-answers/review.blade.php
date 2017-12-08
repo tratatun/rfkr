@@ -24,4 +24,5 @@
             </div>
         </div>
         <div class="divider"></div>
+    </div>
 @endsection

@@ -1,8 +1,8 @@
 <form id="answerTreatment" method="post" action="{{ route('admin.treatment-answers.store', ['treatments' => $treatment->id]) }}">
     {{ csrf_field() }}
     <textarea name="text" id="editor">
-                {{ old('text') }}
-            </textarea>
+        {{ old('text') }}
+    </textarea>
     @if ($errors->has('text'))
         <span class="error-message">{{ $errors->first('text') }}</span>
     @endif
